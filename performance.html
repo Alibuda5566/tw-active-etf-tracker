@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>主動式 ETF 績效</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #697386;
+      --line: #d8dee8;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --danger: #b91c1c;
+      --warn: #a16207;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--ink);
+      background: #eef2f6;
+      letter-spacing: 0;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+      padding: 18px 24px 14px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .page-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .page-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      background: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .page-nav a:hover {
+      border-color: #9aa8ba;
+      background: #f8fafc;
+    }
+
+    .page-nav a[data-page="performance"] {
+      border-color: #0f766e;
+      background: #ecfdf5;
+      color: #0f5f59;
+      font-weight: 700;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(220px, 360px) auto 1fr;
+      gap: 12px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    select,
+    button {
+      height: 38px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 6px;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    select {
+      width: 100%;
+      padding: 0 12px;
+    }
+
+    button {
+      padding: 0 12px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: #9aa8ba;
+      background: #f8fafc;
+    }
+
+    .segments {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .segments button {
+      border: 0;
+      border-radius: 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .segments button:last-child {
+      border-right: 0;
+    }
+
+    .segments button.active {
+      background: #ecfdf5;
+      color: #0f5f59;
+      font-weight: 700;
+    }
+
+    main {
+      padding: 18px 24px 28px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(140px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .stat,
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 12px 14px;
+      min-height: 78px;
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat .value {
+      margin-top: 6px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .stat .sub {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .chart-panel {
+      margin-bottom: 14px;
+    }
+
+    .chart-wrap {
+      padding: 14px;
+      position: relative;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 340px;
+      background: #fff;
+    }
+
+    .axis {
+      stroke: #c8d1de;
+      stroke-width: 1;
+    }
+
+    .grid {
+      stroke: #edf1f6;
+      stroke-width: 1;
+    }
+
+    .line {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 2.5;
+    }
+
+    .label {
+      fill: var(--muted);
+      font-size: 12px;
+    }
+
+    .hover-line {
+      stroke: #64748b;
+      stroke-width: 1;
+      stroke-dasharray: 4 4;
+      pointer-events: none;
+    }
+
+    .hover-dot {
+      fill: #fff;
+      stroke: var(--accent);
+      stroke-width: 2.5;
+      pointer-events: none;
+    }
+
+    .hit-area {
+      fill: transparent;
+      cursor: crosshair;
+    }
+
+    .chart-tooltip {
+      position: absolute;
+      min-width: 178px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, .16);
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.45;
+      pointer-events: none;
+      transform: translate(10px, -50%);
+      display: none;
+      z-index: 3;
+    }
+
+    .chart-tooltip strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e8edf3;
+      text-align: left;
+      vertical-align: middle;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    th {
+      background: #f7f9fc;
+      color: #46546a;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      cursor: pointer;
+    }
+
+    tr:hover td {
+      background: #f7fbfb;
+    }
+
+    tr.selected td {
+      background: #ecfdf5;
+    }
+
+    .scroll {
+      max-height: calc(100vh - 520px);
+      min-height: 280px;
+      overflow: auto;
+    }
+
+    .ticker {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .delta-up {
+      color: var(--accent);
+    }
+
+    .delta-down {
+      color: var(--danger);
+    }
+
+    .empty {
+      padding: 28px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      header {
+        position: static;
+      }
+
+      .toolbar,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      th {
+        position: static;
+      }
+
+      .scroll {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>主動式 ETF 績效</h1>
+    <nav class="page-nav" aria-label="頁面導覽">
+      <a href="changes.html" data-page="changes">每日增減追蹤</a>
+      <a href="index.html" data-page="holdings">ETF 清單與成分股</a>
+      <a href="performance.html" data-page="performance">主動式 ETF 績效</a>
+    </nav>
+    <div class="meta">
+      <span id="dataDate">資料日期</span>
+      <span id="updatedAt">更新時間</span>
+      <span id="modeNote">報酬模式</span>
+    </div>
+    <div class="toolbar">
+      <select id="etfSelect"></select>
+      <div class="segments" aria-label="報酬模式">
+        <button id="priceMode" type="button" data-mode="price" class="active">價格報酬</button>
+        <button id="totalMode" type="button" data-mode="total">含息總報酬</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="stats">
+      <div class="stat">
+        <div class="label">追蹤檔數</div>
+        <div class="value" id="statCount">0</div>
+        <div class="sub">主動式 ETF</div>
+      </div>
+      <div class="stat">
+        <div class="label">上市以來最佳</div>
+        <div class="value" id="statBestSince">-</div>
+        <div class="sub" id="statBestSinceName">-</div>
+      </div>
+      <div class="stat">
+        <div class="label">近 1 月最佳</div>
+        <div class="value" id="statBest1m">-</div>
+        <div class="sub" id="statBest1mName">-</div>
+      </div>
+      <div class="stat">
+        <div class="label">最大回撤最低</div>
+        <div class="value" id="statDrawdown">-</div>
+        <div class="sub" id="statDrawdownName">-</div>
+      </div>
+    </div>
+
+    <section class="chart-panel">
+      <div class="section-head">
+        <h2 id="chartTitle">歷史走勢</h2>
+        <span class="count" id="chartCount"></span>
+      </div>
+      <div class="chart-wrap">
+        <svg id="chart" viewBox="0 0 900 340" role="img" aria-label="ETF 歷史走勢"></svg>
+        <div id="chartTooltip" class="chart-tooltip"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>績效排名</h2>
+        <span class="count" id="tableCount"></span>
+      </div>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="ticker" style="width: 86px;">ETF</th>
+              <th data-sort="name">名稱</th>
+              <th data-sort="launch_date" style="width: 104px;">上市日</th>
+              <th data-sort="latest_close" class="num" style="width: 82px;">最新價</th>
+              <th data-sort="nav" class="num" style="width: 82px;">淨值</th>
+              <th data-sort="premium_discount" class="num" style="width: 86px;">溢/折%</th>
+              <th data-sort="since" class="num" style="width: 100px;">上市以來</th>
+              <th data-sort="annualized" class="num" style="width: 86px;">年化</th>
+              <th data-sort="1m" class="num" style="width: 82px;">1M</th>
+              <th data-sort="3m" class="num" style="width: 82px;">3M</th>
+              <th data-sort="ytd" class="num" style="width: 82px;">YTD</th>
+              <th data-sort="drawdown" class="num" style="width: 96px;">最大回撤</th>
+              <th data-sort="dividend_count" class="num" style="width: 74px;">配息</th>
+            </tr>
+          </thead>
+          <tbody id="performanceBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const state = {
+      data: null,
+      mode: "price",
+      selectedTicker: "",
+      sortKey: "since",
+      sortDir: -1,
+    };
+
+    const $ = id => document.getElementById(id);
+    const fmt = new Intl.NumberFormat("zh-TW");
+    const pct = value => {
+      const number = Number(value || 0);
+      const sign = number > 0 ? "+" : "";
+      return `${sign}${number.toFixed(2)}%`;
+    };
+    const optionalNumber = value => {
+      const number = Number(value);
+      return value === null || value === undefined || value === "" || !Number.isFinite(number) ? "-" : number.toFixed(2);
+    };
+    const premiumCell = value => {
+      if (value === null || value === undefined || value === "") return `<td class="num">-</td>`;
+      const number = Number(value || 0);
+      return `<td class="num ${number >= 0 ? "delta-up" : "delta-down"}">${pct(number)}</td>`;
+    };
+
+    async function loadData() {
+      const [performance, cards] = await Promise.all([
+        fetch("data/performance/active_etf_performance.json").then(r => r.json()),
+        fetch("data/etf_cards.json").then(r => r.json()),
+      ]);
+      const cardsByTicker = new Map(cards.map(card => [card.ticker, card]));
+      performance.etfs = performance.etfs.map(item => {
+        const card = cardsByTicker.get(item.ticker) || {};
+        return {
+          ...item,
+          nav: card.nav,
+          premium_discount: card.premium_discount,
+          premium_discount_date: card.premium_discount_date,
+        };
+      });
+      state.data = performance;
+      state.selectedTicker = state.data.etfs[0]?.ticker || "";
+      renderShell();
+      renderAll();
+    }
+
+    function renderShell() {
+      $("dataDate").textContent = `資料日期 ${state.data.data_date || "-"}`;
+      $("updatedAt").textContent = `更新時間 ${state.data.updated_at || "-"}`;
+      $("statCount").textContent = state.data.etfs.length;
+      $("etfSelect").innerHTML = state.data.etfs.map(item => (
+        `<option value="${escapeHtml(item.ticker)}">${escapeHtml(item.ticker)} ${escapeHtml(item.name)}</option>`
+      )).join("");
+      $("etfSelect").value = state.selectedTicker;
+    }
+
+    function renderAll() {
+      renderMode();
+      renderSummary();
+      renderTable();
+      renderChart();
+    }
+
+    function renderMode() {
+      for (const button of document.querySelectorAll(".segments button")) {
+        button.classList.toggle("active", button.dataset.mode === state.mode);
+      }
+      const mode = state.data.return_modes.find(item => item.id === state.mode);
+      $("modeNote").textContent = mode?.note || "";
+    }
+
+    function renderSummary() {
+      const summary = state.data.summary || {};
+      const bestSince = state.mode === "total" ? summary.best_total_since_inception : summary.best_price_since_inception;
+      const best1m = state.mode === "total" ? summary.best_total_1m : summary.best_price_1m;
+      const drawdown = state.mode === "total" ? summary.mildest_total_drawdown : summary.mildest_price_drawdown;
+      renderStat("statBestSince", "statBestSinceName", bestSince);
+      renderStat("statBest1m", "statBest1mName", best1m);
+      renderStat("statDrawdown", "statDrawdownName", drawdown);
+    }
+
+    function renderStat(valueId, nameId, item) {
+      $("" + valueId).textContent = item?.ticker ? pct(item.value) : "-";
+      $("" + nameId).textContent = item?.ticker ? `${item.ticker} ${item.name}` : "-";
+      $("" + valueId).className = `value ${Number(item?.value || 0) >= 0 ? "delta-up" : "delta-down"}`;
+    }
+
+    function fieldFor(sortKey) {
+      const prefix = state.mode === "total" ? "total" : "price";
+      return {
+        since: `${prefix}_return_since_inception`,
+        annualized: `annualized_${prefix}_return`,
+        "1m": `${prefix}_return_1m`,
+        "3m": `${prefix}_return_3m`,
+        ytd: `${prefix}_return_ytd`,
+        drawdown: `max_drawdown_${prefix}`,
+      }[sortKey] || sortKey;
+    }
+
+    function sortedEtfs() {
+      const field = fieldFor(state.sortKey);
+      return state.data.etfs.slice().sort((a, b) => {
+        const av = a[field];
+        const bv = b[field];
+        if (typeof av === "number" && typeof bv === "number") return (av - bv) * state.sortDir;
+        return String(av || "").localeCompare(String(bv || ""), "zh-Hant") * state.sortDir;
+      });
+    }
+
+    function renderTable() {
+      const rows = sortedEtfs();
+      $("tableCount").textContent = `${rows.length} 檔`;
+      $("performanceBody").innerHTML = rows.map(item => {
+        const prefix = state.mode === "total" ? "total" : "price";
+        return `
+          <tr data-ticker="${escapeHtml(item.ticker)}" class="${item.ticker === state.selectedTicker ? "selected" : ""}">
+            <td><span class="ticker">${escapeHtml(item.ticker)}</span></td>
+            <td class="name" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</td>
+            <td>${escapeHtml(item.launch_date)}</td>
+            <td class="num">${Number(item.latest_close || 0).toFixed(2)}</td>
+            <td class="num">${optionalNumber(item.nav)}</td>
+            ${premiumCell(item.premium_discount)}
+            ${returnCell(item[`${prefix}_return_since_inception`])}
+            ${returnCell(item[`annualized_${prefix}_return`])}
+            ${returnCell(item[`${prefix}_return_1m`])}
+            ${returnCell(item[`${prefix}_return_3m`])}
+            ${returnCell(item[`${prefix}_return_ytd`])}
+            ${returnCell(item[`max_drawdown_${prefix}`])}
+            <td class="num">${item.dividend_count || 0}</td>
+          </tr>
+        `;
+      }).join("");
+
+      for (const row of document.querySelectorAll("#performanceBody tr[data-ticker]")) {
+        row.addEventListener("click", () => {
+          state.selectedTicker = row.dataset.ticker;
+          $("etfSelect").value = state.selectedTicker;
+          renderTable();
+          renderChart();
+        });
+      }
+    }
+
+    function returnCell(value) {
+      const number = Number(value || 0);
+      return `<td class="num ${number >= 0 ? "delta-up" : "delta-down"}">${pct(number)}</td>`;
+    }
+
+    function renderChart() {
+      const item = state.data.etfs.find(row => row.ticker === state.selectedTicker);
+      const series = state.data.history[state.selectedTicker] || [];
+      const field = state.mode === "total" ? "total_return_index" : "price_index";
+      $("chartTitle").textContent = item ? `${item.ticker} ${item.name}` : "歷史走勢";
+      $("chartCount").textContent = `${state.mode === "total" ? "含息總報酬" : "價格報酬"} 基準 100`;
+      drawLineChart(series, field, item?.color || "#0f766e");
+    }
+
+    function drawLineChart(series, field, color) {
+      const svg = $("chart");
+      if (!series.length) {
+        svg.innerHTML = `<text x="450" y="170" text-anchor="middle" class="label">無資料</text>`;
+        $("chartTooltip").style.display = "none";
+        return;
+      }
+
+      const width = 900;
+      const height = 340;
+      const pad = {left: 52, right: 24, top: 20, bottom: 36};
+      const values = series.map(row => Number(row[field] || 0));
+      const minValue = Math.min(...values);
+      const maxValue = Math.max(...values);
+      const span = Math.max(1, maxValue - minValue);
+      const yMin = Math.floor((minValue - span * 0.08) / 5) * 5;
+      const yMax = Math.ceil((maxValue + span * 0.08) / 5) * 5;
+      const xScale = index => pad.left + index * (width - pad.left - pad.right) / Math.max(1, series.length - 1);
+      const yScale = value => pad.top + (yMax - value) * (height - pad.top - pad.bottom) / Math.max(1, yMax - yMin);
+      const points = series.map((row, index) => `${xScale(index).toFixed(2)},${yScale(Number(row[field] || 0)).toFixed(2)}`).join(" ");
+      const grid = [0, 0.25, 0.5, 0.75, 1].map(part => {
+        const y = pad.top + part * (height - pad.top - pad.bottom);
+        const value = yMax - part * (yMax - yMin);
+        return `
+          <line x1="${pad.left}" y1="${y}" x2="${width - pad.right}" y2="${y}" class="grid"></line>
+          <text x="${pad.left - 10}" y="${y + 4}" text-anchor="end" class="label">${value.toFixed(0)}</text>
+        `;
+      }).join("");
+      const firstDate = series[0].date;
+      const lastDate = series[series.length - 1].date;
+      const latest = values[values.length - 1];
+      const chartLeft = pad.left;
+      const chartRight = width - pad.right;
+      const chartTop = pad.top;
+      const chartBottom = height - pad.bottom;
+
+      svg.innerHTML = `
+        ${grid}
+        <line x1="${chartLeft}" y1="${chartBottom}" x2="${chartRight}" y2="${chartBottom}" class="axis"></line>
+        <line x1="${chartLeft}" y1="${chartTop}" x2="${chartLeft}" y2="${chartBottom}" class="axis"></line>
+        <polyline points="${points}" class="line" style="stroke:${escapeHtml(color)}"></polyline>
+        <circle cx="${xScale(series.length - 1)}" cy="${yScale(latest)}" r="4" fill="${escapeHtml(color)}"></circle>
+        <text x="${pad.left}" y="${height - 10}" class="label">${escapeHtml(firstDate)}</text>
+        <text x="${width - pad.right}" y="${height - 10}" text-anchor="end" class="label">${escapeHtml(lastDate)}</text>
+        <text x="${width - pad.right}" y="${pad.top + 12}" text-anchor="end" class="label">最新 ${latest.toFixed(2)}</text>
+        <g id="chartHover" style="display:none">
+          <line id="hoverLine" x1="${chartLeft}" y1="${chartTop}" x2="${chartLeft}" y2="${chartBottom}" class="hover-line"></line>
+          <circle id="hoverDot" cx="${chartLeft}" cy="${chartBottom}" r="4.5" class="hover-dot" style="stroke:${escapeHtml(color)}"></circle>
+        </g>
+        <rect id="chartHitArea" x="${chartLeft}" y="${chartTop}" width="${chartRight - chartLeft}" height="${chartBottom - chartTop}" class="hit-area"></rect>
+      `;
+      attachChartHover(series, field, {xScale, yScale, chartLeft, chartRight, chartTop, chartBottom});
+    }
+
+    function attachChartHover(series, field, chart) {
+      const svg = $("chart");
+      const hitArea = document.getElementById("chartHitArea");
+      const hover = document.getElementById("chartHover");
+      const hoverLine = document.getElementById("hoverLine");
+      const hoverDot = document.getElementById("hoverDot");
+      const tooltip = $("chartTooltip");
+      if (!hitArea || !hover || !hoverLine || !hoverDot) return;
+
+      const showAt = event => {
+        const rect = svg.getBoundingClientRect();
+        const point = svg.createSVGPoint();
+        point.x = event.clientX;
+        point.y = event.clientY;
+        const svgPoint = point.matrixTransform(svg.getScreenCTM().inverse());
+        const viewX = svgPoint.x;
+        const ratio = Math.max(0, Math.min(1, (viewX - chart.chartLeft) / Math.max(1, chart.chartRight - chart.chartLeft)));
+        const index = Math.round(ratio * (series.length - 1));
+        const row = series[Math.max(0, Math.min(series.length - 1, index))];
+        const x = chart.xScale(index);
+        const y = chart.yScale(Number(row[field] || 0));
+        hover.style.display = "";
+        hoverLine.setAttribute("x1", x);
+        hoverLine.setAttribute("x2", x);
+        hoverDot.setAttribute("cx", x);
+        hoverDot.setAttribute("cy", y);
+
+        const close = Number(row.close || 0).toFixed(2);
+        const rawIndexValue = Number(row[field] || 0);
+        const indexValue = rawIndexValue.toFixed(2);
+        const sinceReturn = rawIndexValue - 100;
+        const dividend = Number(row.cash_dividend || 0);
+        const dividendLine = dividend > 0 ? `<div>配息：${dividend.toFixed(2)}</div>` : "";
+        tooltip.innerHTML = `
+          <strong>${escapeHtml(row.date)}</strong>
+          <div>${state.mode === "total" ? "含息指數" : "價格指數"}：${indexValue}</div>
+          <div>上市以來報酬：${pct(sinceReturn)}</div>
+          <div>收盤價：${close}</div>
+          ${dividendLine}
+        `;
+        tooltip.style.display = "block";
+
+        const tooltipX = event.clientX - rect.left;
+        const tooltipY = event.clientY - rect.top;
+        const flipX = tooltipX > rect.width - 220;
+        tooltip.style.left = `${Math.max(8, Math.min(rect.width - 190, tooltipX))}px`;
+        tooltip.style.top = `${Math.max(24, Math.min(rect.height - 18, tooltipY))}px`;
+        tooltip.style.transform = flipX ? "translate(-105%, -50%)" : "translate(10px, -50%)";
+      };
+
+      const hide = () => {
+        hover.style.display = "none";
+        tooltip.style.display = "none";
+      };
+
+      hitArea.addEventListener("mousemove", showAt);
+      hitArea.addEventListener("mouseleave", hide);
+      hitArea.addEventListener("touchstart", event => showAt(event.touches[0]), {passive: true});
+      hitArea.addEventListener("touchmove", event => showAt(event.touches[0]), {passive: true});
+      hitArea.addEventListener("touchend", hide);
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    $("etfSelect").addEventListener("change", event => {
+      state.selectedTicker = event.target.value;
+      renderTable();
+      renderChart();
+    });
+
+    for (const button of document.querySelectorAll(".segments button")) {
+      button.addEventListener("click", () => {
+        state.mode = button.dataset.mode;
+        renderAll();
+      });
+    }
+
+    for (const header of document.querySelectorAll("th[data-sort]")) {
+      header.addEventListener("click", () => {
+        const key = header.dataset.sort;
+        if (state.sortKey === key) {
+          state.sortDir *= -1;
+        } else {
+          state.sortKey = key;
+          state.sortDir = ["ticker", "name", "launch_date"].includes(key) ? 1 : -1;
+        }
+        renderTable();
+      });
+    }
+
+    loadData().catch(error => {
+      $("performanceBody").innerHTML = `<tr><td colspan="13"><div class="empty">${escapeHtml(error.message)}</div></td></tr>`;
+      $("chart").innerHTML = `<text x="450" y="170" text-anchor="middle" class="label">${escapeHtml(error.message)}</text>`;
+    });
+  </script>
+</body>
+</html>

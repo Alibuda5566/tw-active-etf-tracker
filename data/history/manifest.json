@@ -1,0 +1,291 @@
+{
+  "updated_at": "2026-05-10T17:10:26",
+  "latest_report": "reports/active_etf_daily_report_latest.md",
+  "snapshots": [
+    {
+      "name": "2026-04-24_165216",
+      "path": "history/snapshots/2026-04-24_165216",
+      "created_at": "2026-04-25T16:52:16",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_165243",
+      "path": "history/snapshots/2026-04-24_165243",
+      "created_at": "2026-04-25T16:52:43",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_165257",
+      "path": "history/snapshots/2026-04-24_165257",
+      "created_at": "2026-04-25T16:52:57",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_170506",
+      "path": "history/snapshots/2026-04-24_170506",
+      "created_at": "2026-04-25T17:05:06",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_171915",
+      "path": "history/snapshots/2026-04-24_171915",
+      "created_at": "2026-04-25T17:19:15",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_172111",
+      "path": "history/snapshots/2026-04-24_172111",
+      "created_at": "2026-04-25T17:21:11",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_174746",
+      "path": "history/snapshots/2026-04-24_174746",
+      "created_at": "2026-04-25T17:47:46",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_190055",
+      "path": "history/snapshots/2026-04-24_190055",
+      "created_at": "2026-04-27T19:00:55",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-24_190057",
+      "path": "history/snapshots/2026-04-24_190057",
+      "created_at": "2026-04-25T19:00:57",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-27_190053",
+      "path": "history/snapshots/2026-04-27_190053",
+      "created_at": "2026-04-28T19:00:53",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-27_190055",
+      "path": "history/snapshots/2026-04-27_190055",
+      "created_at": "2026-04-27T19:00:55",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-28_190053",
+      "path": "history/snapshots/2026-04-28_190053",
+      "created_at": "2026-04-28T19:00:53",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-28_190204",
+      "path": "history/snapshots/2026-04-28_190204",
+      "created_at": "2026-04-29T19:02:04",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-29_190121",
+      "path": "history/snapshots/2026-04-29_190121",
+      "created_at": "2026-04-30T19:01:21",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-29_190204",
+      "path": "history/snapshots/2026-04-29_190204",
+      "created_at": "2026-04-29T19:02:04",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-30_190121",
+      "path": "history/snapshots/2026-04-30_190121",
+      "created_at": "2026-04-30T19:01:21",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-30_190125",
+      "path": "history/snapshots/2026-04-30_190125",
+      "created_at": "2026-05-01T19:01:25",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-04-30_190237",
+      "path": "history/snapshots/2026-04-30_190237",
+      "created_at": "2026-05-04T19:02:37",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-04_190237",
+      "path": "history/snapshots/2026-05-04_190237",
+      "created_at": "2026-05-04T19:02:37",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-04_190247",
+      "path": "history/snapshots/2026-05-04_190247",
+      "created_at": "2026-05-05T19:02:47",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-05_190059",
+      "path": "history/snapshots/2026-05-05_190059",
+      "created_at": "2026-05-06T19:00:59",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-05_190248",
+      "path": "history/snapshots/2026-05-05_190248",
+      "created_at": "2026-05-05T19:02:48",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-06_190100",
+      "path": "history/snapshots/2026-05-06_190100",
+      "created_at": "2026-05-06T19:01:00",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-06_190108",
+      "path": "history/snapshots/2026-05-06_190108",
+      "created_at": "2026-05-07T19:01:08",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-07_190050",
+      "path": "history/snapshots/2026-05-07_190050",
+      "created_at": "2026-05-08T19:00:50",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-07_190108",
+      "path": "history/snapshots/2026-05-07_190108",
+      "created_at": "2026-05-07T19:01:08",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    },
+    {
+      "name": "2026-05-08_190051",
+      "path": "history/snapshots/2026-05-08_190051",
+      "created_at": "2026-05-08T19:00:51",
+      "files": [
+        "cross_data.json",
+        "etf_cards.json"
+      ]
+    }
+  ],
+  "daily_holdings": [
+    {
+      "date": "2026-04-24",
+      "path": "history/daily_holdings/2026-04-24.json"
+    },
+    {
+      "date": "2026-04-27",
+      "path": "history/daily_holdings/2026-04-27.json"
+    },
+    {
+      "date": "2026-04-28",
+      "path": "history/daily_holdings/2026-04-28.json"
+    },
+    {
+      "date": "2026-04-29",
+      "path": "history/daily_holdings/2026-04-29.json"
+    },
+    {
+      "date": "2026-04-30",
+      "path": "history/daily_holdings/2026-04-30.json"
+    },
+    {
+      "date": "2026-05-04",
+      "path": "history/daily_holdings/2026-05-04.json"
+    },
+    {
+      "date": "2026-05-05",
+      "path": "history/daily_holdings/2026-05-05.json"
+    },
+    {
+      "date": "2026-05-06",
+      "path": "history/daily_holdings/2026-05-06.json"
+    },
+    {
+      "date": "2026-05-07",
+      "path": "history/daily_holdings/2026-05-07.json"
+    },
+    {
+      "date": "2026-05-08",
+      "path": "history/daily_holdings/2026-05-08.json"
+    }
+  ]
+}

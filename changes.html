@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日增減追蹤</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #697386;
+      --line: #d8dee8;
+      --soft: #f4f6f9;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --warn: #a16207;
+      --danger: #b91c1c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--ink);
+      background: #eef2f6;
+      letter-spacing: 0;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+      padding: 18px 24px 14px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .page-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .page-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      background: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .page-nav a:hover {
+      border-color: #9aa8ba;
+      background: #f8fafc;
+    }
+
+    body.page-holdings .page-nav a[data-page="holdings"],
+    body.page-changes .page-nav a[data-page="changes"] {
+      border-color: #0f766e;
+      background: #ecfdf5;
+      color: #0f5f59;
+      font-weight: 700;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(220px, 420px) 1fr auto auto;
+      gap: 12px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    input,
+    select,
+    button,
+    .button-link {
+      height: 38px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 6px;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0 12px;
+    }
+
+    button {
+      padding: 0 12px;
+      cursor: pointer;
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    button:hover,
+    .button-link:hover {
+      border-color: #9aa8ba;
+      background: #f8fafc;
+    }
+
+    body.page-holdings .changes,
+    body.page-holdings #reportDownload,
+    body.page-changes .holdings-content,
+    body.page-changes #search,
+    body.page-changes #etfFilter,
+    body.page-changes #reset {
+      display: none;
+    }
+
+    body.page-changes .toolbar {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    body.page-holdings .toolbar {
+      grid-template-columns: minmax(220px, 420px) 1fr auto;
+    }
+
+    main {
+      padding: 18px 24px 28px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      min-height: 74px;
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat .value {
+      margin-top: 6px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 370px) minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e8edf3;
+      text-align: left;
+      vertical-align: middle;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    th {
+      background: #f7f9fc;
+      color: #46546a;
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 4;
+    }
+
+    tr:hover td {
+      background: #f7fbfb;
+    }
+
+    #etfBody tr[data-etf] {
+      cursor: pointer;
+    }
+
+    #etfBody tr[data-etf]:hover td {
+      background: #eef8f7;
+    }
+
+    #etfBody tr:not([data-etf]) {
+      color: var(--muted);
+    }
+
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ticker {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 7px;
+      vertical-align: -1px;
+      border: 1px solid rgba(0, 0, 0, .16);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      color: #39465a;
+      white-space: nowrap;
+    }
+
+    .bar {
+      height: 8px;
+      width: 100%;
+      background: #e8edf3;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      width: var(--w, 0%);
+      background: var(--c, var(--accent));
+    }
+
+    .etf-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .etf-chip {
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 3px 7px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .empty {
+      padding: 28px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .detail {
+      margin-top: 14px;
+    }
+
+    .changes {
+      margin-bottom: 14px;
+    }
+
+    .change-summary {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(92px, 1fr));
+      gap: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .change-summary-item {
+      padding: 10px 12px;
+      border-right: 1px solid var(--line);
+    }
+
+    .change-summary-item:last-child {
+      border-right: 0;
+    }
+
+    .change-summary-label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .change-summary-value {
+      margin-top: 4px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .change-insights {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(320px, .9fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .change-block {
+      min-width: 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .change-block:last-child {
+      border-right: 0;
+    }
+
+    .change-block-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      background: #fbfcfe;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .change-block h3 {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .change-block-scroll {
+      max-height: 260px;
+      overflow: auto;
+    }
+
+    .compact-table th,
+    .compact-table td {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+
+    .compact-empty {
+      padding: 18px;
+    }
+
+    .action {
+      display: inline-block;
+      min-width: 54px;
+      border-radius: 999px;
+      padding: 3px 8px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .action-added,
+    .delta-up {
+      color: var(--accent);
+    }
+
+    .action-removed,
+    .delta-down {
+      color: var(--danger);
+    }
+
+    .action-increased {
+      color: #0369a1;
+    }
+
+    .action-decreased {
+      color: var(--warn);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-item {
+      padding: 12px 14px;
+      border-right: 1px solid var(--line);
+    }
+
+    .detail-item:last-child {
+      border-right: 0;
+    }
+
+    .detail-label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .detail-value {
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 700;
+      min-height: 21px;
+    }
+
+    .scroll {
+      max-height: calc(100vh - 246px);
+      overflow: auto;
+    }
+
+    .selected-etf td,
+    .selected td {
+      background: #ecfdf5;
+    }
+
+    @media (max-width: 980px) {
+      .toolbar,
+      .layout,
+      .stats,
+      .detail-grid,
+      .change-insights,
+      .change-summary {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        position: static;
+      }
+
+      th {
+        position: static;
+      }
+
+      .scroll {
+        max-height: none;
+      }
+
+      .detail-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .change-summary-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .change-block {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .change-block:last-child {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body class="page-changes">
+  <header>
+    <h1>每日增減追蹤</h1>
+    <nav class="page-nav" aria-label="頁面導覽">
+      <a href="changes.html" data-page="changes">每日增減追蹤</a>
+      <a href="index.html" data-page="holdings">ETF 清單與成分股</a>
+      <a href="performance.html" data-page="performance">主動式 ETF 績效</a>
+    </nav>
+    <div class="meta">
+      <span id="priceDate">價格日期</span>
+      <span id="holdingDate">持股日期</span>
+      <span id="sourceCount">來源</span>
+    </div>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="搜尋股票代號、股票名稱、ETF">
+      <select id="etfFilter"></select>
+      <button id="reset" type="button" title="清除篩選">清除</button>
+      <a id="reportDownload" class="button-link" href="data/reports/active_etf_daily_report_latest.md" download="主動式ETF每日進出報表.md">下載每日報表</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="stats">
+      <div class="stat">
+        <div class="label">ETF</div>
+        <div class="value" id="statEtf">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">股票</div>
+        <div class="value" id="statStock">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">持股關聯</div>
+        <div class="value" id="statLinks">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">最多重疊</div>
+        <div class="value" id="statOverlap">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">今日變動</div>
+        <div class="value" id="statChange">0</div>
+      </div>
+    </div>
+
+    <section class="changes">
+      <div class="section-head">
+        <h2>每日增減追蹤</h2>
+        <span class="count" id="changePeriod"></span>
+      </div>
+      <div class="change-summary">
+        <div class="change-summary-item">
+          <div class="change-summary-label">新增</div>
+          <div class="change-summary-value delta-up" id="changeAdded">0</div>
+        </div>
+        <div class="change-summary-item">
+          <div class="change-summary-label">刪除</div>
+          <div class="change-summary-value delta-down" id="changeRemoved">0</div>
+        </div>
+        <div class="change-summary-item">
+          <div class="change-summary-label">增持</div>
+          <div class="change-summary-value delta-up" id="changeIncreased">0</div>
+        </div>
+        <div class="change-summary-item">
+          <div class="change-summary-label">減持</div>
+          <div class="change-summary-value delta-down" id="changeDecreased">0</div>
+        </div>
+        <div class="change-summary-item">
+          <div class="change-summary-label">合計</div>
+          <div class="change-summary-value" id="changeTotal">0</div>
+        </div>
+      </div>
+      <div class="change-insights">
+        <div class="change-block">
+          <div class="change-block-head">
+            <h3>整體加碼排行</h3>
+            <span class="count" id="stockBuyCount"></span>
+          </div>
+          <div class="change-block-scroll">
+            <table class="compact-table">
+              <thead>
+                <tr>
+                  <th style="width: 84px;">股票</th>
+                  <th>名稱</th>
+                  <th class="num" style="width: 58px;">ETF</th>
+                  <th class="num" style="width: 90px;">淨權重</th>
+                </tr>
+              </thead>
+              <tbody id="stockBuyBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="change-block">
+          <div class="change-block-head">
+            <h3>整體減碼排行</h3>
+            <span class="count" id="stockSellCount"></span>
+          </div>
+          <div class="change-block-scroll">
+            <table class="compact-table">
+              <thead>
+                <tr>
+                  <th style="width: 84px;">股票</th>
+                  <th>名稱</th>
+                  <th class="num" style="width: 58px;">ETF</th>
+                  <th class="num" style="width: 90px;">淨權重</th>
+                </tr>
+              </thead>
+              <tbody id="stockSellBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="change-block">
+          <div class="change-block-head">
+            <h3>ETF 變動摘要</h3>
+            <span class="count" id="etfChangeCount"></span>
+          </div>
+          <div class="change-block-scroll">
+            <table class="compact-table">
+              <thead>
+                <tr>
+                  <th style="width: 82px;">ETF</th>
+                  <th class="num">新增</th>
+                  <th class="num">刪除</th>
+                  <th class="num">增</th>
+                  <th class="num">減</th>
+                  <th class="num">溢/折%</th>
+                  <th class="num">合計</th>
+                </tr>
+              </thead>
+              <tbody id="etfChangeBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 76px;">狀態</th>
+            <th style="width: 92px;">ETF</th>
+            <th style="width: 92px;">股票</th>
+            <th>名稱</th>
+            <th class="num" style="width: 112px;">權重變化</th>
+            <th class="num" style="width: 132px;">股數變化</th>
+          </tr>
+        </thead>
+        <tbody id="changeBody"></tbody>
+      </table>
+    </section>
+
+    <div class="holdings-content">
+    <div class="layout">
+      <section>
+        <div class="section-head">
+          <h2>ETF 清單</h2>
+          <span class="count" id="etfCount"></span>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 92px;">代號</th>
+                <th>名稱</th>
+                <th class="num" style="width: 86px;">收盤</th>
+                <th class="num" style="width: 86px;">淨值</th>
+                <th class="num" style="width: 86px;">溢/折%</th>
+                <th class="num" style="width: 74px;">持股</th>
+              </tr>
+            </thead>
+            <tbody id="etfBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2 id="stockTitle">股票交集</h2>
+          <span class="count" id="stockCount"></span>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 92px;">代號</th>
+                <th>名稱</th>
+                <th class="num" style="width: 82px;">ETF 數</th>
+                <th class="num" style="width: 110px;" id="weightHeader">最高權重</th>
+                <th style="width: 310px;">ETF</th>
+              </tr>
+            </thead>
+            <tbody id="stockBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="detail" id="detailPanel">
+      <div class="section-head">
+        <h2 id="detailTitle">股票明細</h2>
+        <span class="count" id="detailCount"></span>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-item">
+          <div class="detail-label">股票代號</div>
+          <div class="detail-value" id="detailTicker"></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">股票名稱</div>
+          <div class="detail-value" id="detailName"></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">ETF 數</div>
+          <div class="detail-value" id="detailEtfCount"></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">最高權重</div>
+          <div class="detail-value" id="detailMaxWeight"></div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">總股數</div>
+          <div class="detail-value" id="detailShares"></div>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ETF</th>
+            <th class="num">權重</th>
+            <th class="num">股數</th>
+            <th>日期</th>
+          </tr>
+        </thead>
+        <tbody id="detailBody"></tbody>
+      </table>
+    </section>
+    </div>
+  </main>
+
+  <script>
+    const state = {
+      cards: [],
+      stocks: [],
+      changes: null,
+      filtered: [],
+      selectedTicker: "",
+      selectedEtf: "",
+    };
+
+    const fmt = new Intl.NumberFormat("zh-TW");
+    const pct = value => `${Number(value || 0).toFixed(2)}%`;
+    const optionalNumber = value => {
+      const number = Number(value);
+      return value === null || value === undefined || value === "" || !Number.isFinite(number) ? "-" : number.toFixed(2);
+    };
+    const premiumClass = value => Number(value || 0) >= 0 ? "delta-up" : "delta-down";
+    const premiumText = value => {
+      if (value === null || value === undefined || value === "") return "-";
+      const number = Number(value || 0);
+      const sign = number > 0 ? "+" : "";
+      return `${sign}${number.toFixed(2)}%`;
+    };
+    const $ = id => document.getElementById(id);
+
+    async function loadData() {
+      const [cards, stocks] = await Promise.all([
+        fetch("data/etf_cards.json").then(r => r.json()),
+        fetch("data/cross_data.json").then(r => r.json()),
+      ]);
+      state.cards = cards;
+      state.stocks = stocks;
+      state.changes = await fetch("data/holding_changes.json")
+        .then(r => r.ok ? r.json() : null)
+        .catch(() => null);
+      renderShell();
+      renderChanges();
+      applyFilters();
+    }
+
+    function renderShell() {
+      const activeCards = state.cards.filter(card => card.date);
+      const links = state.stocks.reduce((sum, row) => sum + row.etfs.length, 0);
+      const maxOverlap = Math.max(0, ...state.stocks.map(row => row.etf_count));
+      const priceDates = unique(state.cards.map(card => card.price_date).filter(Boolean));
+      const holdingDates = unique(activeCards.map(card => card.date).filter(Boolean));
+
+      $("statEtf").textContent = state.cards.length;
+      $("statStock").textContent = state.stocks.length;
+      $("statLinks").textContent = links;
+      $("statOverlap").textContent = maxOverlap;
+      $("statChange").textContent = state.changes?.summary?.total_changes || 0;
+      $("priceDate").textContent = `價格日期 ${priceDates.join(", ") || "-"}`;
+      $("holdingDate").textContent = `持股日期 ${holdingDates.join(", ") || "-"}`;
+      $("sourceCount").textContent = `持股 ETF ${activeCards.length}`;
+
+      const holdingCounts = getHoldingCounts();
+      const options = [`<option value="">全部 ETF</option>`]
+        .concat(state.cards.filter(card => holdingCounts.has(card.ticker)).map(card => {
+          return `<option value="${escapeHtml(card.ticker)}">${escapeHtml(card.ticker)} ${escapeHtml(card.name)}</option>`;
+        }));
+      $("etfFilter").innerHTML = options.join("");
+      renderEtfs();
+    }
+
+    function getHoldingCounts() {
+      const holdingCounts = new Map();
+      for (const row of state.stocks) {
+        for (const etf of row.etfs) {
+          holdingCounts.set(etf.etf_ticker, (holdingCounts.get(etf.etf_ticker) || 0) + 1);
+        }
+      }
+      return holdingCounts;
+    }
+
+    function renderChanges() {
+      const report = state.changes;
+      renderReportDownload(report);
+      const summary = report?.summary || {};
+      $("changeAdded").textContent = summary.added || 0;
+      $("changeRemoved").textContent = summary.removed || 0;
+      $("changeIncreased").textContent = summary.increased || 0;
+      $("changeDecreased").textContent = summary.decreased || 0;
+      $("changeTotal").textContent = summary.total_changes || 0;
+
+      if (!report) {
+        $("changePeriod").textContent = "尚未建立";
+        $("changeBody").innerHTML = `<tr><td colspan="6"><div class="empty">尚未建立每日持股變動檔</div></td></tr>`;
+        renderStockRollups([], []);
+        renderEtfChangeSummary({});
+        return;
+      }
+
+      $("changePeriod").textContent = report.previous_date
+        ? `${report.previous_date} → ${report.current_date}`
+        : `${report.current_date} 基準日`;
+      renderStockRollups(report.top_stock_buys || [], report.top_stock_sells || []);
+      renderEtfChangeSummary(report.by_etf || {});
+
+      if (report.baseline || !report.changes?.length) {
+        const message = report.baseline ? "目前只有基準日，下一個不同日期更新後會產生增減。" : "本期沒有持股變動。";
+        $("changeBody").innerHTML = `<tr><td colspan="6"><div class="empty">${message}</div></td></tr>`;
+        return;
+      }
+
+      $("changeBody").innerHTML = report.changes.slice(0, 40).map(change => {
+        const weightDelta = Number(change.weight_delta || 0);
+        const shareDelta = Number(change.shares_delta || 0);
+        return `
+          <tr>
+            <td><span class="action action-${escapeHtml(change.action)}">${actionText(change.action)}</span></td>
+            <td><span class="ticker">${escapeHtml(change.etf_ticker)}</span></td>
+            <td><span class="ticker">${escapeHtml(change.stock_ticker)}</span></td>
+            <td class="name" title="${escapeHtml(change.stock_name)}">${escapeHtml(change.stock_name)}</td>
+            <td class="num ${weightDelta >= 0 ? "delta-up" : "delta-down"}">${signed(weightDelta, 2)}%</td>
+            <td class="num ${shareDelta >= 0 ? "delta-up" : "delta-down"}">${signedInt(shareDelta)}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function renderStockRollups(buys, sells) {
+      $("stockBuyCount").textContent = `${buys.length} 檔`;
+      $("stockSellCount").textContent = `${sells.length} 檔`;
+      renderStockRollupTable("stockBuyBody", buys);
+      renderStockRollupTable("stockSellBody", sells);
+    }
+
+    function renderStockRollupTable(targetId, rows) {
+      if (!rows.length) {
+        $(targetId).innerHTML = `<tr><td colspan="4"><div class="empty compact-empty">尚無資料</div></td></tr>`;
+        return;
+      }
+
+      $(targetId).innerHTML = rows.map(row => {
+        const weightDelta = Number(row.net_weight_delta || 0);
+        return `
+          <tr>
+            <td><span class="ticker">${escapeHtml(row.stock_ticker)}</span></td>
+            <td class="name" title="${escapeHtml(row.stock_name)}">${escapeHtml(row.stock_name)}</td>
+            <td class="num">${row.affected_etf_count || 0}</td>
+            <td class="num ${weightDelta >= 0 ? "delta-up" : "delta-down"}">${signed(weightDelta, 2)}%</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function renderEtfChangeSummary(byEtf) {
+      const cardByTicker = new Map(state.cards.map(card => [card.ticker, card]));
+      const rows = Object.entries(byEtf || {})
+        .map(([ticker, summary]) => ({ticker, ...summary}))
+        .sort((a, b) => {
+          if ((b.total_changes || 0) !== (a.total_changes || 0)) return (b.total_changes || 0) - (a.total_changes || 0);
+          return a.ticker.localeCompare(b.ticker);
+        });
+
+      $("etfChangeCount").textContent = `${rows.length} 檔`;
+      if (!rows.length) {
+        $("etfChangeBody").innerHTML = `<tr><td colspan="7"><div class="empty compact-empty">尚無資料</div></td></tr>`;
+        return;
+      }
+
+      $("etfChangeBody").innerHTML = rows.map(row => {
+        const card = cardByTicker.get(row.ticker) || {};
+        return `
+          <tr>
+            <td><span class="ticker">${escapeHtml(row.ticker)}</span></td>
+            <td class="num delta-up">${row.added || 0}</td>
+            <td class="num delta-down">${row.removed || 0}</td>
+            <td class="num delta-up">${row.increased || 0}</td>
+            <td class="num delta-down">${row.decreased || 0}</td>
+            <td class="num ${premiumClass(card.premium_discount)}">${premiumText(card.premium_discount)}</td>
+            <td class="num">${row.total_changes || 0}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function renderReportDownload(report) {
+      const date = report?.current_date || "latest";
+      $("reportDownload").href = report?.current_date
+        ? `data/reports/active_etf_daily_report_${encodeURIComponent(report.current_date)}.md`
+        : "data/reports/active_etf_daily_report_latest.md";
+      $("reportDownload").download = `主動式ETF每日進出報表_${date}.md`;
+    }
+
+    function renderEtfs() {
+      const holdingCounts = getHoldingCounts();
+
+      $("etfCount").textContent = `${state.cards.length} 檔`;
+      $("etfBody").innerHTML = state.cards.map(card => {
+        const count = holdingCounts.get(card.ticker) || 0;
+        const classes = [
+          card.ticker === state.selectedEtf ? "selected-etf" : "",
+        ].filter(Boolean).join(" ");
+        const dataEtf = count ? ` data-etf="${escapeHtml(card.ticker)}"` : "";
+        const className = classes ? ` class="${classes}"` : "";
+        return `
+          <tr${dataEtf}${className}>
+            <td><span class="swatch" style="background:${card.color}"></span><span class="ticker">${escapeHtml(card.ticker)}</span></td>
+            <td class="name" title="${escapeHtml(card.name)}">${escapeHtml(card.name)}</td>
+            <td class="num">${optionalNumber(card.price)}</td>
+            <td class="num">${optionalNumber(card.nav)}</td>
+            <td class="num ${premiumClass(card.premium_discount)}">${premiumText(card.premium_discount)}</td>
+            <td class="num">${count || "-"}</td>
+          </tr>
+        `;
+      }).join("");
+
+      for (const row of $("etfBody").querySelectorAll("tr[data-etf]")) {
+        row.addEventListener("click", () => {
+          state.selectedEtf = row.dataset.etf;
+          state.selectedTicker = "";
+          $("etfFilter").value = state.selectedEtf;
+          applyFilters();
+        });
+      }
+    }
+
+    function renderStockTitle() {
+      const card = state.cards.find(item => item.ticker === state.selectedEtf);
+      $("stockTitle").textContent = card
+        ? `${card.ticker} ${card.name} 成分股`
+        : "股票交集";
+      $("weightHeader").textContent = card ? "持股權重" : "最高權重";
+    }
+
+    function getEtfHolding(row, ticker) {
+      return ticker ? row.etfs.find(item => item.etf_ticker === ticker) : null;
+    }
+
+    function applyFilters() {
+      const query = $("search").value.trim().toLowerCase();
+      const etf = $("etfFilter").value;
+      state.selectedEtf = etf;
+
+      state.filtered = state.stocks.filter(row => {
+        const inEtf = !etf || row.etfs.some(item => item.etf_ticker === etf);
+        if (!inEtf) return false;
+        if (!query) return true;
+        const haystack = [
+          row.ticker,
+          row.name,
+          ...row.etfs.map(item => `${item.etf_ticker} ${item.etf_name}`),
+        ].join(" ").toLowerCase();
+        return haystack.includes(query);
+      });
+
+      state.filtered.sort((a, b) => {
+        if (state.selectedEtf) {
+          const aHolding = getEtfHolding(a, state.selectedEtf);
+          const bHolding = getEtfHolding(b, state.selectedEtf);
+          const weightDiff = Number(bHolding?.weight || 0) - Number(aHolding?.weight || 0);
+          if (weightDiff !== 0) return weightDiff;
+          return a.ticker.localeCompare(b.ticker);
+        }
+        if (b.etf_count !== a.etf_count) return b.etf_count - a.etf_count;
+        if (b.max_weight !== a.max_weight) return b.max_weight - a.max_weight;
+        return a.ticker.localeCompare(b.ticker);
+      });
+
+      renderStockTitle();
+      renderEtfs();
+      renderStocks();
+      const selected = state.filtered.find(row => row.ticker === state.selectedTicker) || state.filtered[0];
+      renderDetail(selected || null);
+    }
+
+    function renderStocks() {
+      $("stockCount").textContent = `${state.filtered.length} 檔`;
+      if (!state.filtered.length) {
+        $("stockBody").innerHTML = `<tr><td colspan="5"><div class="empty">無資料</div></td></tr>`;
+        return;
+      }
+
+      $("stockBody").innerHTML = state.filtered.map(row => {
+        const selectedHolding = getEtfHolding(row, state.selectedEtf);
+        const displayWeight = selectedHolding ? selectedHolding.weight : row.max_weight;
+        const chips = row.etfs
+          .slice()
+          .sort((a, b) => b.weight - a.weight)
+          .map(etf => `<span class="etf-chip"><span class="swatch" style="background:${etf.color}"></span>${escapeHtml(etf.etf_ticker)} ${pct(etf.weight)}</span>`)
+          .join("");
+        return `
+          <tr data-ticker="${escapeHtml(row.ticker)}" class="${row.ticker === state.selectedTicker ? "selected" : ""}">
+            <td><span class="ticker">${escapeHtml(row.ticker)}</span></td>
+            <td class="name" title="${escapeHtml(row.name)}">${escapeHtml(row.name)}</td>
+            <td class="num">${row.etf_count}</td>
+            <td class="num">
+              ${pct(displayWeight)}
+              <div class="bar"><span style="--w:${Math.min(100, displayWeight * 6)}%; --c:#0f766e"></span></div>
+            </td>
+            <td><div class="etf-list">${chips}</div></td>
+          </tr>
+        `;
+      }).join("");
+
+      for (const row of $("stockBody").querySelectorAll("tr[data-ticker]")) {
+        row.addEventListener("click", () => {
+          state.selectedTicker = row.dataset.ticker;
+          renderStocks();
+          renderDetail(state.filtered.find(item => item.ticker === state.selectedTicker));
+        });
+      }
+    }
+
+    function renderDetail(row) {
+      if (!row) {
+        $("detailTitle").textContent = "股票明細";
+        $("detailCount").textContent = "";
+        $("detailTicker").textContent = "";
+        $("detailName").textContent = "";
+        $("detailEtfCount").textContent = "";
+        $("detailMaxWeight").textContent = "";
+        $("detailShares").textContent = "";
+        $("detailBody").innerHTML = `<tr><td colspan="4"><div class="empty">無資料</div></td></tr>`;
+        return;
+      }
+
+      state.selectedTicker = row.ticker;
+      $("detailTitle").textContent = `${row.ticker} ${row.name}`;
+      $("detailCount").textContent = `${row.etfs.length} 筆`;
+      $("detailTicker").textContent = row.ticker;
+      $("detailName").textContent = row.name;
+      $("detailEtfCount").textContent = row.etf_count;
+      $("detailMaxWeight").textContent = pct(row.max_weight);
+      $("detailShares").textContent = fmt.format(row.total_shares || 0);
+      $("detailBody").innerHTML = row.etfs
+        .slice()
+        .sort((a, b) => b.weight - a.weight)
+        .map(etf => `
+          <tr>
+            <td><span class="swatch" style="background:${etf.color}"></span>${escapeHtml(etf.etf_ticker)} ${escapeHtml(etf.etf_name)}</td>
+            <td class="num">${pct(etf.weight)}</td>
+            <td class="num">${fmt.format(etf.shares || 0)}</td>
+            <td>${escapeHtml(etf.date || "-")}</td>
+          </tr>
+        `).join("");
+    }
+
+    function unique(values) {
+      return [...new Set(values)];
+    }
+
+    function actionText(action) {
+      return {
+        added: "新增",
+        removed: "刪除",
+        increased: "增持",
+        decreased: "減持",
+        changed: "變動",
+      }[action] || "變動";
+    }
+
+    function signed(value, digits) {
+      const number = Number(value || 0);
+      const sign = number > 0 ? "+" : "";
+      return `${sign}${number.toFixed(digits)}`;
+    }
+
+    function signedInt(value) {
+      const number = Number(value || 0);
+      const sign = number > 0 ? "+" : "";
+      return `${sign}${fmt.format(number)}`;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    $("search").addEventListener("input", applyFilters);
+    $("etfFilter").addEventListener("change", applyFilters);
+    $("reset").addEventListener("click", () => {
+      $("search").value = "";
+      $("etfFilter").value = "";
+      state.selectedTicker = "";
+      state.selectedEtf = "";
+      applyFilters();
+    });
+
+    loadData().catch(error => {
+      $("stockBody").innerHTML = `<tr><td colspan="5"><div class="empty">${escapeHtml(error.message)}</div></td></tr>`;
+    });
+  </script>
+</body>
+</html>

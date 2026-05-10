@@ -1,0 +1,319 @@
+[
+  {
+    "ticker": "0050",
+    "name": "元大台灣50",
+    "color": "#4a9eff",
+    "tags": [
+      "市值型"
+    ],
+    "type": "passive",
+    "price": 89.95,
+    "price_date": "2026-04-24",
+    "date": "",
+    "aum": "0億"
+  },
+  {
+    "ticker": "0056",
+    "name": "元大高股息",
+    "color": "#4adfb8",
+    "tags": [
+      "高股息型"
+    ],
+    "type": "passive",
+    "price": 40.95,
+    "price_date": "2026-04-24",
+    "date": "",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00878",
+    "name": "國泰永續高股息",
+    "color": "#a78bfa",
+    "tags": [
+      "高股息/ESG"
+    ],
+    "type": "passive",
+    "price": 25.0,
+    "price_date": "2026-04-24",
+    "date": "",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00919",
+    "name": "群益台灣精選高息",
+    "color": "#f472b6",
+    "tags": [
+      "高股息型",
+      "持股待補"
+    ],
+    "type": "passive",
+    "price": 23.5,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "006208",
+    "name": "富邦台50",
+    "color": "#60a5fa",
+    "tags": [
+      "市值型",
+      "同0050"
+    ],
+    "type": "passive",
+    "price": 208.95,
+    "price_date": "2026-04-24",
+    "date": "",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00980A",
+    "name": "主動野村臺灣優選",
+    "color": "#2563eb",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 21.52,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00981A",
+    "name": "主動統一台股增長",
+    "color": "#34d399",
+    "tags": [
+      "台股型",
+      "主動"
+    ],
+    "type": "active",
+    "price": 27.8,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00982A",
+    "name": "主動群益台灣強棒",
+    "color": "#f87171",
+    "tags": [
+      "主動"
+    ],
+    "type": "active",
+    "price": 20.85,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00983A",
+    "name": "主動中信ARK創新",
+    "color": "#0ea5e9",
+    "tags": [
+      "主動",
+      "創新"
+    ],
+    "type": "active",
+    "price": 11.48,
+    "price_date": "2026-04-24",
+    "date": "",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00984A",
+    "name": "主動安聯台灣高息",
+    "color": "#16a34a",
+    "tags": [
+      "主動",
+      "高股息型"
+    ],
+    "type": "active",
+    "price": 13.99,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00985A",
+    "name": "主動野村台灣50",
+    "color": "#1d4ed8",
+    "tags": [
+      "主動",
+      "市值型"
+    ],
+    "type": "active",
+    "price": 19.79,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00986A",
+    "name": "主動台新龍頭成長",
+    "color": "#db2777",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 13.49,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00987A",
+    "name": "主動台新優勢成長",
+    "color": "#be123c",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 15.94,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00990A",
+    "name": "主動元大AI新經濟",
+    "color": "#7c3aed",
+    "tags": [
+      "主動",
+      "AI"
+    ],
+    "type": "active",
+    "price": 15.5,
+    "price_date": "2026-04-24",
+    "date": "2026-04-23",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00992A",
+    "name": "主動群益科技創新",
+    "color": "#818cf8",
+    "tags": [
+      "科技型",
+      "主動"
+    ],
+    "type": "active",
+    "price": 16.93,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00991A",
+    "name": "主動復華未來50",
+    "color": "#facc15",
+    "tags": [
+      "主動"
+    ],
+    "type": "active",
+    "price": 16.25,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00993A",
+    "name": "主動安聯台灣",
+    "color": "#15803d",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 12.37,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00994A",
+    "name": "主動第一金台股優",
+    "color": "#0891b2",
+    "tags": [
+      "主動",
+      "多因子"
+    ],
+    "type": "active",
+    "price": 16.5,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00995A",
+    "name": "主動中信台灣卓越",
+    "color": "#0284c7",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 15.78,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00996A",
+    "name": "主動兆豐台灣豐收",
+    "color": "#65a30d",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 12.76,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00998A",
+    "name": "主動復華金融股息",
+    "color": "#ca8a04",
+    "tags": [
+      "主動",
+      "股息型"
+    ],
+    "type": "active",
+    "price": 15.49,
+    "price_date": "2026-04-24",
+    "date": "",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00400A",
+    "name": "主動國泰動能高息",
+    "color": "#0d9488",
+    "tags": [
+      "主動",
+      "高股息型"
+    ],
+    "type": "active",
+    "price": 12.74,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  },
+  {
+    "ticker": "00401A",
+    "name": "主動摩根台灣鑫收",
+    "color": "#9333ea",
+    "tags": [
+      "主動",
+      "高股息型"
+    ],
+    "type": "active",
+    "price": 11.78,
+    "price_date": "2026-04-24",
+    "date": "2026-04-24",
+    "aum": "0億"
+  }
+]

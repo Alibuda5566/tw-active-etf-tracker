@@ -1,0 +1,232 @@
+{
+  "updated_at": "2026-04-25T19:00:57",
+  "current_date": "2026-04-24",
+  "previous_date": null,
+  "baseline": true,
+  "summary": {
+    "total_changes": 0,
+    "added": 0,
+    "removed": 0,
+    "increased": 0,
+    "decreased": 0,
+    "changed": 0,
+    "etf_count": 23,
+    "stock_count": 354,
+    "holding_links": 1134
+  },
+  "by_etf": {
+    "00400A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 55
+    },
+    "00401A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 62
+    },
+    "0050": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 52
+    },
+    "0056": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 49
+    },
+    "006208": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 51
+    },
+    "00878": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 30
+    },
+    "00919": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 40
+    },
+    "00980A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 50
+    },
+    "00981A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 52
+    },
+    "00982A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 58
+    },
+    "00983A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 39
+    },
+    "00984A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 117
+    },
+    "00985A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 50
+    },
+    "00986A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 27
+    },
+    "00987A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 27
+    },
+    "00990A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 56
+    },
+    "00991A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 50
+    },
+    "00992A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 51
+    },
+    "00993A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 49
+    },
+    "00994A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 36
+    },
+    "00995A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 58
+    },
+    "00996A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 51
+    },
+    "00998A": {
+      "total_changes": 0,
+      "added": 0,
+      "removed": 0,
+      "increased": 0,
+      "decreased": 0,
+      "changed": 0,
+      "holding_count": 24
+    }
+  },
+  "by_stock": [],
+  "changes": [],
+  "top_increases": [],
+  "top_decreases": [],
+  "top_stock_buys": [],
+  "top_stock_sells": []
+}
