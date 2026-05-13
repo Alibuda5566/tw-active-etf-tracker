@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13T11:46:20",
+  "updated_at": "2026-05-14T00:17:56",
   "data_date": "2026-05-13",
   "start_date": "2025-01-01",
   "return_modes": [
@@ -15,7 +15,7 @@
     }
   ],
   "summary": {
-    "active_etf_count": 18,
+    "active_etf_count": 19,
     "best_price_since_inception": {
       "ticker": "00981A",
       "name": "主動統一台股增長",
@@ -100,6 +100,34 @@
       "total_return_ytd": 20.7352,
       "max_drawdown_price": -1.9508,
       "max_drawdown_total": -1.9508,
+      "dividend_count": 0,
+      "dividend_sum": 0,
+      "last_dividend_date": ""
+    },
+    {
+      "ticker": "00403A",
+      "name": "主動統一升級50",
+      "color": "#14b8a6",
+      "launch_date": "2026-05-12",
+      "latest_date": "2026-05-13",
+      "first_close": 10.8,
+      "latest_close": 10.18,
+      "trading_days": 2,
+      "calendar_days": 1,
+      "price_return_since_inception": -5.7407,
+      "total_return_since_inception": -5.7407,
+      "annualized_price_return": -100.0,
+      "annualized_total_return": -100.0,
+      "price_return_1m": -5.7407,
+      "total_return_1m": -5.7407,
+      "price_return_3m": -5.7407,
+      "total_return_3m": -5.7407,
+      "price_return_6m": -5.7407,
+      "total_return_6m": -5.7407,
+      "price_return_ytd": -5.7407,
+      "total_return_ytd": -5.7407,
+      "max_drawdown_price": -5.7407,
+      "max_drawdown_total": -5.7407,
       "dividend_count": 0,
       "dividend_sum": 0,
       "last_dividend_date": ""
@@ -17933,6 +17961,24 @@
         "cash_dividend": 0.0,
         "trading_volume": 12467980
       }
+    ],
+    "00403A": [
+      {
+        "date": "2026-05-12",
+        "close": 10.8,
+        "price_index": 100.0,
+        "total_return_index": 100.0,
+        "cash_dividend": 0.0,
+        "trading_volume": 4204257454
+      },
+      {
+        "date": "2026-05-13",
+        "close": 10.18,
+        "price_index": 94.2593,
+        "total_return_index": 94.2593,
+        "cash_dividend": 0.0,
+        "trading_volume": 3902221403
+      }
     ]
   },
   "dividends": {
@@ -18029,6 +18075,7 @@
     "00996A": [],
     "00998A": [],
     "00400A": [],
-    "00401A": []
+    "00401A": [],
+    "00403A": []
   }
 }

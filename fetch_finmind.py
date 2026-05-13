@@ -43,6 +43,7 @@ ETF_CONFIG = {
     "00998A": {"name": "主動復華金融股息",  "color": "#ca8a04", "tags": ["主動", "股息型"],      "type": "active"},
     "00400A": {"name": "主動國泰動能高息",  "color": "#0d9488", "tags": ["主動", "高股息型"],    "type": "active"},
     "00401A": {"name": "主動摩根台灣鑫收",  "color": "#9333ea", "tags": ["主動", "高股息型"],    "type": "active"},
+    "00403A": {"name": "主動統一升級50",    "color": "#14b8a6", "tags": ["主動", "市值型"],      "type": "active"},
 }
 
 ACTIVE_TICKERS = [t for t, c in ETF_CONFIG.items() if c["type"] == "active"]

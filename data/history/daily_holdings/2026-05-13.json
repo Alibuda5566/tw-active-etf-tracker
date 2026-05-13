@@ -1,6 +1,6 @@
 {
   "data_date": "2026-05-13",
-  "created_at": "2026-05-13T11:47:01",
+  "created_at": "2026-05-14T00:18:39",
   "etfs": {
     "00400A": [
       {
@@ -886,38 +886,440 @@
         "date": "2026-05-13"
       }
     ],
+    "00403A": [
+      {
+        "ticker": "1560",
+        "name": "中砂",
+        "etf_name": "主動統一升級50",
+        "weight": 0.38,
+        "shares": 851000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2049",
+        "name": "上銀科技",
+        "etf_name": "主動統一升級50",
+        "weight": 0.15,
+        "shares": 601000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2303",
+        "name": "聯電",
+        "etf_name": "主動統一升級50",
+        "weight": 3.69,
+        "shares": 53850000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2308",
+        "name": "台達電",
+        "etf_name": "主動統一升級50",
+        "weight": 2.75,
+        "shares": 1823000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2313",
+        "name": "華通",
+        "etf_name": "主動統一升級50",
+        "weight": 0.5,
+        "shares": 3031000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2327",
+        "name": "國巨*",
+        "etf_name": "主動統一升級50",
+        "weight": 1.04,
+        "shares": 3560000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2330",
+        "name": "台積電",
+        "etf_name": "主動統一升級50",
+        "weight": 19.24,
+        "shares": 12440000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2337",
+        "name": "旺宏",
+        "etf_name": "主動統一升級50",
+        "weight": 1.62,
+        "shares": 13832000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2344",
+        "name": "華邦電子",
+        "etf_name": "主動統一升級50",
+        "weight": 0.61,
+        "shares": 7200000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2345",
+        "name": "智邦",
+        "etf_name": "主動統一升級50",
+        "weight": 2.43,
+        "shares": 1430000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2360",
+        "name": "致茂",
+        "etf_name": "主動統一升級50",
+        "weight": 0.89,
+        "shares": 529000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2368",
+        "name": "金像電",
+        "etf_name": "主動統一升級50",
+        "weight": 2.77,
+        "shares": 2941000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2383",
+        "name": "台光電",
+        "etf_name": "主動統一升級50",
+        "weight": 4.27,
+        "shares": 1244000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2454",
+        "name": "聯發科",
+        "etf_name": "主動統一升級50",
+        "weight": 0.38,
+        "shares": 155000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2455",
+        "name": "全新",
+        "etf_name": "主動統一升級50",
+        "weight": 0.04,
+        "shares": 145000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2481",
+        "name": "強茂",
+        "etf_name": "主動統一升級50",
+        "weight": 0.17,
+        "shares": 2001000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2882",
+        "name": "國泰金融",
+        "etf_name": "主動統一升級50",
+        "weight": 0.86,
+        "shares": 16001000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "2891",
+        "name": "中國信託",
+        "etf_name": "主動統一升級50",
+        "weight": 0.45,
+        "shares": 11801000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3017",
+        "name": "奇鋐",
+        "etf_name": "主動統一升級50",
+        "weight": 4.79,
+        "shares": 2660000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3036",
+        "name": "文曄",
+        "etf_name": "主動統一升級50",
+        "weight": 0.47,
+        "shares": 2365000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3037",
+        "name": "欣興",
+        "etf_name": "主動統一升級50",
+        "weight": 3.54,
+        "shares": 5689000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3044",
+        "name": "健鼎科技",
+        "etf_name": "主動統一升級50",
+        "weight": 0.7,
+        "shares": 1894000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3081",
+        "name": "聯亞",
+        "etf_name": "主動統一升級50",
+        "weight": 0.5,
+        "shares": 255000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3105",
+        "name": "穩懋",
+        "etf_name": "主動統一升級50",
+        "weight": 0.33,
+        "shares": 957000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3211",
+        "name": "順達",
+        "etf_name": "主動統一升級50",
+        "weight": 0.44,
+        "shares": 1601000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3443",
+        "name": "創意",
+        "etf_name": "主動統一升級50",
+        "weight": 0.54,
+        "shares": 145000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3529",
+        "name": "力旺電子",
+        "etf_name": "主動統一升級50",
+        "weight": 0.7,
+        "shares": 255000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3533",
+        "name": "嘉澤",
+        "etf_name": "主動統一升級50",
+        "weight": 1.09,
+        "shares": 605000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3583",
+        "name": "辛耘",
+        "etf_name": "主動統一升級50",
+        "weight": 0.49,
+        "shares": 734000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3653",
+        "name": "健策",
+        "etf_name": "主動統一升級50",
+        "weight": 1.06,
+        "shares": 430000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3665",
+        "name": "貿聯-KY",
+        "etf_name": "主動統一升級50",
+        "weight": 2.02,
+        "shares": 1160000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "3711",
+        "name": "日月光投控",
+        "etf_name": "主動統一升級50",
+        "weight": 3.41,
+        "shares": 8920000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "4958",
+        "name": "臻鼎-KY",
+        "etf_name": "主動統一升級50",
+        "weight": 1.11,
+        "shares": 3600000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "4966",
+        "name": "譜瑞-KY",
+        "etf_name": "主動統一升級50",
+        "weight": 0.44,
+        "shares": 784000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "4979",
+        "name": "華星光通科技",
+        "etf_name": "主動統一升級50",
+        "weight": 0.36,
+        "shares": 860000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "5274",
+        "name": "信驊",
+        "etf_name": "主動統一升級50",
+        "weight": 1.8,
+        "shares": 145000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "5347",
+        "name": "世界",
+        "etf_name": "主動統一升級50",
+        "weight": 1.16,
+        "shares": 9901000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "6147",
+        "name": "頎邦",
+        "etf_name": "主動統一升級50",
+        "weight": 0.41,
+        "shares": 3100000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "6223",
+        "name": "旺矽",
+        "etf_name": "主動統一升級50",
+        "weight": 1.2,
+        "shares": 300000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "6274",
+        "name": "台燿",
+        "etf_name": "主動統一升級50",
+        "weight": 0.56,
+        "shares": 551000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "6442",
+        "name": "光聖",
+        "etf_name": "主動統一升級50",
+        "weight": 0.2,
+        "shares": 160000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "6515",
+        "name": "穎崴",
+        "etf_name": "主動統一升級50",
+        "weight": 0.54,
+        "shares": 79000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "6669",
+        "name": "緯穎",
+        "etf_name": "主動統一升級50",
+        "weight": 2.37,
+        "shares": 610000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "6805",
+        "name": "富世達",
+        "etf_name": "主動統一升級50",
+        "weight": 0.27,
+        "shares": 215000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "7769",
+        "name": "鴻勁精密",
+        "etf_name": "主動統一升級50",
+        "weight": 0.86,
+        "shares": 166000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "8046",
+        "name": "南電",
+        "etf_name": "主動統一升級50",
+        "weight": 1.59,
+        "shares": 2590000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "8210",
+        "name": "勤誠",
+        "etf_name": "主動統一升級50",
+        "weight": 0.59,
+        "shares": 553000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "8299",
+        "name": "群聯電子",
+        "etf_name": "主動統一升級50",
+        "weight": 2.06,
+        "shares": 1128000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "8358",
+        "name": "金居",
+        "etf_name": "主動統一升級50",
+        "weight": 0.49,
+        "shares": 1551000,
+        "date": "2026-05-13"
+      },
+      {
+        "ticker": "8996",
+        "name": "高力",
+        "etf_name": "主動統一升級50",
+        "weight": 0.63,
+        "shares": 883000,
+        "date": "2026-05-13"
+      }
+    ],
     "0050": [
       {
         "ticker": "1216",
         "name": "統一",
         "etf_name": "元大台灣50",
-        "weight": 0.39,
-        "shares": 95652546,
-        "date": "2026-05-12"
+        "weight": 0.41,
+        "shares": 95668086,
+        "date": "2026-05-13"
       },
       {
         "ticker": "1301",
         "name": "FORMOSA PLASTICS CORP",
         "etf_name": "元大台灣50",
         "weight": 0.22,
-        "shares": 81500559,
-        "date": "2026-05-12"
+        "shares": 81513801,
+        "date": "2026-05-13"
       },
       {
         "ticker": "1303",
         "name": "南亞塑膠",
         "etf_name": "元大台灣50",
         "weight": 0.47,
-        "shares": 95713771,
-        "date": "2026-05-12"
+        "shares": 95729323,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2002",
         "name": "中鋼",
         "etf_name": "元大台灣50",
-        "weight": 0.22,
-        "shares": 217129421,
-        "date": "2026-05-12"
+        "weight": 0.23,
+        "shares": 217164707,
+        "date": "2026-05-13"
       },
       {
         "ticker": "202605NYF",
@@ -925,383 +1327,383 @@
         "etf_name": "元大台灣50",
         "weight": 0.09,
         "shares": 1738,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "202605TX",
         "name": "臺股期貨",
         "etf_name": "元大台灣50",
-        "weight": 0.12,
+        "weight": 0.13,
         "shares": 268,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2059",
         "name": "川湖",
         "etf_name": "元大台灣50",
         "weight": 0.33,
-        "shares": 1102989,
-        "date": "2026-05-12"
+        "shares": 1103163,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2207",
         "name": "和泰車",
         "etf_name": "元大台灣50",
-        "weight": 0.14,
-        "shares": 5436360,
-        "date": "2026-05-12"
+        "weight": 0.15,
+        "shares": 5437242,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2301",
         "name": "光寶科",
         "etf_name": "元大台灣50",
-        "weight": 0.49,
-        "shares": 37732601,
-        "date": "2026-05-12"
+        "weight": 0.45,
+        "shares": 37738733,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2303",
         "name": "聯電",
         "etf_name": "元大台灣50",
-        "weight": 1.32,
-        "shares": 226406028,
-        "date": "2026-05-12"
+        "weight": 1.26,
+        "shares": 226442820,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2308",
         "name": "台達電",
         "etf_name": "元大台灣50",
-        "weight": 4.62,
-        "shares": 37814764,
-        "date": "2026-05-12"
+        "weight": 4.63,
+        "shares": 37820860,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2317",
         "name": "鴻海",
         "etf_name": "元大台灣50",
-        "weight": 3.31,
-        "shares": 237544197,
-        "date": "2026-05-12"
+        "weight": 3.37,
+        "shares": 237582699,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2327",
         "name": "國巨*",
         "etf_name": "元大台灣50",
-        "weight": 0.7,
-        "shares": 30157087,
-        "date": "2026-05-12"
+        "weight": 0.72,
+        "shares": 30161983,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2330",
         "name": "台積電",
         "etf_name": "元大台灣50",
-        "weight": 59.71,
-        "shares": 475652691,
-        "date": "2026-05-12"
+        "weight": 59.67,
+        "shares": 475729641,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2344",
         "name": "華邦電子",
         "etf_name": "元大台灣50",
-        "weight": 0.41,
-        "shares": 60615206,
-        "date": "2026-05-12"
+        "weight": 0.42,
+        "shares": 60625052,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2345",
         "name": "智邦",
         "etf_name": "元大台灣50",
-        "weight": 1.36,
-        "shares": 9676406,
-        "date": "2026-05-12"
+        "weight": 1.33,
+        "shares": 9677966,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2357",
         "name": "華碩",
         "etf_name": "元大台灣50",
         "weight": 0.5,
-        "shares": 13266572,
-        "date": "2026-05-12"
+        "shares": 13268726,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2360",
         "name": "致茂",
         "etf_name": "元大台灣50",
         "weight": 0.98,
-        "shares": 7199371,
-        "date": "2026-05-12"
+        "shares": 7200535,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2368",
         "name": "金像電",
         "etf_name": "元大台灣50",
-        "weight": 0.52,
-        "shares": 6686858,
-        "date": "2026-05-12"
+        "weight": 0.51,
+        "shares": 6687944,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2382",
         "name": "廣達電腦",
         "etf_name": "元大台灣50",
-        "weight": 0.97,
-        "shares": 51458690,
-        "date": "2026-05-12"
+        "weight": 0.99,
+        "shares": 51467018,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2383",
         "name": "台光電",
         "etf_name": "元大台灣50",
-        "weight": 1.52,
-        "shares": 5590274,
-        "date": "2026-05-12"
+        "weight": 1.56,
+        "shares": 5591174,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2395",
         "name": "研華",
         "etf_name": "元大台灣50",
-        "weight": 0.25,
-        "shares": 8919844,
-        "date": "2026-05-12"
+        "weight": 0.23,
+        "shares": 8921290,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2408",
         "name": "南亞科技",
         "etf_name": "元大台灣50",
-        "weight": 0.39,
-        "shares": 21817310,
-        "date": "2026-05-12"
+        "weight": 0.4,
+        "shares": 21820850,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2412",
         "name": "中華電信",
         "etf_name": "元大台灣50",
-        "weight": 0.56,
-        "shares": 74131902,
-        "date": "2026-05-12"
+        "weight": 0.58,
+        "shares": 74143950,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2449",
         "name": "京元電子",
         "etf_name": "元大台灣50",
-        "weight": 0.35,
-        "shares": 21127694,
-        "date": "2026-05-12"
+        "weight": 0.36,
+        "shares": 21131126,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2454",
         "name": "聯發科",
         "etf_name": "元大台灣50",
-        "weight": 5.9,
-        "shares": 28641946,
-        "date": "2026-05-12"
+        "weight": 5.66,
+        "shares": 28646584,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2603",
         "name": "長榮海運",
         "etf_name": "元大台灣50",
         "weight": 0.25,
-        "shares": 21107558,
-        "date": "2026-05-12"
+        "shares": 21110984,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2880",
         "name": "華南金控",
         "etf_name": "元大台灣50",
         "weight": 0.33,
-        "shares": 180719477,
-        "date": "2026-05-12"
+        "shares": 180748847,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2881",
         "name": "富邦金",
         "etf_name": "元大台灣50",
-        "weight": 0.85,
-        "shares": 162093581,
-        "date": "2026-05-12"
+        "weight": 0.87,
+        "shares": 162119921,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2882",
         "name": "國泰金融",
         "etf_name": "元大台灣50",
-        "weight": 0.77,
-        "shares": 181883021,
-        "date": "2026-05-12"
+        "weight": 0.79,
+        "shares": 181912577,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2883",
         "name": "凱基金控",
         "etf_name": "元大台灣50",
-        "weight": 0.37,
+        "weight": 0.38,
         "shares": 306903939,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2884",
         "name": "玉山金融控股",
         "etf_name": "元大台灣50",
-        "weight": 0.53,
-        "shares": 298143961,
-        "date": "2026-05-12"
+        "weight": 0.54,
+        "shares": 298192411,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2885",
         "name": "元大金",
         "etf_name": "元大台灣50",
-        "weight": 0.64,
-        "shares": 211869068,
-        "date": "2026-05-12"
+        "weight": 0.67,
+        "shares": 211903466,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2886",
         "name": "兆豐金",
         "etf_name": "元大台灣50",
-        "weight": 0.5,
-        "shares": 229434377,
-        "date": "2026-05-12"
+        "weight": 0.51,
+        "shares": 229471661,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2887",
         "name": "台新新光金",
         "etf_name": "元大台灣50",
-        "weight": 0.57,
-        "shares": 446836832,
-        "date": "2026-05-12"
+        "weight": 0.58,
+        "shares": 446909420,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2890",
         "name": "永豐金融",
         "etf_name": "元大台灣50",
-        "weight": 0.42,
-        "shares": 246363137,
-        "date": "2026-05-12"
+        "weight": 0.43,
+        "shares": 246470157,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2891",
         "name": "中國信託",
         "etf_name": "元大台灣50",
-        "weight": 1.03,
-        "shares": 344993327,
-        "date": "2026-05-12"
+        "weight": 1.07,
+        "shares": 345049067,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2892",
         "name": "第一金",
         "etf_name": "元大台灣50",
-        "weight": 0.34,
-        "shares": 210789451,
-        "date": "2026-05-12"
+        "weight": 0.35,
+        "shares": 210823705,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3008",
         "name": "大立光",
         "etf_name": "元大台灣50",
-        "weight": 0.29,
-        "shares": 1864980,
-        "date": "2026-05-12"
+        "weight": 0.3,
+        "shares": 1865280,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3017",
         "name": "奇鋐",
         "etf_name": "元大台灣50",
-        "weight": 0.89,
-        "shares": 6325151,
-        "date": "2026-05-12"
+        "weight": 0.92,
+        "shares": 6326171,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3037",
         "name": "欣興",
         "etf_name": "元大台灣50",
-        "weight": 1.27,
-        "shares": 25988056,
-        "date": "2026-05-12"
+        "weight": 1.31,
+        "shares": 25992262,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3045",
         "name": "台灣大哥",
         "etf_name": "元大台灣50",
         "weight": 0.17,
-        "shares": 27458168,
-        "date": "2026-05-12"
+        "shares": 27462626,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3231",
         "name": "緯創資通",
         "etf_name": "元大台灣50",
         "weight": 0.47,
-        "shares": 59425185,
-        "date": "2026-05-12"
+        "shares": 59434839,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3653",
         "name": "健策",
         "etf_name": "元大台灣50",
-        "weight": 0.36,
-        "shares": 1637375,
-        "date": "2026-05-12"
+        "weight": 0.33,
+        "shares": 1637639,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3661",
         "name": "世芯-KY",
         "etf_name": "元大台灣50",
-        "weight": 0.46,
-        "shares": 1543571,
-        "date": "2026-05-12"
+        "weight": 0.42,
+        "shares": 1543817,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3711",
         "name": "日月光投控",
         "etf_name": "元大台灣50",
-        "weight": 1.98,
-        "shares": 64117214,
-        "date": "2026-05-12"
+        "weight": 1.99,
+        "shares": 64127570,
+        "date": "2026-05-13"
       },
       {
         "ticker": "4904",
         "name": "遠傳",
         "etf_name": "元大台灣50",
-        "weight": 0.18,
-        "shares": 34457234,
-        "date": "2026-05-12"
+        "weight": 0.19,
+        "shares": 34462832,
+        "date": "2026-05-13"
       },
       {
         "ticker": "5880",
         "name": "合庫金",
         "etf_name": "元大台灣50",
         "weight": 0.26,
-        "shares": 203277346,
-        "date": "2026-05-12"
+        "shares": 203310382,
+        "date": "2026-05-13"
       },
       {
         "ticker": "6505",
         "name": "台塑化",
         "etf_name": "元大台灣50",
         "weight": 0.07,
-        "shares": 23129240,
-        "date": "2026-05-12"
+        "shares": 23132996,
+        "date": "2026-05-13"
       },
       {
         "ticker": "6669",
         "name": "緯穎",
         "etf_name": "元大台灣50",
-        "weight": 0.65,
-        "shares": 2010534,
-        "date": "2026-05-12"
+        "weight": 0.63,
+        "shares": 2010858,
+        "date": "2026-05-13"
       },
       {
         "ticker": "6919",
         "name": "康霈*",
         "etf_name": "元大台灣50",
         "weight": 0.1,
-        "shares": 18707385,
-        "date": "2026-05-12"
+        "shares": 18710517,
+        "date": "2026-05-13"
       },
       {
         "ticker": "7769",
         "name": "鴻勁精密",
         "etf_name": "元大台灣50",
-        "weight": 0.42,
-        "shares": 1108400,
-        "date": "2026-05-12"
+        "weight": 0.47,
+        "shares": 1108580,
+        "date": "2026-05-13"
       }
     ],
     "0056": [
@@ -1309,409 +1711,409 @@
         "ticker": "1102",
         "name": "亞泥",
         "etf_name": "元大高股息",
-        "weight": 0.82,
-        "shares": 149773699,
-        "date": "2026-05-12"
+        "weight": 0.84,
+        "shares": 149141063,
+        "date": "2026-05-13"
       },
       {
         "ticker": "1216",
         "name": "統一",
         "etf_name": "元大高股息",
-        "weight": 2.26,
-        "shares": 195464753,
-        "date": "2026-05-12"
+        "weight": 2.34,
+        "shares": 194678100,
+        "date": "2026-05-13"
       },
       {
         "ticker": "1319",
         "name": "東陽",
         "etf_name": "元大高股息",
         "weight": 0.34,
-        "shares": 26895456,
-        "date": "2026-05-12"
+        "shares": 26782096,
+        "date": "2026-05-13"
       },
       {
         "ticker": "1477",
         "name": "聚陽實業",
         "etf_name": "元大高股息",
-        "weight": 0.41,
-        "shares": 11480492,
-        "date": "2026-05-12"
+        "weight": 0.42,
+        "shares": 11433186,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2006",
         "name": "東和鋼鐵",
         "etf_name": "元大高股息",
         "weight": 0.35,
-        "shares": 33345589,
-        "date": "2026-05-12"
+        "shares": 33205524,
+        "date": "2026-05-13"
       },
       {
         "ticker": "202605TX",
         "name": "臺股期貨",
         "etf_name": "元大高股息",
-        "weight": 0.85,
-        "shares": 645,
-        "date": "2026-05-12"
+        "weight": 0.78,
+        "shares": 585,
+        "date": "2026-05-13"
       },
       {
         "ticker": "202606TX",
         "name": "臺股期貨",
         "etf_name": "元大高股息",
-        "weight": 0.11,
-        "shares": 80,
-        "date": "2026-05-12"
+        "weight": 0.19,
+        "shares": 140,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2027",
         "name": "大成鋼",
         "etf_name": "元大高股息",
-        "weight": 0.67,
-        "shares": 106116181,
-        "date": "2026-05-12"
+        "weight": 0.64,
+        "shares": 105678873,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2105",
         "name": "正新",
         "etf_name": "元大高股息",
-        "weight": 0.77,
-        "shares": 153858337,
-        "date": "2026-05-12"
+        "weight": 0.76,
+        "shares": 153236601,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2301",
         "name": "光寶科",
         "etf_name": "元大高股息",
-        "weight": 3.54,
-        "shares": 95505443,
-        "date": "2026-05-12"
+        "weight": 3.22,
+        "shares": 95129829,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2303",
         "name": "聯電",
         "etf_name": "元大高股息",
-        "weight": 6.92,
-        "shares": 418953396,
-        "date": "2026-05-12"
+        "weight": 6.57,
+        "shares": 417316543,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2317",
         "name": "鴻海",
         "etf_name": "元大高股息",
-        "weight": 2.54,
-        "shares": 64359573,
-        "date": "2026-05-12"
+        "weight": 2.57,
+        "shares": 64102224,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2324",
         "name": "仁寶",
         "etf_name": "元大高股息",
-        "weight": 0.97,
-        "shares": 204187793,
-        "date": "2026-05-12"
+        "weight": 1.02,
+        "shares": 203368767,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2347",
         "name": "聯強",
         "etf_name": "元大高股息",
-        "weight": 1.09,
-        "shares": 81115826,
-        "date": "2026-05-12"
+        "weight": 1.07,
+        "shares": 80795911,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2353",
         "name": "宏碁",
         "etf_name": "元大高股息",
-        "weight": 0.59,
-        "shares": 132441355,
-        "date": "2026-05-12"
+        "weight": 0.6,
+        "shares": 131893521,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2356",
         "name": "英業達",
         "etf_name": "元大高股息",
-        "weight": 1.25,
-        "shares": 162901135,
-        "date": "2026-05-12"
+        "weight": 1.37,
+        "shares": 162247353,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2357",
         "name": "華碩",
         "etf_name": "元大高股息",
-        "weight": 3.72,
-        "shares": 34988565,
-        "date": "2026-05-12"
+        "weight": 3.7,
+        "shares": 34853296,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2376",
         "name": "技嘉科技",
         "etf_name": "元大高股息",
-        "weight": 1.6,
-        "shares": 31599120,
-        "date": "2026-05-12"
+        "weight": 1.58,
+        "shares": 31470718,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2377",
         "name": "微星",
         "etf_name": "元大高股息",
-        "weight": 0.64,
-        "shares": 38443140,
-        "date": "2026-05-12"
+        "weight": 0.71,
+        "shares": 38285962,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2379",
         "name": "瑞昱",
         "etf_name": "元大高股息",
-        "weight": 2.22,
-        "shares": 25331680,
-        "date": "2026-05-12"
+        "weight": 2.23,
+        "shares": 25233362,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2382",
         "name": "廣達電腦",
         "etf_name": "元大高股息",
-        "weight": 4.1,
-        "shares": 76253628,
-        "date": "2026-05-12"
+        "weight": 4.14,
+        "shares": 75954750,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2385",
         "name": "群光",
         "etf_name": "元大高股息",
-        "weight": 0.72,
-        "shares": 33811093,
-        "date": "2026-05-12"
+        "weight": 0.69,
+        "shares": 33671573,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2449",
         "name": "京元電子",
         "etf_name": "元大高股息",
-        "weight": 2.57,
-        "shares": 54069070,
-        "date": "2026-05-12"
+        "weight": 2.63,
+        "shares": 53852596,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2454",
         "name": "聯發科",
         "etf_name": "元大高股息",
-        "weight": 9.16,
-        "shares": 15659267,
-        "date": "2026-05-12"
+        "weight": 8.72,
+        "shares": 15597791,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2474",
         "name": "可成",
         "etf_name": "元大高股息",
         "weight": 0.85,
-        "shares": 26203046,
-        "date": "2026-05-12"
+        "shares": 26105164,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2603",
         "name": "長榮海運",
         "etf_name": "元大高股息",
-        "weight": 3.14,
-        "shares": 92678630,
-        "date": "2026-05-12"
+        "weight": 3.1,
+        "shares": 92317404,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2618",
         "name": "長榮航",
         "etf_name": "元大高股息",
-        "weight": 1.41,
-        "shares": 253392877,
-        "date": "2026-05-12"
+        "weight": 1.39,
+        "shares": 252377651,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2645",
         "name": "長榮航太",
         "etf_name": "元大高股息",
         "weight": 0.35,
-        "shares": 13956670,
-        "date": "2026-05-12"
+        "shares": 13903042,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2880",
         "name": "華南金控",
         "etf_name": "元大高股息",
-        "weight": 2.68,
-        "shares": 521610547,
-        "date": "2026-05-12"
+        "weight": 2.72,
+        "shares": 519548158,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2883",
         "name": "凱基金控",
         "etf_name": "元大高股息",
-        "weight": 2.01,
-        "shares": 587329306,
-        "date": "2026-05-12"
+        "weight": 2.05,
+        "shares": 584919534,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2884",
         "name": "玉山金融控股",
         "etf_name": "元大高股息",
-        "weight": 1.82,
-        "shares": 361302211,
-        "date": "2026-05-12"
+        "weight": 1.84,
+        "shares": 359824825,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2885",
         "name": "元大金",
         "etf_name": "元大高股息",
-        "weight": 3.28,
-        "shares": 380313260,
-        "date": "2026-05-12"
+        "weight": 3.38,
+        "shares": 378829552,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2886",
         "name": "兆豐金",
         "etf_name": "元大高股息",
-        "weight": 2.32,
-        "shares": 374180727,
-        "date": "2026-05-12"
+        "weight": 2.36,
+        "shares": 372724596,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2887",
         "name": "台新新光金",
         "etf_name": "元大高股息",
-        "weight": 1.59,
-        "shares": 436227950,
-        "date": "2026-05-12"
+        "weight": 1.61,
+        "shares": 434360998,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2890",
         "name": "永豐金融",
         "etf_name": "元大高股息",
-        "weight": 2.7,
-        "shares": 559393717,
-        "date": "2026-05-12"
+        "weight": 2.72,
+        "shares": 557171970,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2891",
         "name": "中國信託",
         "etf_name": "元大高股息",
-        "weight": 3.86,
-        "shares": 456613510,
-        "date": "2026-05-12"
+        "weight": 3.99,
+        "shares": 454798115,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3005",
         "name": "神基科技",
         "etf_name": "元大高股息",
         "weight": 0.46,
-        "shares": 29299457,
-        "date": "2026-05-12"
+        "shares": 29180974,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3023",
         "name": "信邦電子",
         "etf_name": "元大高股息",
         "weight": 0.54,
-        "shares": 11242497,
-        "date": "2026-05-12"
+        "shares": 11196499,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3034",
         "name": "NOVATEK MICROELECTRONICS COR",
         "etf_name": "元大高股息",
-        "weight": 2.2,
-        "shares": 28513339,
-        "date": "2026-05-12"
+        "weight": 2.21,
+        "shares": 28402486,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3036",
         "name": "文曄",
         "etf_name": "元大高股息",
-        "weight": 2.52,
-        "shares": 57839486,
-        "date": "2026-05-12"
+        "weight": 2.62,
+        "shares": 57615273,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3044",
         "name": "健鼎科技",
         "etf_name": "元大高股息",
-        "weight": 1.88,
-        "shares": 24785477,
-        "date": "2026-05-12"
+        "weight": 2.09,
+        "shares": 24689775,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3045",
         "name": "台灣大哥",
         "etf_name": "元大高股息",
-        "weight": 2.44,
-        "shares": 140478594,
-        "date": "2026-05-12"
+        "weight": 2.51,
+        "shares": 139927490,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3231",
         "name": "緯創資通",
         "etf_name": "元大高股息",
         "weight": 2.72,
-        "shares": 121456233,
-        "date": "2026-05-12"
+        "shares": 120976742,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3702",
         "name": "大聯大",
         "etf_name": "元大高股息",
-        "weight": 1.37,
-        "shares": 75847665,
-        "date": "2026-05-12"
+        "weight": 1.34,
+        "shares": 75541702,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3711",
         "name": "日月光投控",
         "etf_name": "元大高股息",
-        "weight": 5.64,
-        "shares": 64272721,
-        "date": "2026-05-12"
+        "weight": 5.61,
+        "shares": 64016135,
+        "date": "2026-05-13"
       },
       {
         "ticker": "4938",
         "name": "和碩",
         "etf_name": "元大高股息",
-        "weight": 1.54,
-        "shares": 120407192,
-        "date": "2026-05-12"
+        "weight": 1.57,
+        "shares": 119932170,
+        "date": "2026-05-13"
       },
       {
         "ticker": "5876",
         "name": "上海商銀",
         "etf_name": "元大高股息",
-        "weight": 1.36,
-        "shares": 214092559,
-        "date": "2026-05-12"
+        "weight": 1.37,
+        "shares": 213227317,
+        "date": "2026-05-13"
       },
       {
         "ticker": "6176",
         "name": "瑞儀光電",
         "etf_name": "元大高股息",
         "weight": 0.33,
-        "shares": 20042316,
-        "date": "2026-05-12"
+        "shares": 19958495,
+        "date": "2026-05-13"
       },
       {
         "ticker": "6239",
         "name": "力成科技",
         "etf_name": "元大高股息",
-        "weight": 1.29,
-        "shares": 36014502,
-        "date": "2026-05-12"
+        "weight": 1.33,
+        "shares": 35874328,
+        "date": "2026-05-13"
       },
       {
         "ticker": "6285",
         "name": "啟碁",
         "etf_name": "元大高股息",
-        "weight": 1.02,
-        "shares": 22923169,
-        "date": "2026-05-12"
+        "weight": 0.99,
+        "shares": 22830301,
+        "date": "2026-05-13"
       },
       {
         "ticker": "9904",
         "name": "寶成",
         "etf_name": "元大高股息",
-        "weight": 0.45,
-        "shares": 111242314,
-        "date": "2026-05-12"
+        "weight": 0.46,
+        "shares": 110790182,
+        "date": "2026-05-13"
       }
     ],
     "006208": [
@@ -1719,9 +2121,9 @@
         "ticker": "1216",
         "name": "統一",
         "etf_name": "富邦台50",
-        "weight": 0.39,
+        "weight": 0.41,
         "shares": 22138765,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "1301",
@@ -1729,23 +2131,23 @@
         "etf_name": "富邦台50",
         "weight": 0.22,
         "shares": 18864117,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "1303",
         "name": "南亞塑膠",
         "etf_name": "富邦台50",
-        "weight": 0.48,
+        "weight": 0.47,
         "shares": 22153502,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2002",
         "name": "中鋼",
         "etf_name": "富邦台50",
-        "weight": 0.22,
+        "weight": 0.23,
         "shares": 50255307,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "202605WTXK6F",
@@ -1753,87 +2155,87 @@
         "etf_name": "富邦台50",
         "weight": 0.2,
         "shares": 99,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2059",
         "name": "川湖",
         "etf_name": "富邦台50",
-        "weight": 0.34,
+        "weight": 0.33,
         "shares": 256000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2207",
         "name": "和泰車",
         "etf_name": "富邦台50",
-        "weight": 0.14,
+        "weight": 0.15,
         "shares": 1259044,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2301",
         "name": "光寶科",
         "etf_name": "富邦台50",
-        "weight": 0.49,
+        "weight": 0.45,
         "shares": 8734000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2303",
         "name": "聯電",
         "etf_name": "富邦台50",
-        "weight": 1.32,
+        "weight": 1.26,
         "shares": 52401891,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2308",
         "name": "台達電",
         "etf_name": "富邦台50",
-        "weight": 4.6,
+        "weight": 4.61,
         "shares": 8699581,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2317",
         "name": "鴻海",
         "etf_name": "富邦台50",
-        "weight": 3.3,
+        "weight": 3.37,
         "shares": 54834679,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2327",
         "name": "國巨*",
         "etf_name": "富邦台50",
-        "weight": 0.71,
+        "weight": 0.72,
         "shares": 6980728,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2330",
         "name": "台積電",
         "etf_name": "富邦台50",
-        "weight": 59.72,
+        "weight": 59.68,
         "shares": 109918064,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2344",
         "name": "華邦電子",
         "etf_name": "富邦台50",
-        "weight": 0.41,
+        "weight": 0.42,
         "shares": 14030000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2345",
         "name": "智邦",
         "etf_name": "富邦台50",
-        "weight": 1.36,
+        "weight": 1.33,
         "shares": 2229000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2357",
@@ -1841,7 +2243,7 @@
         "etf_name": "富邦台50",
         "weight": 0.5,
         "shares": 3070657,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2360",
@@ -1849,71 +2251,71 @@
         "etf_name": "富邦台50",
         "weight": 0.98,
         "shares": 1659000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2368",
         "name": "金像電",
         "etf_name": "富邦台50",
-        "weight": 0.52,
+        "weight": 0.51,
         "shares": 1548000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2382",
         "name": "廣達電腦",
         "etf_name": "富邦台50",
-        "weight": 0.97,
+        "weight": 0.99,
         "shares": 11864301,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2383",
         "name": "台光電",
         "etf_name": "富邦台50",
-        "weight": 1.52,
+        "weight": 1.55,
         "shares": 1289000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2395",
         "name": "研華",
         "etf_name": "富邦台50",
-        "weight": 0.25,
+        "weight": 0.23,
         "shares": 2064538,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2408",
         "name": "南亞科技",
         "etf_name": "富邦台50",
-        "weight": 0.39,
+        "weight": 0.4,
         "shares": 5050000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2412",
         "name": "中華電信",
         "etf_name": "富邦台50",
-        "weight": 0.56,
+        "weight": 0.58,
         "shares": 17158072,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2449",
         "name": "京元電子",
         "etf_name": "富邦台50",
-        "weight": 0.35,
+        "weight": 0.36,
         "shares": 4890000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2454",
         "name": "聯發科",
         "etf_name": "富邦台50",
-        "weight": 5.9,
+        "weight": 5.66,
         "shares": 6621042,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2603",
@@ -1921,87 +2323,87 @@
         "etf_name": "富邦台50",
         "weight": 0.25,
         "shares": 4886000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2880",
         "name": "華南金控",
         "etf_name": "富邦台50",
-        "weight": 0.33,
+        "weight": 0.34,
         "shares": 41828046,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2881",
         "name": "富邦金",
         "etf_name": "富邦台50",
-        "weight": 0.85,
+        "weight": 0.87,
         "shares": 37517543,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2882",
         "name": "國泰金融",
         "etf_name": "富邦台50",
-        "weight": 0.77,
+        "weight": 0.8,
         "shares": 42097200,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2883",
         "name": "凱基金控",
         "etf_name": "富邦台50",
-        "weight": 0.37,
+        "weight": 0.38,
         "shares": 70906545,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2884",
         "name": "玉山金融控股",
         "etf_name": "富邦台50",
-        "weight": 0.53,
+        "weight": 0.54,
         "shares": 69005867,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2885",
         "name": "元大金",
         "etf_name": "富邦台50",
-        "weight": 0.64,
+        "weight": 0.67,
         "shares": 48991456,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2886",
         "name": "兆豐金",
         "etf_name": "富邦台50",
-        "weight": 0.5,
+        "weight": 0.51,
         "shares": 53103130,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2887",
         "name": "台新新光金",
         "etf_name": "富邦台50",
-        "weight": 0.57,
+        "weight": 0.59,
         "shares": 103375500,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2890",
         "name": "永豐金融",
         "etf_name": "富邦台50",
-        "weight": 0.42,
+        "weight": 0.43,
         "shares": 56998373,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2891",
         "name": "中國信託",
         "etf_name": "富邦台50",
-        "weight": 1.02,
+        "weight": 1.07,
         "shares": 79386506,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2892",
@@ -2009,31 +2411,31 @@
         "etf_name": "富邦台50",
         "weight": 0.35,
         "shares": 48787640,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3008",
         "name": "大立光",
         "etf_name": "富邦台50",
-        "weight": 0.29,
+        "weight": 0.3,
         "shares": 432468,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3017",
         "name": "奇鋐",
         "etf_name": "富邦台50",
-        "weight": 0.89,
+        "weight": 0.92,
         "shares": 1458000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3037",
         "name": "欣興",
         "etf_name": "富邦台50",
-        "weight": 1.26,
+        "weight": 1.31,
         "shares": 5999000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3045",
@@ -2041,7 +2443,7 @@
         "etf_name": "富邦台50",
         "weight": 0.17,
         "shares": 6355368,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3231",
@@ -2049,39 +2451,39 @@
         "etf_name": "富邦台50",
         "weight": 0.47,
         "shares": 13754000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3653",
         "name": "健策",
         "etf_name": "富邦台50",
-        "weight": 0.36,
+        "weight": 0.33,
         "shares": 379000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3661",
         "name": "世芯-KY",
         "etf_name": "富邦台50",
-        "weight": 0.46,
+        "weight": 0.42,
         "shares": 358000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3711",
         "name": "日月光投控",
         "etf_name": "富邦台50",
-        "weight": 1.97,
+        "weight": 1.98,
         "shares": 14749577,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "4904",
         "name": "遠傳",
         "etf_name": "富邦台50",
-        "weight": 0.18,
+        "weight": 0.19,
         "shares": 7975506,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "5880",
@@ -2089,7 +2491,7 @@
         "etf_name": "富邦台50",
         "weight": 0.26,
         "shares": 47049109,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6505",
@@ -2097,31 +2499,31 @@
         "etf_name": "富邦台50",
         "weight": 0.07,
         "shares": 5354203,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6669",
         "name": "緯穎",
         "etf_name": "富邦台50",
-        "weight": 0.65,
+        "weight": 0.64,
         "shares": 466000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6919",
         "name": "康霈*",
         "etf_name": "富邦台50",
-        "weight": 0.1,
+        "weight": 0.11,
         "shares": 4453000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "7769",
         "name": "鴻勁精密",
         "etf_name": "富邦台50",
-        "weight": 0.43,
+        "weight": 0.47,
         "shares": 257000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       }
     ],
     "00878": [
@@ -2129,113 +2531,113 @@
         "ticker": "1216",
         "name": "統一",
         "etf_name": "國泰永續高股息",
-        "weight": 1.89,
+        "weight": 1.96,
         "shares": 138570000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "1402",
         "name": "遠東新",
         "etf_name": "國泰永續高股息",
-        "weight": 1.11,
+        "weight": 1.12,
         "shares": 222859000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "202605TX",
         "name": "臺股期貨",
         "etf_name": "國泰永續高股息",
-        "weight": 3.01,
-        "shares": 1930,
-        "date": "2026-05-12"
+        "weight": 2.95,
+        "shares": 1894,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2301",
         "name": "光寶科",
         "etf_name": "國泰永續高股息",
-        "weight": 3.04,
+        "weight": 2.76,
         "shares": 69293000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2303",
         "name": "聯電",
         "etf_name": "國泰永續高股息",
-        "weight": 10.21,
+        "weight": 9.68,
         "shares": 522856000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2324",
         "name": "仁寶",
         "etf_name": "國泰永續高股息",
-        "weight": 0.95,
+        "weight": 1.0,
         "shares": 170603000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2356",
         "name": "英業達",
         "etf_name": "國泰永續高股息",
-        "weight": 1.33,
+        "weight": 1.45,
         "shares": 145694000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2357",
         "name": "華碩",
         "etf_name": "國泰永續高股息",
-        "weight": 3.89,
+        "weight": 3.86,
         "shares": 30929000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2376",
         "name": "技嘉科技",
         "etf_name": "國泰永續高股息",
-        "weight": 1.6,
+        "weight": 1.58,
         "shares": 26746000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2379",
         "name": "瑞昱",
         "etf_name": "國泰永續高股息",
-        "weight": 2.17,
+        "weight": 2.18,
         "shares": 20977000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2382",
         "name": "廣達電腦",
         "etf_name": "國泰永續高股息",
-        "weight": 2.8,
+        "weight": 2.83,
         "shares": 44159000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2412",
         "name": "中華電信",
         "etf_name": "國泰永續高股息",
-        "weight": 1.95,
+        "weight": 2.0,
         "shares": 77214000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2449",
         "name": "京元電子",
         "etf_name": "國泰永續高股息",
-        "weight": 2.33,
+        "weight": 2.38,
         "shares": 41521000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2454",
         "name": "聯發科",
         "etf_name": "國泰永續高股息",
-        "weight": 10.07,
+        "weight": 9.58,
         "shares": 14573000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2474",
@@ -2243,63 +2645,63 @@
         "etf_name": "國泰永續高股息",
         "weight": 0.91,
         "shares": 23764000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2881",
         "name": "富邦金",
         "etf_name": "國泰永續高股息",
-        "weight": 6.93,
+        "weight": 7.06,
         "shares": 396015945,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2882",
         "name": "國泰金融",
         "etf_name": "國泰永續高股息",
-        "weight": 8.53,
+        "weight": 8.69,
         "shares": 597358486,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2885",
         "name": "元大金",
         "etf_name": "國泰永續高股息",
-        "weight": 3.31,
+        "weight": 3.41,
         "shares": 324760516,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2886",
         "name": "兆豐金",
         "etf_name": "國泰永續高股息",
-        "weight": 1.86,
+        "weight": 1.89,
         "shares": 253433964,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2891",
         "name": "中國信託",
         "etf_name": "國泰永續高股息",
-        "weight": 8.18,
+        "weight": 8.45,
         "shares": 818247000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3034",
         "name": "NOVATEK MICROELECTRONICS COR",
         "etf_name": "國泰永續高股息",
-        "weight": 2.3,
+        "weight": 2.32,
         "shares": 25326000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3045",
         "name": "台灣大哥",
         "etf_name": "國泰永續高股息",
-        "weight": 2.01,
+        "weight": 2.06,
         "shares": 97609000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3231",
@@ -2307,63 +2709,63 @@
         "etf_name": "國泰永續高股息",
         "weight": 1.88,
         "shares": 71185000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3293",
         "name": "鈊象電子",
         "etf_name": "國泰永續高股息",
-        "weight": 1.58,
+        "weight": 1.56,
         "shares": 11434000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3711",
         "name": "日月光投控",
         "etf_name": "國泰永續高股息",
-        "weight": 5.77,
+        "weight": 5.74,
         "shares": 55638000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "4904",
         "name": "遠傳",
         "etf_name": "國泰永續高股息",
-        "weight": 2.04,
+        "weight": 2.09,
         "shares": 114468000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "4958",
         "name": "臻鼎-KY",
         "etf_name": "國泰永續高股息",
-        "weight": 2.97,
+        "weight": 3.25,
         "shares": 39009000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "5347",
         "name": "世界",
         "etf_name": "國泰永續高股息",
-        "weight": 2.42,
+        "weight": 2.41,
         "shares": 76192442,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "5871",
         "name": "CHAILEASE HOLDING CO LTD",
         "etf_name": "國泰永續高股息",
-        "weight": 1.45,
+        "weight": 1.43,
         "shares": 70667080,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "5876",
         "name": "上海商銀",
         "etf_name": "國泰永續高股息",
-        "weight": 1.52,
+        "weight": 1.53,
         "shares": 202375590,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       }
     ],
     "00919": [
@@ -7597,65 +7999,65 @@
         "ticker": "1590",
         "name": "亞德客-KY",
         "etf_name": "主動第一金台股優",
-        "weight": 0.24,
+        "weight": 0.23,
         "shares": 9000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2059",
         "name": "川湖",
         "etf_name": "主動第一金台股優",
-        "weight": 1.59,
+        "weight": 1.56,
         "shares": 17000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2303",
         "name": "聯電",
         "etf_name": "主動第一金台股優",
-        "weight": 1.38,
+        "weight": 1.32,
         "shares": 770000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2308",
         "name": "台達電",
         "etf_name": "主動第一金台股優",
-        "weight": 4.69,
-        "shares": 124499,
-        "date": "2026-05-12"
+        "weight": 4.4,
+        "shares": 116499,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2317",
         "name": "鴻海",
         "etf_name": "主動第一金台股優",
-        "weight": 1.37,
-        "shares": 320000,
-        "date": "2026-05-12"
+        "weight": 0.31,
+        "shares": 70000,
+        "date": "2026-05-13"
       },
       {
         "ticker": "2327",
         "name": "國巨*",
         "etf_name": "主動第一金台股優",
-        "weight": 1.01,
+        "weight": 1.03,
         "shares": 140000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2330",
         "name": "台積電",
         "etf_name": "主動第一金台股優",
-        "weight": 13.85,
+        "weight": 13.86,
         "shares": 357999,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2345",
         "name": "智邦",
         "etf_name": "主動第一金台股優",
-        "weight": 4.38,
+        "weight": 4.29,
         "shares": 101000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2360",
@@ -7663,39 +8065,39 @@
         "etf_name": "主動第一金台股優",
         "weight": 3.86,
         "shares": 92000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2368",
         "name": "金像電",
         "etf_name": "主動第一金台股優",
-        "weight": 2.48,
+        "weight": 2.45,
         "shares": 104000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2383",
         "name": "台光電",
         "etf_name": "主動第一金台股優",
-        "weight": 5.89,
+        "weight": 6.02,
         "shares": 70000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2395",
         "name": "研華",
         "etf_name": "主動第一金台股優",
-        "weight": 0.17,
+        "weight": 0.16,
         "shares": 20000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2408",
         "name": "南亞科技",
         "etf_name": "主動第一金台股優",
-        "weight": 1.26,
+        "weight": 1.28,
         "shares": 228000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2412",
@@ -7703,63 +8105,63 @@
         "etf_name": "主動第一金台股優",
         "weight": 0.0,
         "shares": 1,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2449",
         "name": "京元電子",
         "etf_name": "主動第一金台股優",
-        "weight": 1.58,
+        "weight": 1.62,
         "shares": 305000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2454",
         "name": "聯發科",
         "etf_name": "主動第一金台股優",
-        "weight": 6.1,
+        "weight": 5.86,
         "shares": 96000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "2467",
         "name": "志聖",
         "etf_name": "主動第一金台股優",
-        "weight": 1.04,
+        "weight": 1.02,
         "shares": 93000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3017",
         "name": "奇鋐",
         "etf_name": "主動第一金台股優",
-        "weight": 2.49,
-        "shares": 57500,
-        "date": "2026-05-12"
+        "weight": 2.86,
+        "shares": 63500,
+        "date": "2026-05-13"
       },
       {
         "ticker": "3036",
         "name": "文曄",
         "etf_name": "主動第一金台股優",
-        "weight": 0.28,
+        "weight": 0.3,
         "shares": 60000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3037",
         "name": "欣興",
         "etf_name": "主動第一金台股優",
-        "weight": 4.01,
+        "weight": 4.16,
         "shares": 267001,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3044",
         "name": "健鼎科技",
         "etf_name": "主動第一金台股優",
-        "weight": 0.25,
+        "weight": 0.28,
         "shares": 30000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3045",
@@ -7767,63 +8169,55 @@
         "etf_name": "主動第一金台股優",
         "weight": 0.0,
         "shares": 1,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3081",
         "name": "聯亞",
         "etf_name": "主動第一金台股優",
-        "weight": 1.42,
+        "weight": 1.34,
         "shares": 27000,
-        "date": "2026-05-12"
-      },
-      {
-        "ticker": "3105",
-        "name": "穩懋",
-        "etf_name": "主動第一金台股優",
-        "weight": 0.81,
-        "shares": 92000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3264",
         "name": "欣銓",
         "etf_name": "主動第一金台股優",
-        "weight": 0.43,
+        "weight": 0.44,
         "shares": 110000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3443",
         "name": "創意",
         "etf_name": "主動第一金台股優",
-        "weight": 3.54,
+        "weight": 3.45,
         "shares": 37050,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3653",
         "name": "健策",
         "etf_name": "主動第一金台股優",
-        "weight": 1.92,
+        "weight": 1.76,
         "shares": 28501,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3661",
         "name": "世芯-KY",
         "etf_name": "主動第一金台股優",
-        "weight": 0.27,
+        "weight": 0.25,
         "shares": 3000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3665",
         "name": "貿聯-KY",
         "etf_name": "主動第一金台股優",
-        "weight": 2.76,
+        "weight": 2.53,
         "shares": 58000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "3711",
@@ -7831,7 +8225,7 @@
         "etf_name": "主動第一金台股優",
         "weight": 2.75,
         "shares": 288002,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "4904",
@@ -7839,23 +8233,23 @@
         "etf_name": "主動第一金台股優",
         "weight": 0.0,
         "shares": 3,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "4958",
         "name": "臻鼎-KY",
         "etf_name": "主動第一金台股優",
-        "weight": 0.84,
-        "shares": 120000,
-        "date": "2026-05-12"
+        "weight": 1.24,
+        "shares": 160000,
+        "date": "2026-05-13"
       },
       {
         "ticker": "5274",
         "name": "信驊",
         "etf_name": "主動第一金台股優",
-        "weight": 3.0,
+        "weight": 3.02,
         "shares": 9700,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6187",
@@ -7863,95 +8257,87 @@
         "etf_name": "主動第一金台股優",
         "weight": 0.34,
         "shares": 16000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6223",
         "name": "旺矽",
         "etf_name": "主動第一金台股優",
-        "weight": 2.91,
+        "weight": 3.08,
         "shares": 30901,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6257",
         "name": "矽格",
         "etf_name": "主動第一金台股優",
-        "weight": 0.47,
+        "weight": 0.48,
         "shares": 130000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6274",
         "name": "台燿",
         "etf_name": "主動第一金台股優",
-        "weight": 3.83,
+        "weight": 3.9,
         "shares": 154000,
-        "date": "2026-05-12"
-      },
-      {
-        "ticker": "6510",
-        "name": "精測",
-        "etf_name": "主動第一金台股優",
-        "weight": 0.4,
-        "shares": 6000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6515",
         "name": "穎崴",
         "etf_name": "主動第一金台股優",
-        "weight": 1.54,
+        "weight": 1.55,
         "shares": 9000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6669",
         "name": "緯穎",
         "etf_name": "主動第一金台股優",
-        "weight": 4.08,
+        "weight": 3.99,
         "shares": 41000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "6805",
         "name": "富世達",
         "etf_name": "主動第一金台股優",
-        "weight": 0.76,
-        "shares": 24001,
-        "date": "2026-05-12"
+        "weight": 0.35,
+        "shares": 11001,
+        "date": "2026-05-13"
       },
       {
         "ticker": "7769",
         "name": "鴻勁精密",
         "etf_name": "主動第一金台股優",
-        "weight": 3.07,
+        "weight": 3.38,
         "shares": 26000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "8046",
         "name": "南電",
         "etf_name": "主動第一金台股優",
-        "weight": 2.36,
+        "weight": 2.35,
         "shares": 153000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "8210",
         "name": "勤誠",
         "etf_name": "主動第一金台股優",
-        "weight": 0.43,
+        "weight": 0.42,
         "shares": 16000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "8299",
         "name": "群聯電子",
         "etf_name": "主動第一金台股優",
-        "weight": 1.92,
+        "weight": 1.87,
         "shares": 41000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       },
       {
         "ticker": "8358",
@@ -7959,7 +8345,7 @@
         "etf_name": "主動第一金台股優",
         "weight": 0.2,
         "shares": 25000,
-        "date": "2026-05-12"
+        "date": "2026-05-13"
       }
     ],
     "00995A": [
