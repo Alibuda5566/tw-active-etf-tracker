@@ -1,6 +1,6 @@
 {
   "data_date": "2026-06-10",
-  "updated_at": "2026-06-10T12:07:38",
+  "updated_at": "2026-06-10T23:41:14",
   "source": "etfinfo",
   "formula": "(market_price / nav - 1) * 100",
   "etfs": [
@@ -317,12 +317,12 @@
       "name": "主動摩根台灣鑫收",
       "date": "2026-06-10",
       "price": 13.21,
-      "nav": 13.26,
-      "premium_discount": -0.38,
-      "change": 0,
-      "aum": 0,
-      "beneficiaries": 0,
-      "source": "moneydj",
+      "nav": 13.18,
+      "premium_discount": 0.22,
+      "change": -0.52,
+      "aum": 3447000000.0,
+      "beneficiaries": 18387,
+      "source": "etfinfo",
       "type": "active",
       "color": "#9333ea"
     },
@@ -339,6 +339,34 @@
       "source": "etfinfo",
       "type": "active",
       "color": "#14b8a6"
+    },
+    {
+      "ticker": "00404A",
+      "name": "主動聯博動能50",
+      "date": "2026-06-10",
+      "price": 9.59,
+      "nav": 9.5397,
+      "premium_discount": 0.53,
+      "change": -0.37,
+      "aum": 2388000000.0,
+      "beneficiaries": 1,
+      "source": "etfinfo",
+      "type": "active",
+      "color": "#6366f1"
+    },
+    {
+      "ticker": "00405A",
+      "name": "主動富邦台灣龍耀",
+      "date": "2026-06-10",
+      "price": 9.22,
+      "nav": 9.0,
+      "premium_discount": 2.44,
+      "change": -0.26,
+      "aum": 16181000000.0,
+      "beneficiaries": 1,
+      "source": "etfinfo",
+      "type": "active",
+      "color": "#84cc16"
     }
   ],
   "errors": []

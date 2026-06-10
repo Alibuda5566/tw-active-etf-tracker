@@ -56,6 +56,8 @@ ETFINFO_FALLBACK_TICKERS = [
     "00400A",
     "00401A",
     "00403A",
+    "00404A",
+    "00405A",
 ]
 
 HOLDING_TICKERS = (
