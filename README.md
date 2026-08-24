@@ -1,6 +1,6 @@
 # Taiwan Active ETF Tracker
 
-台股主動式 ETF 追蹤看板。這個專案會整理主動式 ETF 的持股、每日增減、溢/折價與上市以來績效，並產出可下載的每日 Markdown 報告。
+台股主動式 ETF 追蹤看板。這個專案會整理主動式 ETF 的股票持股、期貨部位、每日增減、溢/折價與上市以來績效，並產出可下載的每日 Markdown 報告。
 
 ## Pages
 
@@ -12,8 +12,8 @@ https://alibuda5566.github.io/tw-active-etf-tracker/
 
 ## 頁面
 
-- `index.html`：ETF 清單與成分股交集。
-- `changes.html`：每日持股增減追蹤與每日報告下載。
+- `index.html`：ETF 清單、成分股交集與目前期貨部位。
+- `changes.html`：每日股票及期貨部位增減追蹤與每日報告下載。
 - `performance.html`：主動式 ETF 上市以來績效與互動式走勢圖。
 
 ## 本機執行
@@ -55,8 +55,8 @@ FINMIND_TOKEN
 ## 主要資料
 
 - `data/etf_cards.json`：ETF 基本資料、價格、淨值與溢/折價。
-- `data/cross_data.json`：股票與 ETF 持股交集。
-- `data/holding_changes.json`：最新一次每日持股變動。
+- `data/cross_data.json`：股票與期貨部位彙總；`asset_type` 會標示 `stock` 或 `future`，`unit` 會標示股或口。
+- `data/holding_changes.json`：最新一次每日股票與期貨部位變動。
 - `data/premium_discount.json`：各 ETF 市價、淨值與溢/折價。
 - `data/performance/active_etf_performance.json`：主動式 ETF 績效。
-- `data/reports/active_etf_daily_report_YYYY-MM-DD.md`：每日進出報告。
+- `data/reports/active_etf_daily_report_YYYY-MM-DD.md`：每日股票進出與期貨部位報告。

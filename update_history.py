@@ -166,25 +166,29 @@ def rebuild_history() -> Path:
 def _holdings_from_cross_data(cross_rows) -> dict[str, list[dict]]:
     holdings: dict[str, list[dict]] = {}
     for row in cross_rows:
-        stock_ticker = str(row.get("ticker", "")).strip()
-        stock_name = str(row.get("name", "")).strip()
-        if not stock_ticker:
+        asset_ticker = str(row.get("ticker", "")).strip()
+        asset_name = str(row.get("name", "")).strip()
+        asset_type = row.get("asset_type") or "stock"
+        unit = row.get("unit") or ("口" if asset_type == "future" else "股")
+        if not asset_ticker:
             continue
         for etf in row.get("etfs", []):
             etf_ticker = str(etf.get("etf_ticker", "")).strip()
             if not etf_ticker:
                 continue
             holdings.setdefault(etf_ticker, []).append({
-                "ticker": stock_ticker,
-                "name": stock_name,
+                "ticker": asset_ticker,
+                "name": asset_name,
                 "etf_name": etf.get("etf_name", etf_ticker),
                 "weight": _to_float(etf.get("weight")),
                 "shares": _to_int(etf.get("shares")),
+                "asset_type": asset_type,
+                "unit": unit,
                 "date": etf.get("date", ""),
             })
 
     for etf_ticker in list(holdings):
-        holdings[etf_ticker].sort(key=lambda item: item["ticker"])
+        holdings[etf_ticker].sort(key=lambda item: (item.get("asset_type", "stock"), item["ticker"]))
     return dict(sorted(holdings.items()))
 
 
@@ -222,13 +226,12 @@ def _build_change_report(previous_snapshot, current_snapshot) -> dict:
         by_etf = {}
         for etf_ticker, holdings in sorted(current_etfs.items()):
             summary = _summarize_changes([])
-            summary["holding_count"] = len(holdings)
+            summary.update(_holding_counts(holdings))
             by_etf[etf_ticker] = summary
 
         summary = _summarize_changes([])
         summary["etf_count"] = len(current_etfs)
-        summary["stock_count"] = _stock_count(current_etfs)
-        summary["holding_links"] = sum(len(items) for items in current_etfs.values())
+        summary.update(_portfolio_counts(current_etfs))
         return {
             "updated_at": datetime.now().isoformat(timespec="seconds"),
             "current_date": current_date,
@@ -237,37 +240,41 @@ def _build_change_report(previous_snapshot, current_snapshot) -> dict:
             "summary": summary,
             "by_etf": by_etf,
             "by_stock": [],
+            "by_future": [],
+            "future_positions": _future_positions(current_etfs),
             "changes": [],
             "top_increases": [],
             "top_decreases": [],
             "top_stock_buys": [],
             "top_stock_sells": [],
+            "top_future_increases": [],
+            "top_future_decreases": [],
         }
 
     changes = []
     by_etf = {}
     for etf_ticker in sorted(set(previous_etfs) | set(current_etfs)):
-        old_map = {item["ticker"]: item for item in previous_etfs.get(etf_ticker, [])}
-        new_map = {item["ticker"]: item for item in current_etfs.get(etf_ticker, [])}
+        old_map = {_holding_key(item): item for item in previous_etfs.get(etf_ticker, [])}
+        new_map = {_holding_key(item): item for item in current_etfs.get(etf_ticker, [])}
         etf_changes = []
 
-        for stock_ticker in sorted(set(old_map) | set(new_map)):
-            old = old_map.get(stock_ticker)
-            new = new_map.get(stock_ticker)
-            change = _compare_holding(etf_ticker, stock_ticker, old, new, previous_date, current_date)
+        for holding_key in sorted(set(old_map) | set(new_map)):
+            old = old_map.get(holding_key)
+            new = new_map.get(holding_key)
+            change = _compare_holding(etf_ticker, holding_key[1], old, new, previous_date, current_date)
             if change:
                 changes.append(change)
                 etf_changes.append(change)
 
         summary = _summarize_changes(etf_changes)
-        summary["holding_count"] = len(new_map)
+        summary.update(_holding_counts(list(new_map.values())))
         by_etf[etf_ticker] = summary
 
     summary = _summarize_changes(changes)
     summary["etf_count"] = len(current_etfs)
-    summary["stock_count"] = _stock_count(current_etfs)
-    summary["holding_links"] = sum(len(items) for items in current_etfs.values())
+    summary.update(_portfolio_counts(current_etfs))
     by_stock = _rollup_changes_by_stock(changes)
+    by_future = _rollup_changes_by_future(changes)
 
     return {
         "updated_at": datetime.now().isoformat(timespec="seconds"),
@@ -277,6 +284,8 @@ def _build_change_report(previous_snapshot, current_snapshot) -> dict:
         "summary": summary,
         "by_etf": by_etf,
         "by_stock": by_stock,
+        "by_future": by_future,
+        "future_positions": _future_positions(current_etfs),
         "changes": sorted(
             changes,
             key=lambda item: (
@@ -290,6 +299,8 @@ def _build_change_report(previous_snapshot, current_snapshot) -> dict:
         "top_decreases": _top_changes(changes, positive=False),
         "top_stock_buys": _top_stock_rollups(by_stock, positive=True),
         "top_stock_sells": _top_stock_rollups(by_stock, positive=False),
+        "top_future_increases": _top_stock_rollups(by_future, positive=True),
+        "top_future_decreases": _top_stock_rollups(by_future, positive=False),
     }
 
 
@@ -322,12 +333,16 @@ def _compare_holding(
         action = "changed"
 
     source = new or old or {}
+    asset_type = source.get("asset_type") or "stock"
+    unit = source.get("unit") or ("口" if asset_type == "future" else "股")
     return {
         "action": action,
         "etf_ticker": etf_ticker,
         "etf_name": source.get("etf_name", etf_ticker),
         "stock_ticker": stock_ticker,
         "stock_name": source.get("name", ""),
+        "asset_type": asset_type,
+        "unit": unit,
         "old_weight": round(old_weight, 6),
         "new_weight": round(new_weight, 6),
         "weight_delta": weight_delta,
@@ -347,10 +362,14 @@ def _summarize_changes(changes: list[dict]) -> dict:
         "increased": 0,
         "decreased": 0,
         "changed": 0,
+        "stock_changes": 0,
+        "future_changes": 0,
     }
     for change in changes:
         action = change.get("action", "changed")
         summary[action] = summary.get(action, 0) + 1
+        asset_key = "future_changes" if change.get("asset_type") == "future" else "stock_changes"
+        summary[asset_key] += 1
     return summary
 
 
@@ -358,8 +377,63 @@ def _stock_count(etfs: dict[str, list[dict]]) -> int:
     stocks = set()
     for holdings in etfs.values():
         for item in holdings:
-            stocks.add(item.get("ticker"))
+            if item.get("asset_type", "stock") == "stock":
+                stocks.add(item.get("ticker"))
     return len(stocks)
+
+
+def _holding_key(item: dict) -> tuple[str, str]:
+    return item.get("asset_type", "stock"), str(item.get("ticker", ""))
+
+
+def _holding_counts(holdings: list[dict]) -> dict[str, int]:
+    stock_count = sum(1 for item in holdings if item.get("asset_type", "stock") == "stock")
+    future_count = sum(1 for item in holdings if item.get("asset_type") == "future")
+    return {
+        "holding_count": stock_count,
+        "stock_count": stock_count,
+        "future_count": future_count,
+    }
+
+
+def _portfolio_counts(etfs: dict[str, list[dict]]) -> dict[str, int]:
+    stock_tickers = set()
+    future_tickers = set()
+    stock_links = 0
+    future_links = 0
+    for holdings in etfs.values():
+        for item in holdings:
+            if item.get("asset_type") == "future":
+                future_tickers.add(item.get("ticker"))
+                future_links += 1
+            else:
+                stock_tickers.add(item.get("ticker"))
+                stock_links += 1
+    return {
+        "stock_count": len(stock_tickers),
+        "future_count": len(future_tickers),
+        "holding_links": stock_links,
+        "future_links": future_links,
+    }
+
+
+def _future_positions(etfs: dict[str, list[dict]]) -> list[dict]:
+    result = []
+    for etf_ticker, holdings in etfs.items():
+        for item in holdings:
+            if item.get("asset_type") != "future":
+                continue
+            result.append({
+                "etf_ticker": etf_ticker,
+                "etf_name": item.get("etf_name", etf_ticker),
+                "ticker": item.get("ticker", ""),
+                "name": item.get("name", ""),
+                "weight": _to_float(item.get("weight")),
+                "quantity": _to_int(item.get("shares")),
+                "unit": item.get("unit") or "口",
+                "date": item.get("date", ""),
+            })
+    return sorted(result, key=lambda item: (item["etf_ticker"], -abs(item["weight"]), item["ticker"]))
 
 
 def _top_changes(changes: list[dict], positive: bool) -> list[dict]:
@@ -372,8 +446,18 @@ def _top_changes(changes: list[dict], positive: bool) -> list[dict]:
 
 
 def _rollup_changes_by_stock(changes: list[dict]) -> list[dict]:
+    return _rollup_changes_by_asset(changes, "stock")
+
+
+def _rollup_changes_by_future(changes: list[dict]) -> list[dict]:
+    return _rollup_changes_by_asset(changes, "future")
+
+
+def _rollup_changes_by_asset(changes: list[dict], asset_type: str) -> list[dict]:
     grouped: dict[str, dict] = {}
     for change in changes:
+        if change.get("asset_type", "stock") != asset_type:
+            continue
         stock_ticker = change.get("stock_ticker", "")
         if not stock_ticker:
             continue
@@ -381,6 +465,8 @@ def _rollup_changes_by_stock(changes: list[dict]) -> list[dict]:
         row = grouped.setdefault(stock_ticker, {
             "stock_ticker": stock_ticker,
             "stock_name": change.get("stock_name", ""),
+            "asset_type": asset_type,
+            "unit": change.get("unit") or ("口" if asset_type == "future" else "股"),
             "net_weight_delta": 0.0,
             "net_shares_delta": 0,
             "affected_etfs": set(),
@@ -407,6 +493,7 @@ def _rollup_changes_by_stock(changes: list[dict]) -> list[dict]:
             "old_shares": change.get("old_shares", 0),
             "new_shares": change.get("new_shares", 0),
             "shares_delta": change.get("shares_delta", 0),
+            "unit": change.get("unit") or ("口" if asset_type == "future" else "股"),
         })
 
     result = []
@@ -457,7 +544,15 @@ def _render_active_etf_daily_report(report: dict) -> str:
         change for change in report.get("changes", [])
         if change.get("etf_ticker") in active_tickers
     ]
+    active_stock_changes = [change for change in active_changes if change.get("asset_type", "stock") == "stock"]
+    active_future_changes = [change for change in active_changes if change.get("asset_type") == "future"]
+    active_future_positions = [
+        item for item in report.get("future_positions", [])
+        if item.get("etf_ticker") in active_tickers
+    ]
     active_summary = _summarize_changes(active_changes)
+    active_stock_summary = _summarize_changes(active_stock_changes)
+    active_future_summary = _summarize_changes(active_future_changes)
     active_stock_rollups = _rollup_changes_by_stock(active_changes)
     top_buys = _top_stock_rollups(active_stock_rollups, positive=True)
     top_sells = _top_stock_rollups(active_stock_rollups, positive=False)
@@ -477,15 +572,12 @@ def _render_active_etf_daily_report(report: dict) -> str:
         "## 全體主動式 ETF 進出總結",
         "",
         _markdown_table(
-            ["新增", "刪除", "增持", "減持", "其他變動", "合計"],
-            [[
-                active_summary["added"],
-                active_summary["removed"],
-                active_summary["increased"],
-                active_summary["decreased"],
-                active_summary["changed"],
-                active_summary["total_changes"],
-            ]],
+            ["類型", "新增", "刪除", "增持", "減持", "其他變動", "合計"],
+            [
+                _summary_row("股票", active_stock_summary),
+                _summary_row("期貨", active_future_summary),
+                _summary_row("合計", active_summary),
+            ],
         ),
         "",
         "### 主動式 ETF 溢/折價概覽",
@@ -509,6 +601,14 @@ def _render_active_etf_daily_report(report: dict) -> str:
         "",
         _stock_rollup_markdown(top_sells),
         "",
+        "### 主動式 ETF 期貨部位",
+        "",
+        _future_positions_markdown(active_future_positions),
+        "",
+        "### 期貨部位異動",
+        "",
+        _future_changes_markdown(active_future_changes),
+        "",
         "### 各主動式 ETF 變動摘要",
         "",
         _etf_summary_markdown(active_cards, report.get("by_etf", {})),
@@ -520,23 +620,33 @@ def _render_active_etf_daily_report(report: dict) -> str:
     changes_by_etf: dict[str, list[dict]] = {}
     for change in active_changes:
         changes_by_etf.setdefault(change.get("etf_ticker", ""), []).append(change)
+    futures_by_etf: dict[str, list[dict]] = {}
+    for position in active_future_positions:
+        futures_by_etf.setdefault(position.get("etf_ticker", ""), []).append(position)
 
     for card in active_cards:
         ticker = card["ticker"]
         name = card.get("name", "")
         summary = report.get("by_etf", {}).get(ticker, {})
         etf_changes = changes_by_etf.get(ticker, [])
+        etf_stock_changes = [change for change in etf_changes if change.get("asset_type", "stock") == "stock"]
+        etf_future_changes = [change for change in etf_changes if change.get("asset_type") == "future"]
+        etf_futures = futures_by_etf.get(ticker, [])
         lines.extend([
             f"### {ticker} {name}",
             "",
-            f"- 持股檔數：{summary.get('holding_count', 0)}",
+            f"- 股票持股：{summary.get('stock_count', summary.get('holding_count', 0))} 檔 / 期貨部位：{summary.get('future_count', 0)} 筆",
             f"- 市價 / 淨值 / 溢/折價：{_fmt_price(card.get('market_price') or card.get('price'))} / {_fmt_price(card.get('nav'))} / {_fmt_optional_percent(card.get('premium_discount'), signed=True)}",
             f"- 新增：{summary.get('added', 0)} / 刪除：{summary.get('removed', 0)} / 增持：{summary.get('increased', 0)} / 減持：{summary.get('decreased', 0)} / 合計：{summary.get('total_changes', 0)}",
             "",
+            "#### 目前期貨部位",
+            "",
+            _future_positions_markdown(etf_futures, include_etf=False),
+            "",
         ])
-        if etf_changes:
+        if etf_stock_changes:
             rows = []
-            for change in sorted(etf_changes, key=lambda item: (_action_rank(item["action"]), -abs(_to_float(item["weight_delta"])), item["stock_ticker"])):
+            for change in sorted(etf_stock_changes, key=lambda item: (_action_rank(item["action"]), -abs(_to_float(item["weight_delta"])), item["stock_ticker"])):
                 rows.append([
                     _action_text(change.get("action")),
                     change.get("stock_ticker", ""),
@@ -551,9 +661,70 @@ def _render_active_etf_daily_report(report: dict) -> str:
                 "",
             ])
         else:
-            lines.extend(["本期沒有進出變動。", ""])
+            lines.extend(["本期股票沒有進出變動。", ""])
+
+        lines.extend([
+            "#### 期貨異動",
+            "",
+            _future_changes_markdown(etf_future_changes, include_etf=False),
+            "",
+        ])
 
     return "\n".join(lines).rstrip() + "\n"
+
+
+def _summary_row(label: str, summary: dict) -> list:
+    return [
+        label,
+        summary.get("added", 0),
+        summary.get("removed", 0),
+        summary.get("increased", 0),
+        summary.get("decreased", 0),
+        summary.get("changed", 0),
+        summary.get("total_changes", 0),
+    ]
+
+
+def _future_positions_markdown(rows: list[dict], include_etf: bool = True) -> str:
+    if not rows:
+        return "目前沒有期貨部位。"
+    headers = ["ETF", "合約", "名稱", "權重", "數量", "日期"] if include_etf else ["合約", "名稱", "權重", "數量", "日期"]
+    table_rows = []
+    for row in rows:
+        values = [
+            row.get("ticker", ""),
+            row.get("name", ""),
+            _fmt_percent(row.get("weight"), signed=False),
+            _fmt_quantity(row.get("quantity"), row.get("unit")),
+            row.get("date") or "-",
+        ]
+        if include_etf:
+            values.insert(0, row.get("etf_ticker", ""))
+        table_rows.append(values)
+    return _markdown_table(headers, table_rows)
+
+
+def _future_changes_markdown(rows: list[dict], include_etf: bool = True) -> str:
+    if not rows:
+        return "本期沒有期貨異動。"
+    headers = ["狀態", "ETF", "合約", "名稱", "前日權重", "今日權重", "權重差", "數量差"]
+    if not include_etf:
+        headers.remove("ETF")
+    table_rows = []
+    for change in sorted(rows, key=lambda item: (_action_rank(item["action"]), -abs(_to_float(item["weight_delta"])), item["stock_ticker"])):
+        values = [
+            _action_text(change.get("action")),
+            change.get("stock_ticker", ""),
+            change.get("stock_name", ""),
+            _fmt_percent(change.get("old_weight"), signed=False),
+            _fmt_percent(change.get("new_weight"), signed=False),
+            _fmt_percent(change.get("weight_delta"), signed=True),
+            _fmt_quantity(change.get("shares_delta"), change.get("unit"), signed=True),
+        ]
+        if include_etf:
+            values.insert(1, change.get("etf_ticker", ""))
+        table_rows.append(values)
+    return _markdown_table(headers, table_rows)
 
 
 def _load_etf_cards() -> list[dict]:
@@ -596,14 +767,15 @@ def _etf_summary_markdown(active_cards: list[dict], by_etf: dict) -> str:
             card.get("name", ""),
             _fmt_price(card.get("nav")),
             _fmt_optional_percent(card.get("premium_discount"), signed=True),
-            summary.get("holding_count", 0),
+            summary.get("stock_count", summary.get("holding_count", 0)),
+            summary.get("future_count", 0),
             summary.get("added", 0),
             summary.get("removed", 0),
             summary.get("increased", 0),
             summary.get("decreased", 0),
             summary.get("total_changes", 0),
         ])
-    return _markdown_table(["ETF", "名稱", "淨值", "溢/折價", "持股", "新增", "刪除", "增持", "減持", "合計"], rows)
+    return _markdown_table(["ETF", "名稱", "淨值", "溢/折價", "股票", "期貨", "新增", "刪除", "增持", "減持", "合計"], rows)
 
 
 def _premium_discount_markdown(active_cards: list[dict]) -> str:
@@ -669,6 +841,12 @@ def _fmt_signed_int(value) -> str:
     number = _to_int(value)
     sign = "+" if number > 0 else ""
     return f"{sign}{number:,}"
+
+
+def _fmt_quantity(value, unit, signed: bool = False) -> str:
+    number = _to_int(value)
+    sign = "+" if signed and number > 0 else ""
+    return f"{sign}{number:,} {unit or '口'}"
 
 
 def _action_rank(action: str) -> int:

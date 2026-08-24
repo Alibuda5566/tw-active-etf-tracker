@@ -149,9 +149,9 @@ def update_etf_cards_holdings_dates(holdings_by_etf: dict[str, list[dict]]):
 
 
 def rebuild_cross_data(all_holdings: dict[str, list[dict]]):
-    """根據最新持股重建 cross_data.json"""
+    """根據最新股票與期貨部位重建 cross_data.json。"""
     etf_aums = _load_etf_aums()
-    stock_map: dict[str, dict] = {}
+    asset_map: dict[tuple[str, str], dict] = {}
 
     for etf_ticker, holdings in all_holdings.items():
         cfg = ETF_CONFIG.get(etf_ticker, {})
@@ -162,10 +162,18 @@ def rebuild_cross_data(all_holdings: dict[str, list[dict]]):
             stk = h["ticker"]
             if not stk:
                 continue
-            if stk not in stock_map:
-                stock_map[stk] = {"name": h.get("name", ""), "etfs": []}
+            asset_type = h.get("asset_type") or "stock"
+            unit = h.get("unit") or ("口" if asset_type == "future" else "股")
+            asset_key = (asset_type, stk)
+            if asset_key not in asset_map:
+                asset_map[asset_key] = {
+                    "name": h.get("name", ""),
+                    "asset_type": asset_type,
+                    "unit": unit,
+                    "etfs": [],
+                }
             capital_yi = round(aum * h["weight"] / 100, 1) if aum and h.get("weight") else 0
-            stock_map[stk]["etfs"].append({
+            asset_map[asset_key]["etfs"].append({
                 "etf_ticker": etf_ticker,
                 "etf_name": cfg.get("name", etf_ticker),
                 "color": etf_color,
@@ -176,11 +184,13 @@ def rebuild_cross_data(all_holdings: dict[str, list[dict]]):
             })
 
     result = []
-    for stk, info in stock_map.items():
+    for (asset_type, stk), info in asset_map.items():
         etfs = info["etfs"]
         result.append({
             "ticker": stk,
             "name": info["name"],
+            "asset_type": asset_type,
+            "unit": info["unit"],
             "etf_count": len(etfs),
             "max_weight": max((e["weight"] for e in etfs), default=0),
             "total_capital": round(sum(e["capital_yi"] for e in etfs), 1),
@@ -188,9 +198,11 @@ def rebuild_cross_data(all_holdings: dict[str, list[dict]]):
             "etfs": etfs,
         })
 
-    result.sort(key=lambda x: -x["etf_count"])
+    result.sort(key=lambda x: (x.get("asset_type") == "future", -x["etf_count"], x["ticker"]))
     save_json(DATA_DIR / "cross_data.json", result)
-    print(f"  cross_data.json 已更新：{len(result)} 筆股票")
+    stock_count = sum(1 for item in result if item.get("asset_type") != "future")
+    future_count = len(result) - stock_count
+    print(f"  cross_data.json 已更新：{stock_count} 筆股票、{future_count} 筆期貨")
 
 
 def _load_etf_aums() -> dict[str, float]:
@@ -230,6 +242,8 @@ def _load_existing_holdings() -> dict[str, list[dict]]:
                 "name": row["name"],
                 "weight": e["weight"],
                 "shares": e["shares"],
+                "asset_type": row.get("asset_type", "stock"),
+                "unit": row.get("unit") or ("口" if row.get("asset_type") == "future" else "股"),
                 "date": e.get("date", ""),
             })
     return holdings

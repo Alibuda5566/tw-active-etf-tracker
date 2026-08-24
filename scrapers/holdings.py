@@ -79,6 +79,9 @@ _BROWSER_HEADERS = {
     "Upgrade-Insecure-Requests": "1",
 }
 
+ASSET_STOCK = "stock"
+ASSET_FUTURE = "future"
+
 
 def _clean_text(value: Any) -> str:
     if value is None:
@@ -151,6 +154,23 @@ def fetch_capital_holdings(ticker: str) -> list[dict[str, Any]]:
             "name": _clean_text(item.get("stocName")),
             "weight": _to_float(item.get("weight", item.get("weightRound"))),
             "shares": _to_int(item.get("share", item.get("shareFormat"))),
+            "asset_type": ASSET_STOCK,
+            "unit": "股",
+            "date": data_date,
+            "source": "capitalfund",
+        })
+
+    for item in data.get("futures") or []:
+        ticker_code = _clean_text(item.get("txEname") or item.get("txDate"))
+        if not _is_security_code(ticker_code):
+            continue
+        result.append({
+            "ticker": ticker_code,
+            "name": _clean_text(item.get("txDesc")) or ticker_code,
+            "weight": _to_float(item.get("weight", item.get("weightRound"))),
+            "shares": _to_int(item.get("lot", item.get("lotRound"))),
+            "asset_type": ASSET_FUTURE,
+            "unit": "口",
             "date": data_date,
             "source": "capitalfund",
         })
@@ -171,19 +191,30 @@ def fetch_unitrust_holdings(ticker: str) -> list[dict[str, Any]]:
         return []
 
     assets = json.loads(html.unescape(match.group(1)))
+    return _parse_unitrust_assets(assets)
+
+
+def _parse_unitrust_assets(assets: list[dict[str, Any]]) -> list[dict[str, Any]]:
     result = []
     for asset in assets:
-        if asset.get("AssetCode") != "ST":
+        asset_code = _clean_text(asset.get("AssetCode")).upper()
+        if asset_code not in {"ST", "GD"}:
             continue
+        asset_type = ASSET_STOCK if asset_code == "ST" else ASSET_FUTURE
+        unit = "股" if asset_type == ASSET_STOCK else "口"
         for item in asset.get("Details") or []:
             ticker_code = _clean_text(item.get("DetailCode"))
-            if not re.match(r"^\d{4,5}[A-Z]?$", ticker_code):
+            if asset_type == ASSET_STOCK and not re.match(r"^\d{4,5}[A-Z]?$", ticker_code):
+                continue
+            if asset_type == ASSET_FUTURE and not _is_security_code(ticker_code):
                 continue
             result.append({
                 "ticker": ticker_code,
                 "name": _clean_text(item.get("DetailName")),
                 "weight": _to_float(item.get("NavRate")),
                 "shares": _to_int(item.get("Share")),
+                "asset_type": asset_type,
+                "unit": unit,
                 "date": _date_only(item.get("TranDate")),
                 "source": "unitrust",
             })
@@ -290,9 +321,13 @@ def _parse_etfinfo_root_holdings(root: Any, ticker: str) -> list[dict[str, Any]]
         return []
 
     snapshot_date = _date_only(holdings_payload.get("snapshotDate"))
-    raw_items = holdings_payload.get("stocks")
-    if not isinstance(raw_items, list) or not raw_items:
-        raw_items = holdings_payload.get("holdings") or []
+    stock_items = holdings_payload.get("stocks") or []
+    stock_codes = {
+        _security_code(item.get("code"))
+        for item in stock_items
+        if isinstance(item, dict) and item.get("code")
+    }
+    raw_items = holdings_payload.get("holdings") or stock_items
 
     result = []
     for item in raw_items:
@@ -301,11 +336,21 @@ def _parse_etfinfo_root_holdings(root: Any, ticker: str) -> list[dict[str, Any]]
         ticker_code = _security_code(item.get("code"))
         if not _is_security_code(ticker_code):
             continue
+        if _is_future_holding(item):
+            asset_type = ASSET_FUTURE
+            unit = "口"
+        elif ticker_code in stock_codes or (not stock_codes and not _is_excluded_holding(item)):
+            asset_type = ASSET_STOCK
+            unit = "股"
+        else:
+            continue
         result.append({
             "ticker": ticker_code,
             "name": _clean_text(item.get("name")),
             "weight": _to_float(item.get("weight")),
             "shares": _to_int(item.get("shares")),
+            "asset_type": asset_type,
+            "unit": unit,
             "date": snapshot_date,
             "source": "etfinfo",
         })
@@ -364,6 +409,8 @@ def _parse_etfinfo_html_holdings(text: str) -> list[dict[str, Any]]:
             "name": cells[1],
             "weight": _to_float(cells[2]),
             "shares": _to_int(cells[3]),
+            "asset_type": ASSET_STOCK,
+            "unit": "股",
             "date": date,
             "source": "etfinfo",
         })
@@ -390,6 +437,29 @@ def _security_code(value: Any) -> str:
 def _is_security_code(value: Any) -> bool:
     text = _clean_text(value)
     return bool(re.fullmatch(r"[A-Z0-9][A-Z0-9./-]{0,15}(?:\s+[A-Z]{1,4})?", text))
+
+
+def _is_future_holding(item: dict[str, Any]) -> bool:
+    name = _clean_text(item.get("name") or item.get("DetailName") or item.get("txDesc")).upper()
+    return "期貨" in name or "FUTURE" in name
+
+
+def _is_excluded_holding(item: dict[str, Any]) -> bool:
+    name = _clean_text(item.get("name") or item.get("DetailName") or item.get("txDesc")).upper()
+    code = _clean_text(item.get("code") or item.get("DetailCode") or item.get("ticker")).upper()
+    excluded_terms = (
+        "選擇權",
+        "OPTION",
+        "現金",
+        "CASH",
+        "應收",
+        "RECEIVABLE",
+        "應付",
+        "PAYABLE",
+        "保證金",
+        "MARGIN",
+    )
+    return code.startswith("C_") or any(term in name for term in excluded_terms)
 
 
 def _read_xlsx_first_sheet(content: bytes) -> list[list[str]]:
@@ -475,11 +545,17 @@ def _parse_fuhwa_rows(rows: list[list[str]], data_date: str = "") -> list[dict[s
         ticker_code = _security_code(raw_code)
         if not _is_security_code(ticker_code):
             continue
+        holding = {"code": ticker_code, "name": row[1]}
+        if _is_excluded_holding(holding):
+            continue
+        is_future = _is_future_holding(holding)
         result.append({
             "ticker": ticker_code,
             "name": _clean_text(row[1]),
             "weight": _to_float(row[4]),
             "shares": _to_int(row[2]),
+            "asset_type": ASSET_FUTURE if is_future else ASSET_STOCK,
+            "unit": "口" if is_future else "股",
             "date": data_date,
             "source": "fuhwa",
         })
@@ -507,11 +583,17 @@ def _parse_fuhwa_html_table(text: str) -> list[dict[str, Any]]:
         ticker_code = _security_code(cells[0])
         if not _is_security_code(ticker_code):
             continue
+        holding = {"code": ticker_code, "name": cells[1]}
+        if _is_excluded_holding(holding):
+            continue
+        is_future = _is_future_holding(holding)
         result.append({
             "ticker": ticker_code,
             "name": cells[1],
             "weight": _to_float(cells[4]),
             "shares": _to_int(cells[2]),
+            "asset_type": ASSET_FUTURE if is_future else ASSET_STOCK,
+            "unit": "口" if is_future else "股",
             "date": "",
             "source": "fuhwa-html",
         })

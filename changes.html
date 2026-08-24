@@ -158,7 +158,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      grid-template-columns: repeat(6, minmax(110px, 1fr));
       gap: 10px;
       margin-bottom: 14px;
     }
@@ -348,6 +348,45 @@
       margin-bottom: 14px;
     }
 
+    .future-section {
+      margin-top: 14px;
+    }
+
+    .future-section .scroll {
+      max-height: 360px;
+    }
+
+    .change-detail-head {
+      padding: 10px 12px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .change-detail-head h3 {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .derivative-panels {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .derivative-panel {
+      min-width: 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .derivative-panel:last-child {
+      border-right: 0;
+    }
+
+    .derivative-panel .change-block-scroll {
+      max-height: 300px;
+    }
+
     .change-summary {
       display: grid;
       grid-template-columns: repeat(5, minmax(92px, 1fr));
@@ -494,12 +533,55 @@
       .stats,
       .detail-grid,
       .change-insights,
-      .change-summary {
+      .change-summary,
+      .derivative-panels {
         grid-template-columns: 1fr;
+      }
+
+      body.page-holdings .toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      body.page-changes .toolbar {
+        flex-wrap: wrap;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      header,
+      main {
+        padding-left: 14px;
+        padding-right: 14px;
       }
 
       header {
         position: static;
+      }
+
+      .page-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .page-nav a {
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .page-nav a:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .meta span {
+        min-width: 0;
+        overflow-wrap: anywhere;
       }
 
       th {
@@ -528,6 +610,15 @@
       .change-block:last-child {
         border-bottom: 0;
       }
+
+      .derivative-panel {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .derivative-panel:last-child {
+        border-bottom: 0;
+      }
     }
   </style>
 </head>
@@ -545,7 +636,7 @@
       <span id="sourceCount">來源</span>
     </div>
     <div class="toolbar">
-      <input id="search" type="search" placeholder="搜尋股票代號、股票名稱、ETF">
+      <input id="search" type="search" placeholder="搜尋股票、期貨或 ETF">
       <select id="etfFilter"></select>
       <button id="reset" type="button" title="清除篩選">清除</button>
       <a id="reportDownload" class="button-link" href="data/reports/active_etf_daily_report_latest.md" download="主動式ETF每日進出報表.md">下載每日報表</a>
@@ -561,6 +652,10 @@
       <div class="stat">
         <div class="label">股票</div>
         <div class="value" id="statStock">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">期貨部位</div>
+        <div class="value" id="statFuture">0</div>
       </div>
       <div class="stat">
         <div class="label">持股關聯</div>
@@ -665,6 +760,7 @@
           </div>
         </div>
       </div>
+      <div class="change-detail-head"><h3>股票異動明細</h3></div>
       <table>
         <thead>
           <tr>
@@ -678,6 +774,49 @@
         </thead>
         <tbody id="changeBody"></tbody>
       </table>
+      <div class="derivative-panels">
+        <div class="derivative-panel">
+          <div class="change-block-head">
+            <h3>目前期貨部位</h3>
+            <span class="count" id="futurePositionCount"></span>
+          </div>
+          <div class="change-block-scroll">
+            <table class="compact-table">
+              <thead>
+                <tr>
+                  <th style="width: 82px;">ETF</th>
+                  <th style="width: 104px;">合約</th>
+                  <th>名稱</th>
+                  <th class="num" style="width: 82px;">權重</th>
+                  <th class="num" style="width: 78px;">口數</th>
+                </tr>
+              </thead>
+              <tbody id="futurePositionBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="derivative-panel">
+          <div class="change-block-head">
+            <h3>本期期貨異動</h3>
+            <span class="count" id="futureChangeCount"></span>
+          </div>
+          <div class="change-block-scroll">
+            <table class="compact-table">
+              <thead>
+                <tr>
+                  <th style="width: 70px;">狀態</th>
+                  <th style="width: 82px;">ETF</th>
+                  <th style="width: 96px;">合約</th>
+                  <th>名稱</th>
+                  <th class="num" style="width: 88px;">權重差</th>
+                  <th class="num" style="width: 78px;">口數差</th>
+                </tr>
+              </thead>
+              <tbody id="futureChangeBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="holdings-content">
@@ -696,7 +835,7 @@
                 <th class="num" style="width: 86px;">收盤</th>
                 <th class="num" style="width: 86px;">淨值</th>
                 <th class="num" style="width: 86px;">溢/折%</th>
-                <th class="num" style="width: 74px;">持股</th>
+                <th class="num" style="width: 86px;">股票 / 期貨</th>
               </tr>
             </thead>
             <tbody id="etfBody"></tbody>
@@ -725,6 +864,28 @@
         </div>
       </section>
     </div>
+
+    <section class="future-section">
+      <div class="section-head">
+        <h2 id="futureTitle">期貨部位</h2>
+        <span class="count" id="futureCount"></span>
+      </div>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 92px;">ETF</th>
+              <th style="width: 120px;">合約</th>
+              <th>名稱</th>
+              <th class="num" style="width: 100px;">權重</th>
+              <th class="num" style="width: 100px;">口數</th>
+              <th style="width: 120px;">日期</th>
+            </tr>
+          </thead>
+          <tbody id="futureBody"></tbody>
+        </table>
+      </div>
+    </section>
 
     <section class="detail" id="detailPanel">
       <div class="section-head">
@@ -772,8 +933,10 @@
     const state = {
       cards: [],
       stocks: [],
+      futures: [],
       changes: null,
       filtered: [],
+      filteredFutures: [],
       selectedTicker: "",
       selectedEtf: "",
     };
@@ -794,12 +957,13 @@
     const $ = id => document.getElementById(id);
 
     async function loadData() {
-      const [cards, stocks] = await Promise.all([
+      const [cards, assets] = await Promise.all([
         fetch("data/etf_cards.json").then(r => r.json()),
         fetch("data/cross_data.json").then(r => r.json()),
       ]);
       state.cards = cards;
-      state.stocks = stocks;
+      state.stocks = assets.filter(row => (row.asset_type || "stock") === "stock");
+      state.futures = assets.filter(row => row.asset_type === "future");
       state.changes = await fetch("data/holding_changes.json")
         .then(r => r.ok ? r.json() : null)
         .catch(() => null);
@@ -811,12 +975,14 @@
     function renderShell() {
       const activeCards = state.cards.filter(card => card.date);
       const links = state.stocks.reduce((sum, row) => sum + row.etfs.length, 0);
+      const futurePositions = state.futures.reduce((sum, row) => sum + row.etfs.length, 0);
       const maxOverlap = Math.max(0, ...state.stocks.map(row => row.etf_count));
       const priceDates = unique(state.cards.map(card => card.price_date).filter(Boolean));
       const holdingDates = unique(activeCards.map(card => card.date).filter(Boolean));
 
       $("statEtf").textContent = state.cards.length;
       $("statStock").textContent = state.stocks.length;
+      $("statFuture").textContent = futurePositions;
       $("statLinks").textContent = links;
       $("statOverlap").textContent = maxOverlap;
       $("statChange").textContent = state.changes?.summary?.total_changes || 0;
@@ -825,8 +991,9 @@
       $("sourceCount").textContent = `持股 ETF ${activeCards.length}`;
 
       const holdingCounts = getHoldingCounts();
+      const futureCounts = getFutureCounts();
       const options = [`<option value="">全部 ETF</option>`]
-        .concat(state.cards.filter(card => holdingCounts.has(card.ticker)).map(card => {
+        .concat(state.cards.filter(card => holdingCounts.has(card.ticker) || futureCounts.has(card.ticker)).map(card => {
           return `<option value="${escapeHtml(card.ticker)}">${escapeHtml(card.ticker)} ${escapeHtml(card.name)}</option>`;
         }));
       $("etfFilter").innerHTML = options.join("");
@@ -841,6 +1008,16 @@
         }
       }
       return holdingCounts;
+    }
+
+    function getFutureCounts() {
+      const futureCounts = new Map();
+      for (const row of state.futures) {
+        for (const etf of row.etfs) {
+          futureCounts.set(etf.etf_ticker, (futureCounts.get(etf.etf_ticker) || 0) + 1);
+        }
+      }
+      return futureCounts;
     }
 
     function renderChanges() {
@@ -858,6 +1035,7 @@
         $("changeBody").innerHTML = `<tr><td colspan="6"><div class="empty">尚未建立每日持股變動檔</div></td></tr>`;
         renderStockRollups([], []);
         renderEtfChangeSummary({});
+        renderFuturePanels(flattenFutureRows(state.futures), []);
         return;
       }
 
@@ -866,14 +1044,19 @@
         : `${report.current_date} 基準日`;
       renderStockRollups(report.top_stock_buys || [], report.top_stock_sells || []);
       renderEtfChangeSummary(report.by_etf || {});
+      const futureChanges = (report.changes || []).filter(change => change.asset_type === "future");
+      const futurePositions = report.future_positions || flattenFutureRows(state.futures);
+      renderFuturePanels(futurePositions, futureChanges);
 
-      if (report.baseline || !report.changes?.length) {
-        const message = report.baseline ? "目前只有基準日，下一個不同日期更新後會產生增減。" : "本期沒有持股變動。";
+      const stockChanges = (report.changes || []).filter(change => (change.asset_type || "stock") === "stock");
+
+      if (report.baseline || !stockChanges.length) {
+        const message = report.baseline ? "目前只有基準日，下一個不同日期更新後會產生增減。" : "本期沒有股票持股變動。";
         $("changeBody").innerHTML = `<tr><td colspan="6"><div class="empty">${message}</div></td></tr>`;
         return;
       }
 
-      $("changeBody").innerHTML = report.changes.slice(0, 40).map(change => {
+      $("changeBody").innerHTML = stockChanges.slice(0, 40).map(change => {
         const weightDelta = Number(change.weight_delta || 0);
         const shareDelta = Number(change.shares_delta || 0);
         return `
@@ -887,6 +1070,43 @@
           </tr>
         `;
       }).join("");
+    }
+
+    function renderFuturePanels(positions, changes) {
+      $("futurePositionCount").textContent = `${positions.length} 筆`;
+      if (!positions.length) {
+        $("futurePositionBody").innerHTML = `<tr><td colspan="5"><div class="empty compact-empty">目前沒有期貨部位</div></td></tr>`;
+      } else {
+        $("futurePositionBody").innerHTML = positions.map(position => `
+          <tr>
+            <td><span class="ticker">${escapeHtml(position.etf_ticker)}</span></td>
+            <td><span class="ticker">${escapeHtml(position.ticker)}</span></td>
+            <td class="name" title="${escapeHtml(position.name)}">${escapeHtml(position.name)}</td>
+            <td class="num">${pct(position.weight)}</td>
+            <td class="num">${fmt.format(position.quantity ?? position.shares ?? 0)}</td>
+          </tr>
+        `).join("");
+      }
+
+      $("futureChangeCount").textContent = `${changes.length} 筆`;
+      if (!changes.length) {
+        $("futureChangeBody").innerHTML = `<tr><td colspan="6"><div class="empty compact-empty">本期沒有期貨異動</div></td></tr>`;
+      } else {
+        $("futureChangeBody").innerHTML = changes.map(change => {
+          const weightDelta = Number(change.weight_delta || 0);
+          const quantityDelta = Number(change.shares_delta || 0);
+          return `
+            <tr>
+              <td><span class="action action-${escapeHtml(change.action)}">${actionText(change.action)}</span></td>
+              <td><span class="ticker">${escapeHtml(change.etf_ticker)}</span></td>
+              <td><span class="ticker">${escapeHtml(change.stock_ticker)}</span></td>
+              <td class="name" title="${escapeHtml(change.stock_name)}">${escapeHtml(change.stock_name)}</td>
+              <td class="num ${weightDelta >= 0 ? "delta-up" : "delta-down"}">${signed(weightDelta, 2)}%</td>
+              <td class="num ${quantityDelta >= 0 ? "delta-up" : "delta-down"}">${signedInt(quantityDelta)}</td>
+            </tr>
+          `;
+        }).join("");
+      }
     }
 
     function renderStockRollups(buys, sells) {
@@ -956,14 +1176,16 @@
 
     function renderEtfs() {
       const holdingCounts = getHoldingCounts();
+      const futureCounts = getFutureCounts();
 
       $("etfCount").textContent = `${state.cards.length} 檔`;
       $("etfBody").innerHTML = state.cards.map(card => {
         const count = holdingCounts.get(card.ticker) || 0;
+        const futureCount = futureCounts.get(card.ticker) || 0;
         const classes = [
           card.ticker === state.selectedEtf ? "selected-etf" : "",
         ].filter(Boolean).join(" ");
-        const dataEtf = count ? ` data-etf="${escapeHtml(card.ticker)}"` : "";
+        const dataEtf = count || futureCount ? ` data-etf="${escapeHtml(card.ticker)}"` : "";
         const className = classes ? ` class="${classes}"` : "";
         return `
           <tr${dataEtf}${className}>
@@ -972,7 +1194,7 @@
             <td class="num">${optionalNumber(card.price)}</td>
             <td class="num">${optionalNumber(card.nav)}</td>
             <td class="num ${premiumClass(card.premium_discount)}">${premiumText(card.premium_discount)}</td>
-            <td class="num">${count || "-"}</td>
+            <td class="num">${count || 0} / ${futureCount || 0}</td>
           </tr>
         `;
       }).join("");
@@ -1029,11 +1251,57 @@
         return a.ticker.localeCompare(b.ticker);
       });
 
+      state.filteredFutures = flattenFutureRows(state.futures).filter(position => {
+        if (etf && position.etf_ticker !== etf) return false;
+        if (!query) return true;
+        return `${position.ticker} ${position.name} ${position.etf_ticker} ${position.etf_name}`.toLowerCase().includes(query);
+      }).sort((a, b) => {
+        if (b.weight !== a.weight) return b.weight - a.weight;
+        if (a.etf_ticker !== b.etf_ticker) return a.etf_ticker.localeCompare(b.etf_ticker);
+        return a.ticker.localeCompare(b.ticker);
+      });
+
       renderStockTitle();
       renderEtfs();
       renderStocks();
+      renderFutures();
       const selected = state.filtered.find(row => row.ticker === state.selectedTicker) || state.filtered[0];
       renderDetail(selected || null);
+    }
+
+    function flattenFutureRows(rows) {
+      return rows.flatMap(row => row.etfs.map(etf => ({
+        etf_ticker: etf.etf_ticker,
+        etf_name: etf.etf_name,
+        ticker: row.ticker,
+        name: row.name,
+        weight: Number(etf.weight || 0),
+        quantity: Number(etf.shares || 0),
+        unit: row.unit || "口",
+        date: etf.date || "",
+      })));
+    }
+
+    function renderFutures() {
+      const card = state.cards.find(item => item.ticker === state.selectedEtf);
+      $("futureTitle").textContent = card
+        ? `${card.ticker} ${card.name} 期貨部位`
+        : "期貨部位";
+      $("futureCount").textContent = `${state.filteredFutures.length} 筆`;
+      if (!state.filteredFutures.length) {
+        $("futureBody").innerHTML = `<tr><td colspan="6"><div class="empty">目前沒有期貨部位</div></td></tr>`;
+        return;
+      }
+      $("futureBody").innerHTML = state.filteredFutures.map(position => `
+        <tr>
+          <td><span class="ticker">${escapeHtml(position.etf_ticker)}</span></td>
+          <td><span class="ticker">${escapeHtml(position.ticker)}</span></td>
+          <td class="name" title="${escapeHtml(position.name)}">${escapeHtml(position.name)}</td>
+          <td class="num">${pct(position.weight)}</td>
+          <td class="num">${fmt.format(position.quantity)} ${escapeHtml(position.unit)}</td>
+          <td>${escapeHtml(position.date || "-")}</td>
+        </tr>
+      `).join("");
     }
 
     function renderStocks() {
