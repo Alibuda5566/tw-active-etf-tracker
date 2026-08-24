@@ -13,10 +13,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 6.7345,
+        "weight": 6.7768,
         "capital_yi": 0,
         "shares": 872000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -49,10 +49,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 4.77,
+        "weight": 4.62,
         "capital_yi": 0,
         "shares": 249000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -67,10 +67,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.87,
+        "weight": 1.81,
         "capital_yi": 0,
         "shares": 50000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -139,10 +139,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 4.7052,
+        "weight": 4.4995,
         "capital_yi": 0,
         "shares": 32000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -211,10 +211,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.2641,
+        "weight": 1.2936,
         "capital_yi": 0,
         "shares": 2000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -232,10 +232,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 8.7399,
+        "weight": 8.8656,
         "capital_yi": 0,
         "shares": 1794000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -268,10 +268,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 9.18,
+        "weight": 8.98,
         "capital_yi": 0,
         "shares": 753000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -286,10 +286,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 13.98,
+        "weight": 13.69,
         "capital_yi": 0,
         "shares": 588000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -358,10 +358,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 8.4148,
+        "weight": 8.123,
         "capital_yi": 0,
         "shares": 90000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -412,10 +412,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 8.9259,
+        "weight": 8.6966,
         "capital_yi": 0,
         "shares": 22000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -427,16 +427,16 @@
     "etf_count": 20,
     "max_weight": 5.2119,
     "total_capital": 0,
-    "total_shares": 27822173,
+    "total_shares": 27912173,
     "etfs": [
       {
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 3.0869,
+        "weight": 3.4092,
         "capital_yi": 0,
-        "shares": 727000,
-        "date": "2026-08-24"
+        "shares": 817000,
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -469,10 +469,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.79,
+        "weight": 1.84,
         "capital_yi": 0,
         "shares": 174000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -487,10 +487,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.49,
+        "weight": 2.56,
         "capital_yi": 0,
         "shares": 124000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -559,10 +559,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 2.2106,
+        "weight": 2.2399,
         "capital_yi": 0,
         "shares": 28000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -625,10 +625,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 3.5642,
+        "weight": 3.7271,
         "capital_yi": 0,
         "shares": 320000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -661,10 +661,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 3.91,
+        "weight": 4.09,
         "capital_yi": 0,
         "shares": 136000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -679,10 +679,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.29,
+        "weight": 1.35,
         "capital_yi": 0,
         "shares": 23000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -751,10 +751,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 6.3904,
+        "weight": 6.5959,
         "capital_yi": 0,
         "shares": 29000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -817,10 +817,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.1645,
+        "weight": 1.1543,
         "capital_yi": 0,
         "shares": 959000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -856,7 +856,7 @@
         "weight": 1.56,
         "capital_yi": 0,
         "shares": 526000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -874,7 +874,7 @@
         "weight": 1.94,
         "capital_yi": 0,
         "shares": 335000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -1036,10 +1036,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 3.09,
+        "weight": 3.22,
         "capital_yi": 0,
         "shares": 563000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -1054,10 +1054,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.71,
+        "weight": 1.79,
         "capital_yi": 0,
         "shares": 160000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -1126,10 +1126,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 6.9875,
+        "weight": 7.1916,
         "capital_yi": 0,
         "shares": 166000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -1219,19 +1219,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 3.58,
+        "weight": 3.54,
         "capital_yi": 0,
         "shares": 404000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.42,
+        "weight": 1.4,
         "capital_yi": 0,
         "shares": 82000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -1300,10 +1300,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 1.901,
+        "weight": 1.8568,
         "capital_yi": 0,
         "shares": 28000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -1366,10 +1366,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 2.2195,
+        "weight": 2.2265,
         "capital_yi": 0,
         "shares": 379000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -1402,10 +1402,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.94,
+        "weight": 2.01,
         "capital_yi": 0,
         "shares": 134000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -1420,10 +1420,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.92,
+        "weight": 1.99,
         "capital_yi": 0,
         "shares": 68000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -1474,10 +1474,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 6.4467,
+        "weight": 6.5794,
         "capital_yi": 0,
         "shares": 58000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -1543,7 +1543,7 @@
         "weight": 0.0023,
         "capital_yi": 0,
         "shares": 1000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -1576,10 +1576,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.17,
+        "weight": 1.22,
         "capital_yi": 0,
         "shares": 203000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -1594,10 +1594,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.54,
+        "weight": 0.56,
         "capital_yi": 0,
         "shares": 48000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00990A",
@@ -1657,10 +1657,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 4.007,
+        "weight": 4.1326,
         "capital_yi": 0,
         "shares": 91000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -1706,7 +1706,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 17,
-    "max_weight": 3.5837,
+    "max_weight": 3.6344,
     "total_capital": 0,
     "total_shares": 12947252,
     "etfs": [
@@ -1714,10 +1714,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 3.5837,
+        "weight": 3.6344,
         "capital_yi": 0,
         "shares": 844000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -1750,10 +1750,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.57,
+        "weight": 1.59,
         "capital_yi": 0,
         "shares": 148000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -1771,7 +1771,7 @@
         "weight": 0.1,
         "capital_yi": 0,
         "shares": 5000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -1879,10 +1879,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 3.5045,
+        "weight": 3.4403,
         "capital_yi": 0,
         "shares": 307000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -1915,10 +1915,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.99,
+        "weight": 2.04,
         "capital_yi": 0,
         "shares": 72000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -1996,10 +1996,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 5.7245,
+        "weight": 5.7973,
         "capital_yi": 0,
         "shares": 27000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -2044,10 +2044,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 5.4683,
+        "weight": 5.0776,
         "capital_yi": 0,
         "shares": 185000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00991A",
@@ -2071,10 +2071,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 5.42,
+        "weight": 5.59,
         "capital_yi": 0,
         "shares": 80000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -2089,10 +2089,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.45,
+        "weight": 1.5,
         "capital_yi": 0,
         "shares": 11000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -2200,10 +2200,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.3388,
+        "weight": 1.2625,
         "capital_yi": 0,
         "shares": 5285000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -2227,10 +2227,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.2,
+        "weight": 0.19,
         "capital_yi": 0,
         "shares": 171000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -2356,10 +2356,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.011,
+        "weight": 0.0114,
         "capital_yi": 0,
         "shares": 1000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -2386,7 +2386,7 @@
         "weight": 1.67,
         "capital_yi": 0,
         "shares": 59000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -2446,10 +2446,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 4.3451,
+        "weight": 4.2791,
         "capital_yi": 0,
         "shares": 20000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -2539,19 +2539,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.88,
+        "weight": 1.94,
         "capital_yi": 0,
         "shares": 69000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.61,
+        "weight": 2.69,
         "capital_yi": 0,
         "shares": 49000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -2611,10 +2611,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 3.7675,
+        "weight": 3.8306,
         "capital_yi": 0,
         "shares": 18000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -2660,7 +2660,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 16,
-    "max_weight": 6.5907,
+    "max_weight": 6.5413,
     "total_capital": 0,
     "total_shares": 7339598,
     "etfs": [
@@ -2668,10 +2668,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 6.5907,
+        "weight": 6.5413,
         "capital_yi": 0,
         "shares": 510000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -2707,7 +2707,7 @@
         "weight": 1.65,
         "capital_yi": 0,
         "shares": 52000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -2722,10 +2722,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 3.27,
+        "weight": 3.29,
         "capital_yi": 0,
         "shares": 53000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -2854,7 +2854,7 @@
         "weight": 0.37,
         "capital_yi": 0,
         "shares": 32336,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
@@ -2863,7 +2863,7 @@
         "weight": 0.2,
         "capital_yi": 0,
         "shares": 9000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -2914,10 +2914,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 4.413,
+        "weight": 4.2753,
         "capital_yi": 0,
         "shares": 50000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -2971,10 +2971,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.113,
+        "weight": 1.1299,
         "capital_yi": 0,
         "shares": 35900,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -3007,10 +3007,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.42,
+        "weight": 1.45,
         "capital_yi": 0,
         "shares": 18300,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -3070,10 +3070,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 0.1787,
+        "weight": 0.1796,
         "capital_yi": 0,
         "shares": 300,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -3118,10 +3118,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.2953,
+        "weight": 1.3304,
         "capital_yi": 0,
         "shares": 434000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -3154,10 +3154,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.58,
+        "weight": 1.65,
         "capital_yi": 0,
         "shares": 209000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -3226,10 +3226,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 4.35,
+        "weight": 4.489,
         "capital_yi": 0,
         "shares": 75000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -3283,10 +3283,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 2.39,
+        "weight": 2.38,
         "capital_yi": 0,
         "shares": 1921000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -3301,10 +3301,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.16,
+        "weight": 0.15,
         "capital_yi": 0,
         "shares": 64000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00994A",
@@ -3395,7 +3395,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 14,
-    "max_weight": 2.9818,
+    "max_weight": 2.9437,
     "total_capital": 0,
     "total_shares": 2446942,
     "etfs": [
@@ -3412,10 +3412,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 2.36,
+        "weight": 2.37,
         "capital_yi": 0,
         "shares": 73000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -3433,7 +3433,7 @@
         "weight": 1.96,
         "capital_yi": 0,
         "shares": 31000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -3484,10 +3484,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 2.9818,
+        "weight": 2.9437,
         "capital_yi": 0,
         "shares": 12000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -3559,10 +3559,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.6,
+        "weight": 1.62,
         "capital_yi": 0,
         "shares": 987000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00994A",
@@ -3688,10 +3688,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 2.93,
+        "weight": 2.84,
         "capital_yi": 0,
         "shares": 1096000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -3706,10 +3706,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.01,
+        "weight": 0.98,
         "capital_yi": 0,
         "shares": 193000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -3751,10 +3751,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 4.9162,
+        "weight": 4.7153,
         "capital_yi": 0,
         "shares": 240000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0050",
@@ -3799,10 +3799,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 2.8388,
+        "weight": 2.9564,
         "capital_yi": 0,
         "shares": 257000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -3835,10 +3835,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.74,
+        "weight": 0.72,
         "capital_yi": 0,
         "shares": 26000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -3853,10 +3853,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.66,
+        "weight": 0.65,
         "capital_yi": 0,
         "shares": 12000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00400A",
@@ -3928,10 +3928,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 2.839,
+        "weight": 2.8738,
         "capital_yi": 0,
         "shares": 3178000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -3955,10 +3955,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.03,
+        "weight": 1.07,
         "capital_yi": 0,
         "shares": 461000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -3973,10 +3973,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.48,
+        "weight": 0.5,
         "capital_yi": 0,
         "shares": 110000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00995A",
@@ -4075,10 +4075,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.67,
+        "weight": 1.68,
         "capital_yi": 0,
         "shares": 595000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
@@ -4087,7 +4087,7 @@
         "weight": 0.49,
         "capital_yi": 0,
         "shares": 89000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -4186,19 +4186,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.92,
+        "weight": 2.02,
         "capital_yi": 0,
         "shares": 393000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.93,
+        "weight": 0.98,
         "capital_yi": 0,
         "shares": 98000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -4417,10 +4417,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.2833,
+        "weight": 0.2904,
         "capital_yi": 0,
         "shares": 2213556,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00991A",
@@ -4537,10 +4537,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.8972,
+        "weight": 0.8538,
         "capital_yi": 0,
         "shares": 382000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -4564,19 +4564,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.0,
+        "weight": 1.03,
         "capital_yi": 0,
         "shares": 181000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.22,
+        "weight": 1.26,
         "capital_yi": 0,
         "shares": 113000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -4618,10 +4618,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 1.4801,
+        "weight": 1.5096,
         "capital_yi": 0,
         "shares": 35000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -4666,10 +4666,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 2.35,
+        "weight": 2.26,
         "capital_yi": 0,
         "shares": 2416000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -4768,10 +4768,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.2355,
+        "weight": 1.235,
         "capital_yi": 0,
         "shares": 3432000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00991A",
@@ -4795,10 +4795,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.92,
+        "weight": 0.94,
         "capital_yi": 0,
         "shares": 1041000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -4882,7 +4882,7 @@
         "weight": 0.0,
         "capital_yi": 0,
         "shares": 250,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00991A",
@@ -4897,10 +4897,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.2,
+        "weight": 0.19,
         "capital_yi": 0,
         "shares": 154000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00996A",
@@ -4990,10 +4990,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.49,
+        "weight": 1.44,
         "capital_yi": 0,
         "shares": 4525000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -5008,10 +5008,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.2,
+        "weight": 0.19,
         "capital_yi": 0,
         "shares": 306000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00401A",
@@ -5101,10 +5101,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.66,
+        "weight": 0.69,
         "capital_yi": 0,
         "shares": 56000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -5155,10 +5155,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 2.179,
+        "weight": 2.2594,
         "capital_yi": 0,
         "shares": 47000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00405A",
@@ -5185,19 +5185,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 2.1,
+        "weight": 2.03,
         "capital_yi": 0,
         "shares": 2293000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.43,
+        "weight": 0.42,
         "capital_yi": 0,
         "shares": 243000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -5389,10 +5389,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 4.31,
+        "weight": 4.19,
         "capital_yi": 0,
         "shares": 1737000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00401A",
@@ -5467,7 +5467,7 @@
         "weight": 0.0,
         "capital_yi": 0,
         "shares": 1000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00991A",
@@ -5575,10 +5575,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.76,
+        "weight": 0.79,
         "capital_yi": 0,
         "shares": 185000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -5596,7 +5596,7 @@
         "weight": 0.02,
         "capital_yi": 0,
         "shares": 2000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -5642,18 +5642,18 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 9,
-    "max_weight": 1.3666,
+    "max_weight": 1.6588,
     "total_capital": 0,
-    "total_shares": 11180000,
+    "total_shares": 11923000,
     "etfs": [
       {
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.3666,
+        "weight": 1.6588,
         "capital_yi": 0,
-        "shares": 3242000,
-        "date": "2026-08-24"
+        "shares": 3985000,
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -5668,10 +5668,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.67,
+        "weight": 0.68,
         "capital_yi": 0,
         "shares": 650000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -5743,10 +5743,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.3475,
+        "weight": 1.225,
         "capital_yi": 0,
         "shares": 2289000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00992A",
@@ -5987,7 +5987,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 8,
-    "max_weight": 4.2821,
+    "max_weight": 3.9934,
     "total_capital": 0,
     "total_shares": 1307800,
     "etfs": [
@@ -6013,19 +6013,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 3.38,
+        "weight": 3.19,
         "capital_yi": 0,
         "shares": 228600,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.39,
+        "weight": 2.26,
         "capital_yi": 0,
         "shares": 83000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -6049,10 +6049,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 4.2821,
+        "weight": 3.9934,
         "capital_yi": 0,
         "shares": 37800,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00405A",
@@ -6071,7 +6071,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 8,
-    "max_weight": 3.88,
+    "max_weight": 3.83,
     "total_capital": 0,
     "total_shares": 359219375,
     "etfs": [
@@ -6088,10 +6088,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 3.88,
+        "weight": 3.83,
         "capital_yi": 0,
         "shares": 3832000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00401A",
@@ -6256,10 +6256,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.78,
+        "weight": 1.76,
         "capital_yi": 0,
         "shares": 55000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -6301,10 +6301,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 1.9863,
+        "weight": 1.9396,
         "capital_yi": 0,
         "shares": 8000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00405A",
@@ -6343,7 +6343,7 @@
         "weight": 1.27,
         "capital_yi": 0,
         "shares": 1657000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00401A",
@@ -6398,7 +6398,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 7,
-    "max_weight": 4.85,
+    "max_weight": 4.88,
     "total_capital": 0,
     "total_shares": 70791277,
     "etfs": [
@@ -6406,10 +6406,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.259,
+        "weight": 1.253,
         "capital_yi": 0,
         "shares": 1800000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00992A",
@@ -6424,10 +6424,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.19,
+        "weight": 1.2,
         "capital_yi": 0,
         "shares": 694000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -6442,10 +6442,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 4.85,
+        "weight": 4.88,
         "capital_yi": 0,
         "shares": 1448000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0056",
@@ -6481,19 +6481,19 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.2161,
+        "weight": 1.199,
         "capital_yi": 0,
         "shares": 901000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.94,
+        "weight": 0.96,
         "capital_yi": 0,
         "shares": 146000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -6548,7 +6548,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 7,
-    "max_weight": 3.81,
+    "max_weight": 3.79,
     "total_capital": 0,
     "total_shares": 208373438,
     "etfs": [
@@ -6574,10 +6574,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 3.81,
+        "weight": 3.79,
         "capital_yi": 0,
         "shares": 2828000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00401A",
@@ -6623,7 +6623,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 7,
-    "max_weight": 3.229,
+    "max_weight": 3.2097,
     "total_capital": 0,
     "total_shares": 5097000,
     "etfs": [
@@ -6631,10 +6631,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.2301,
+        "weight": 1.3087,
         "capital_yi": 0,
         "shares": 1572000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00992A",
@@ -6676,10 +6676,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 3.229,
+        "weight": 3.2097,
         "capital_yi": 0,
         "shares": 205000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -7006,10 +7006,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 2.3141,
+        "weight": 2.1553,
         "capital_yi": 0,
         "shares": 1117000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -7024,10 +7024,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.09,
+        "weight": 0.1,
         "capital_yi": 0,
         "shares": 10000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00994A",
@@ -7073,7 +7073,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 7,
-    "max_weight": 3.5607,
+    "max_weight": 3.6558,
     "total_capital": 0,
     "total_shares": 3290000,
     "etfs": [
@@ -7090,10 +7090,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.48,
+        "weight": 0.5,
         "capital_yi": 0,
         "shares": 54000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00994A",
@@ -7117,10 +7117,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 3.5607,
+        "weight": 3.6558,
         "capital_yi": 0,
         "shares": 52000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -7231,10 +7231,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.22,
+        "weight": 1.19,
         "capital_yi": 0,
         "shares": 6340622,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00401A",
@@ -7363,10 +7363,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.2,
+        "weight": 1.18,
         "capital_yi": 0,
         "shares": 1147000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -7381,10 +7381,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.6,
+        "weight": 1.59,
         "capital_yi": 0,
         "shares": 788000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00400A",
@@ -7412,7 +7412,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 6,
-    "max_weight": 5.952,
+    "max_weight": 5.9813,
     "total_capital": 0,
     "total_shares": 4562000,
     "etfs": [
@@ -7420,10 +7420,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 5.952,
+        "weight": 5.9813,
         "capital_yi": 0,
         "shares": 3828000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00992A",
@@ -7486,10 +7486,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.3177,
+        "weight": 0.3376,
         "capital_yi": 0,
         "shares": 321000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00992A",
@@ -7504,10 +7504,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.25,
+        "weight": 1.23,
         "capital_yi": 0,
         "shares": 482000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -7546,16 +7546,16 @@
     "etf_count": 6,
     "max_weight": 2.1,
     "total_capital": 0,
-    "total_shares": 42057799,
+    "total_shares": 40857799,
     "etfs": [
       {
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.0558,
+        "weight": 0.3894,
         "capital_yi": 0,
-        "shares": 1910000,
-        "date": "2026-08-24"
+        "shares": 710000,
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00994A",
@@ -7627,10 +7627,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.92,
+        "weight": 0.93,
         "capital_yi": 0,
         "shares": 193000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -7676,7 +7676,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 6,
-    "max_weight": 1.9283,
+    "max_weight": 1.7914,
     "total_capital": 0,
     "total_shares": 1038000,
     "etfs": [
@@ -7687,7 +7687,7 @@
         "weight": 0.0008,
         "capital_yi": 0,
         "shares": 1000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00981A",
@@ -7720,10 +7720,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 1.9283,
+        "weight": 1.7914,
         "capital_yi": 0,
         "shares": 114000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -7939,10 +7939,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.43,
+        "weight": 0.48,
         "capital_yi": 0,
         "shares": 134000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -7987,10 +7987,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.8,
+        "weight": 0.84,
         "capital_yi": 0,
         "shares": 345000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00995A",
@@ -8038,7 +8038,7 @@
         "weight": 0.27,
         "capital_yi": 0,
         "shares": 12000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00995A",
@@ -8092,10 +8092,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.93,
+        "weight": 0.96,
         "capital_yi": 0,
         "shares": 252000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00400A",
@@ -8152,7 +8152,7 @@
         "weight": 0.28,
         "capital_yi": 0,
         "shares": 35000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -8263,10 +8263,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.3134,
+        "weight": 0.3117,
         "capital_yi": 0,
         "shares": 310000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -8369,7 +8369,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 5,
-    "max_weight": 2.23,
+    "max_weight": 2.26,
     "total_capital": 0,
     "total_shares": 644000,
     "etfs": [
@@ -8377,19 +8377,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.29,
+        "weight": 0.3,
         "capital_yi": 0,
         "shares": 38000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.23,
+        "weight": 2.26,
         "capital_yi": 0,
         "shares": 148000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00400A",
@@ -8443,19 +8443,19 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 2.07,
+        "weight": 1.97,
         "capital_yi": 0,
         "shares": 197000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.41,
+        "weight": 0.39,
         "capital_yi": 0,
         "shares": 20000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -8483,7 +8483,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 4,
-    "max_weight": 1.0933,
+    "max_weight": 1.1483,
     "total_capital": 0,
     "total_shares": 1130000,
     "etfs": [
@@ -8491,10 +8491,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.0933,
+        "weight": 1.1483,
         "capital_yi": 0,
         "shares": 1000000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -8627,7 +8627,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 4,
-    "max_weight": 2.6461,
+    "max_weight": 2.6247,
     "total_capital": 0,
     "total_shares": 1073000,
     "etfs": [
@@ -8635,10 +8635,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 2.6461,
+        "weight": 2.6247,
         "capital_yi": 0,
         "shares": 1000000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00993A",
@@ -8683,19 +8683,19 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.4196,
+        "weight": 0.4109,
         "capital_yi": 0,
         "shares": 93000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.48,
+        "weight": 0.49,
         "capital_yi": 0,
         "shares": 44000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
@@ -8704,7 +8704,7 @@
         "weight": 0.17,
         "capital_yi": 0,
         "shares": 8000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00400A",
@@ -8819,7 +8819,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 4,
-    "max_weight": 1.18,
+    "max_weight": 1.19,
     "total_capital": 0,
     "total_shares": 5063500,
     "etfs": [
@@ -8827,10 +8827,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 1.18,
+        "weight": 1.19,
         "capital_yi": 0,
         "shares": 3124500,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -8875,10 +8875,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.127,
+        "weight": 0.1205,
         "capital_yi": 0,
         "shares": 42000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -8893,10 +8893,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.49,
+        "weight": 1.46,
         "capital_yi": 0,
         "shares": 108000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00404A",
@@ -8915,7 +8915,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 4,
-    "max_weight": 2.8599,
+    "max_weight": 2.9875,
     "total_capital": 0,
     "total_shares": 1711000,
     "etfs": [
@@ -8923,10 +8923,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 2.8599,
+        "weight": 2.9875,
         "capital_yi": 0,
         "shares": 1650000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00995A",
@@ -9089,7 +9089,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 3,
-    "max_weight": 2.08,
+    "max_weight": 2.07,
     "total_capital": 0,
     "total_shares": 112582069,
     "etfs": [
@@ -9097,10 +9097,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.08,
+        "weight": 2.07,
         "capital_yi": 0,
         "shares": 4181000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "0056",
@@ -9145,10 +9145,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 0.19,
+        "weight": 0.2,
         "capital_yi": 0,
         "shares": 55000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -9206,7 +9206,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 3,
-    "max_weight": 1.2955,
+    "max_weight": 1.2726,
     "total_capital": 0,
     "total_shares": 43338984,
     "etfs": [
@@ -9214,10 +9214,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.2955,
+        "weight": 1.2726,
         "capital_yi": 0,
         "shares": 4386000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -9916,10 +9916,10 @@
         "etf_ticker": "00980A",
         "etf_name": "主動野村臺灣優選",
         "color": "#2563eb",
-        "weight": 0.53,
+        "weight": 0.55,
         "capital_yi": 0,
         "shares": 182000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00996A",
@@ -9947,7 +9947,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 3,
-    "max_weight": 2.36,
+    "max_weight": 2.61,
     "total_capital": 0,
     "total_shares": 242000,
     "etfs": [
@@ -9955,10 +9955,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.36,
+        "weight": 2.61,
         "capital_yi": 0,
         "shares": 108000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00995A",
@@ -10025,7 +10025,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 3,
-    "max_weight": 3.5915,
+    "max_weight": 3.58,
     "total_capital": 0,
     "total_shares": 89297,
     "etfs": [
@@ -10042,10 +10042,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 3.5915,
+        "weight": 3.515,
         "capital_yi": 0,
         "shares": 1400,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -10064,7 +10064,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 3,
-    "max_weight": 3.9798,
+    "max_weight": 4.0068,
     "total_capital": 0,
     "total_shares": 73909,
     "etfs": [
@@ -10081,10 +10081,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 3.9798,
+        "weight": 4.0068,
         "capital_yi": 0,
         "shares": 2800,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -10204,7 +10204,7 @@
         "weight": 0.2,
         "capital_yi": 0,
         "shares": 357000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00996A",
@@ -10373,7 +10373,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 1.2106,
+    "max_weight": 1.2246,
     "total_capital": 0,
     "total_shares": 2466000,
     "etfs": [
@@ -10381,10 +10381,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.2106,
+        "weight": 1.2246,
         "capital_yi": 0,
         "shares": 2356000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00404A",
@@ -10493,7 +10493,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 0.3087,
+    "max_weight": 0.3112,
     "total_capital": 0,
     "total_shares": 1508000,
     "etfs": [
@@ -10501,10 +10501,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.3087,
+        "weight": 0.3112,
         "capital_yi": 0,
         "shares": 1303000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -10531,10 +10531,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.4852,
+        "weight": 0.4743,
         "capital_yi": 0,
         "shares": 950000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00995A",
@@ -10613,7 +10613,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 1.1354,
+    "max_weight": 1.149,
     "total_capital": 0,
     "total_shares": 3988000,
     "etfs": [
@@ -10621,10 +10621,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.1354,
+        "weight": 1.149,
         "capital_yi": 0,
         "shares": 3396000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00400A",
@@ -10643,7 +10643,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 3.5019,
+    "max_weight": 3.6782,
     "total_capital": 0,
     "total_shares": 5465000,
     "etfs": [
@@ -10651,19 +10651,19 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 3.5019,
+        "weight": 3.6782,
         "capital_yi": 0,
         "shares": 4809000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.41,
+        "weight": 2.44,
         "capital_yi": 0,
         "shares": 656000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -10703,7 +10703,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 2.1585,
+    "max_weight": 2.1496,
     "total_capital": 0,
     "total_shares": 195729,
     "etfs": [
@@ -10720,10 +10720,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 2.1585,
+        "weight": 2.1496,
         "capital_yi": 0,
         "shares": 92729,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -10733,7 +10733,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 1.6342,
+    "max_weight": 1.6716,
     "total_capital": 0,
     "total_shares": 1958000,
     "etfs": [
@@ -10741,10 +10741,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.6342,
+        "weight": 1.6716,
         "capital_yi": 0,
         "shares": 1158000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00403A",
@@ -10883,7 +10883,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 1.3153,
+    "max_weight": 1.275,
     "total_capital": 0,
     "total_shares": 3769000,
     "etfs": [
@@ -10891,10 +10891,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.3153,
+        "weight": 1.275,
         "capital_yi": 0,
         "shares": 3533000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -10913,7 +10913,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 0.8097,
+    "max_weight": 0.8282,
     "total_capital": 0,
     "total_shares": 512000,
     "etfs": [
@@ -10921,10 +10921,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.8097,
+        "weight": 0.8282,
         "capital_yi": 0,
         "shares": 459000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00984A",
@@ -11320,10 +11320,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.8981,
+        "weight": 1.8696,
         "capital_yi": 0,
         "shares": 700,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -11333,18 +11333,18 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 3.5806,
+    "max_weight": 3.9025,
     "total_capital": 0,
-    "total_shares": 2811,
+    "total_shares": 3011,
     "etfs": [
       {
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 3.5806,
+        "weight": 3.9025,
         "capital_yi": 0,
-        "shares": 1800,
-        "date": "2026-08-24"
+        "shares": 2000,
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -11393,7 +11393,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 2.0603,
+    "max_weight": 2.0117,
     "total_capital": 0,
     "total_shares": 53839,
     "etfs": [
@@ -11410,10 +11410,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.0603,
+        "weight": 2.0117,
         "capital_yi": 0,
         "shares": 1300,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -11440,10 +11440,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 0.6321,
+        "weight": 0.632,
         "capital_yi": 0,
         "shares": 500,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -11453,7 +11453,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 5.5848,
+    "max_weight": 5.5669,
     "total_capital": 0,
     "total_shares": 4050,
     "etfs": [
@@ -11461,10 +11461,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 5.5848,
+        "weight": 5.5669,
         "capital_yi": 0,
         "shares": 3000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -11483,7 +11483,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 1.825,
+    "max_weight": 1.827,
     "total_capital": 0,
     "total_shares": 6450,
     "etfs": [
@@ -11491,10 +11491,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.825,
+        "weight": 1.827,
         "capital_yi": 0,
         "shares": 950,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00998A",
@@ -11530,10 +11530,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 3.7478,
+        "weight": 3.4749,
         "capital_yi": 0,
         "shares": 780,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -11543,7 +11543,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 3.06,
+    "max_weight": 3.1014,
     "total_capital": 0,
     "total_shares": 1045,
     "etfs": [
@@ -11551,10 +11551,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 3.06,
+        "weight": 3.1014,
         "capital_yi": 0,
         "shares": 450,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -11590,10 +11590,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 4.2594,
+        "weight": 4.0356,
         "capital_yi": 0,
         "shares": 800,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -11603,7 +11603,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 1.8289,
+    "max_weight": 1.8854,
     "total_capital": 0,
     "total_shares": 1318,
     "etfs": [
@@ -11611,10 +11611,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.8289,
+        "weight": 1.8854,
         "capital_yi": 0,
         "shares": 1200,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -11663,7 +11663,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 5.9249,
+    "max_weight": 5.8556,
     "total_capital": 0,
     "total_shares": 7727,
     "etfs": [
@@ -11671,10 +11671,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 5.9249,
+        "weight": 5.8556,
         "capital_yi": 0,
         "shares": 5000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -11740,10 +11740,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.7493,
+        "weight": 1.689,
         "capital_yi": 0,
         "shares": 200,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -11753,7 +11753,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 2,
-    "max_weight": 1.9313,
+    "max_weight": 1.9245,
     "total_capital": 0,
     "total_shares": 2934,
     "etfs": [
@@ -11761,10 +11761,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.9313,
+        "weight": 1.9245,
         "capital_yi": 0,
         "shares": 1100,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       },
       {
         "etf_ticker": "00983A",
@@ -11860,10 +11860,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 0.9171,
+        "weight": 0.9143,
         "capital_yi": 0,
         "shares": 750,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -12041,7 +12041,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.47,
+    "max_weight": 2.49,
     "total_capital": 0,
     "total_shares": 3473000,
     "etfs": [
@@ -12049,10 +12049,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 2.47,
+        "weight": 2.49,
         "capital_yi": 0,
         "shares": 3473000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -12094,7 +12094,7 @@
         "weight": 0.0009,
         "capital_yi": 0,
         "shares": 660,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -12440,7 +12440,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.1083,
+    "max_weight": 1.1355,
     "total_capital": 0,
     "total_shares": 4484000,
     "etfs": [
@@ -12448,10 +12448,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.1083,
+        "weight": 1.1355,
         "capital_yi": 0,
         "shares": 4484000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -12566,7 +12566,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.77,
+    "max_weight": 1.72,
     "total_capital": 0,
     "total_shares": 8783000,
     "etfs": [
@@ -12574,10 +12574,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.77,
+        "weight": 1.72,
         "capital_yi": 0,
         "shares": 8783000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -12881,7 +12881,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.1822,
+    "max_weight": 1.1925,
     "total_capital": 0,
     "total_shares": 3472000,
     "etfs": [
@@ -12889,10 +12889,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.1822,
+        "weight": 1.1925,
         "capital_yi": 0,
         "shares": 3472000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -12944,7 +12944,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.3185,
+    "max_weight": 0.3208,
     "total_capital": 0,
     "total_shares": 603000,
     "etfs": [
@@ -12952,10 +12952,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.3185,
+        "weight": 0.3208,
         "capital_yi": 0,
         "shares": 603000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -12997,7 +12997,7 @@
         "weight": 0.0002,
         "capital_yi": 0,
         "shares": 1400,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13060,7 +13060,7 @@
         "weight": 0.0014,
         "capital_yi": 0,
         "shares": 4000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13217,7 +13217,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.2726,
+    "max_weight": 0.2792,
     "total_capital": 0,
     "total_shares": 1544000,
     "etfs": [
@@ -13225,10 +13225,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.2726,
+        "weight": 0.2792,
         "capital_yi": 0,
         "shares": 1544000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13322,7 +13322,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.57,
+    "max_weight": 1.63,
     "total_capital": 0,
     "total_shares": 1019000,
     "etfs": [
@@ -13330,10 +13330,10 @@
         "etf_ticker": "00985A",
         "etf_name": "主動野村台灣50",
         "color": "#1d4ed8",
-        "weight": 1.57,
+        "weight": 1.63,
         "capital_yi": 0,
         "shares": 1019000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13343,7 +13343,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.0188,
+    "max_weight": 0.0189,
     "total_capital": 0,
     "total_shares": 194350,
     "etfs": [
@@ -13351,10 +13351,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.0188,
+        "weight": 0.0189,
         "capital_yi": 0,
         "shares": 194350,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13448,7 +13448,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.2901,
+    "max_weight": 1.2897,
     "total_capital": 0,
     "total_shares": 3504000,
     "etfs": [
@@ -13456,10 +13456,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 1.2901,
+        "weight": 1.2897,
         "capital_yi": 0,
         "shares": 3504000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13553,18 +13553,18 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.7192,
+    "max_weight": 0.4814,
     "total_capital": 0,
-    "total_shares": 774000,
+    "total_shares": 516000,
     "etfs": [
       {
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.7192,
+        "weight": 0.4814,
         "capital_yi": 0,
-        "shares": 774000,
-        "date": "2026-08-24"
+        "shares": 516000,
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13574,7 +13574,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.9065,
+    "max_weight": 1.8327,
     "total_capital": 0,
     "total_shares": 11000,
     "etfs": [
@@ -13582,10 +13582,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.9065,
+        "weight": 1.8327,
         "capital_yi": 0,
         "shares": 11000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13616,7 +13616,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.29,
+    "max_weight": 0.2994,
     "total_capital": 0,
     "total_shares": 546000,
     "etfs": [
@@ -13624,10 +13624,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.29,
+        "weight": 0.2994,
         "capital_yi": 0,
         "shares": 546000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13637,7 +13637,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.1586,
+    "max_weight": 2.2528,
     "total_capital": 0,
     "total_shares": 52000,
     "etfs": [
@@ -13645,10 +13645,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 2.1586,
+        "weight": 2.2528,
         "capital_yi": 0,
         "shares": 52000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13679,7 +13679,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.8758,
+    "max_weight": 1.8583,
     "total_capital": 0,
     "total_shares": 50000,
     "etfs": [
@@ -13687,10 +13687,10 @@
         "etf_ticker": "00987A",
         "etf_name": "主動台新優勢成長",
         "color": "#be123c",
-        "weight": 1.8758,
+        "weight": 1.8583,
         "capital_yi": 0,
         "shares": 50000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13784,7 +13784,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.7402,
+    "max_weight": 1.7346,
     "total_capital": 0,
     "total_shares": 7000,
     "etfs": [
@@ -13792,10 +13792,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.7402,
+        "weight": 1.7346,
         "capital_yi": 0,
         "shares": 7000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13910,7 +13910,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.2885,
+    "max_weight": 0.2872,
     "total_capital": 0,
     "total_shares": 2871000,
     "etfs": [
@@ -13918,10 +13918,10 @@
         "etf_ticker": "00982A",
         "etf_name": "主動群益台灣強棒",
         "color": "#f87171",
-        "weight": 0.2885,
+        "weight": 0.2872,
         "capital_yi": 0,
         "shares": 2871000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -13973,7 +13973,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.4343,
+    "max_weight": 1.4177,
     "total_capital": 0,
     "total_shares": 12000,
     "etfs": [
@@ -13981,10 +13981,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.4343,
+        "weight": 1.4177,
         "capital_yi": 0,
         "shares": 12000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -14267,7 +14267,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.0207,
+    "max_weight": 1.0233,
     "total_capital": 0,
     "total_shares": 600,
     "etfs": [
@@ -14275,10 +14275,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.0207,
+        "weight": 1.0233,
         "capital_yi": 0,
         "shares": 600,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -14435,18 +14435,18 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.9615,
+    "max_weight": 0.3764,
     "total_capital": 0,
-    "total_shares": 100,
+    "total_shares": 40,
     "etfs": [
       {
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 0.9615,
+        "weight": 0.3764,
         "capital_yi": 0,
-        "shares": 100,
-        "date": "2026-08-24"
+        "shares": 40,
+        "date": "2026-08-21"
       }
     ]
   },
@@ -14939,18 +14939,18 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 3.4324,
+    "max_weight": 4.0723,
     "total_capital": 0,
-    "total_shares": 3300,
+    "total_shares": 3752,
     "etfs": [
       {
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 3.4324,
+        "weight": 4.0723,
         "capital_yi": 0,
-        "shares": 3300,
-        "date": "2026-08-24"
+        "shares": 3752,
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15002,7 +15002,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 0.6354,
+    "max_weight": 0.6285,
     "total_capital": 0,
     "total_shares": 500,
     "etfs": [
@@ -15010,10 +15010,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 0.6354,
+        "weight": 0.6285,
         "capital_yi": 0,
         "shares": 500,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15065,7 +15065,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.1439,
+    "max_weight": 2.1192,
     "total_capital": 0,
     "total_shares": 2200,
     "etfs": [
@@ -15073,10 +15073,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.1439,
+        "weight": 2.1192,
         "capital_yi": 0,
         "shares": 2200,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15107,7 +15107,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.2694,
+    "max_weight": 2.286,
     "total_capital": 0,
     "total_shares": 1000,
     "etfs": [
@@ -15115,10 +15115,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.2694,
+        "weight": 2.286,
         "capital_yi": 0,
         "shares": 1000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15149,7 +15149,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.6394,
+    "max_weight": 2.6577,
     "total_capital": 0,
     "total_shares": 500,
     "etfs": [
@@ -15157,10 +15157,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.6394,
+        "weight": 2.6577,
         "capital_yi": 0,
         "shares": 500,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15191,7 +15191,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.7397,
+    "max_weight": 1.6927,
     "total_capital": 0,
     "total_shares": 40000,
     "etfs": [
@@ -15199,10 +15199,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.7397,
+        "weight": 1.6927,
         "capital_yi": 0,
         "shares": 40000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15254,7 +15254,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 3.0113,
+    "max_weight": 3.0247,
     "total_capital": 0,
     "total_shares": 550,
     "etfs": [
@@ -15262,10 +15262,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 3.0113,
+        "weight": 3.0247,
         "capital_yi": 0,
         "shares": 550,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15317,7 +15317,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.542,
+    "max_weight": 2.5942,
     "total_capital": 0,
     "total_shares": 1700,
     "etfs": [
@@ -15325,10 +15325,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.542,
+        "weight": 2.5942,
         "capital_yi": 0,
         "shares": 1700,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15359,7 +15359,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.8311,
+    "max_weight": 2.7451,
     "total_capital": 0,
     "total_shares": 8000,
     "etfs": [
@@ -15367,10 +15367,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.8311,
+        "weight": 2.7451,
         "capital_yi": 0,
         "shares": 8000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15506,18 +15506,18 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.5453,
+    "max_weight": 2.8109,
     "total_capital": 0,
-    "total_shares": 1500,
+    "total_shares": 1700,
     "etfs": [
       {
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.5453,
+        "weight": 2.8109,
         "capital_yi": 0,
-        "shares": 1500,
-        "date": "2026-08-24"
+        "shares": 1700,
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15527,7 +15527,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.0975,
+    "max_weight": 1.0809,
     "total_capital": 0,
     "total_shares": 350,
     "etfs": [
@@ -15535,10 +15535,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.0975,
+        "weight": 1.0809,
         "capital_yi": 0,
         "shares": 350,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15611,7 +15611,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 2.6292,
+    "max_weight": 2.607,
     "total_capital": 0,
     "total_shares": 1000,
     "etfs": [
@@ -15619,10 +15619,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 2.6292,
+        "weight": 2.607,
         "capital_yi": 0,
         "shares": 1000,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
@@ -15905,7 +15905,7 @@
     "asset_type": "stock",
     "unit": "股",
     "etf_count": 1,
-    "max_weight": 1.6917,
+    "max_weight": 1.6514,
     "total_capital": 0,
     "total_shares": 900,
     "etfs": [
@@ -15913,10 +15913,10 @@
         "etf_ticker": "00986A",
         "etf_name": "主動台新龍頭成長",
         "color": "#db2777",
-        "weight": 1.6917,
+        "weight": 1.6514,
         "capital_yi": 0,
         "shares": 900,
-        "date": "2026-08-24"
+        "date": "2026-08-21"
       }
     ]
   },
