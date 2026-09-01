@@ -32,7 +32,7 @@ http://localhost:8765/index.html
 
 ## 每日更新
 
-GitHub Actions 會在台北時間週一到週五晚上 7 點自動執行：
+GitHub Actions 會在台北時間週一到週五晚上 7:13 自動執行，並在晚上 8:43 安排一次備援檢查。若當天已成功更新，備援工作會自動跳過：
 
 ```bash
 python update_data.py
