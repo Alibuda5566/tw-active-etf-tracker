@@ -1,6 +1,6 @@
 {
   "data_date": "2026-09-02",
-  "updated_at": "2026-09-02T15:08:08",
+  "updated_at": "2026-09-02T16:53:10",
   "source": "etfinfo",
   "formula": "(market_price / nav - 1) * 100",
   "etfs": [
