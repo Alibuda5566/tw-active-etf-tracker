@@ -1,6 +1,6 @@
 {
   "data_date": "2026-10-22",
-  "updated_at": "2026-10-22T17:39:22",
+  "updated_at": "2026-10-23T17:28:18",
   "source": "etfinfo",
   "formula": "(market_price / nav - 1) * 100",
   "etfs": [
@@ -345,7 +345,7 @@
       "name": "主動聯博動能50",
       "date": "2026-10-22",
       "price": 9.37,
-      "nav": 9.3393,
+      "nav": 9.3392,
       "premium_discount": 0.33,
       "change": -0.15,
       "aum": 3965000000.0,
