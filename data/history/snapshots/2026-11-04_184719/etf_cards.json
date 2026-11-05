@@ -1,0 +1,491 @@
+[
+  {
+    "ticker": "0050",
+    "name": "元大台灣50",
+    "color": "#4a9eff",
+    "tags": [
+      "市值型"
+    ],
+    "type": "passive",
+    "price": 97.15,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 97.15,
+    "nav": 96.79,
+    "premium_discount": 0.37,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "0056",
+    "name": "元大高股息",
+    "color": "#4adfb8",
+    "tags": [
+      "高股息型"
+    ],
+    "type": "passive",
+    "price": 51.55,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 51.55,
+    "nav": 51.42,
+    "premium_discount": 0.25,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00878",
+    "name": "國泰永續高股息",
+    "color": "#a78bfa",
+    "tags": [
+      "高股息/ESG"
+    ],
+    "type": "passive",
+    "price": 33.03,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 33.03,
+    "nav": 32.95,
+    "premium_discount": 0.24,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00919",
+    "name": "群益台灣精選高息",
+    "color": "#f472b6",
+    "tags": [
+      "高股息型",
+      "持股待補"
+    ],
+    "type": "passive",
+    "price": 31.19,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 31.19,
+    "nav": 31.19,
+    "premium_discount": 0.0,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "006208",
+    "name": "富邦台50",
+    "color": "#60a5fa",
+    "tags": [
+      "市值型",
+      "同0050"
+    ],
+    "type": "passive",
+    "price": 222.55,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 222.55,
+    "nav": 221.74,
+    "premium_discount": 0.37,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00980A",
+    "name": "主動野村臺灣優選",
+    "color": "#2563eb",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 20.03,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 20.03,
+    "nav": 19.98,
+    "premium_discount": 0.25,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00981A",
+    "name": "主動統一台股增長",
+    "color": "#34d399",
+    "tags": [
+      "台股型",
+      "主動"
+    ],
+    "type": "active",
+    "price": 23.05,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 23.05,
+    "nav": 23.06,
+    "premium_discount": -0.04,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00982A",
+    "name": "主動群益台灣強棒",
+    "color": "#f87171",
+    "tags": [
+      "主動"
+    ],
+    "type": "active",
+    "price": 17.78,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 17.78,
+    "nav": 17.74,
+    "premium_discount": 0.23,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00983A",
+    "name": "主動中信ARK創新",
+    "color": "#0ea5e9",
+    "tags": [
+      "主動",
+      "創新"
+    ],
+    "type": "active",
+    "price": 12.07,
+    "price_date": "2026-11-05",
+    "date": "2026-11-02",
+    "aum": "0億",
+    "market_price": 12.07,
+    "nav": 12.23,
+    "premium_discount": -1.31,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00984A",
+    "name": "主動安聯台灣高息",
+    "color": "#16a34a",
+    "tags": [
+      "主動",
+      "高股息型"
+    ],
+    "type": "active",
+    "price": 13.36,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 13.36,
+    "nav": 13.31,
+    "premium_discount": 0.38,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00985A",
+    "name": "主動野村台灣50",
+    "color": "#1d4ed8",
+    "tags": [
+      "主動",
+      "市值型"
+    ],
+    "type": "active",
+    "price": 17.98,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 17.98,
+    "nav": 17.94,
+    "premium_discount": 0.22,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00986A",
+    "name": "主動台新龍頭成長",
+    "color": "#db2777",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 13.22,
+    "price_date": "2026-11-05",
+    "date": "2026-11-02",
+    "aum": "0億",
+    "market_price": 13.22,
+    "nav": 13.32,
+    "premium_discount": -0.66,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00987A",
+    "name": "主動台新優勢成長",
+    "color": "#be123c",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 12.98,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 12.98,
+    "nav": 12.95,
+    "premium_discount": 0.23,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00990A",
+    "name": "主動元大AI新經濟",
+    "color": "#7c3aed",
+    "tags": [
+      "主動",
+      "AI"
+    ],
+    "type": "active",
+    "price": 13.06,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 13.06,
+    "nav": 13.29,
+    "premium_discount": -1.73,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00992A",
+    "name": "主動群益科技創新",
+    "color": "#818cf8",
+    "tags": [
+      "科技型",
+      "主動"
+    ],
+    "type": "active",
+    "price": 13.57,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 13.57,
+    "nav": 13.54,
+    "premium_discount": 0.22,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00991A",
+    "name": "主動復華未來50",
+    "color": "#facc15",
+    "tags": [
+      "主動"
+    ],
+    "type": "active",
+    "price": 13.71,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 13.71,
+    "nav": 13.74,
+    "premium_discount": -0.22,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00993A",
+    "name": "主動安聯台灣",
+    "color": "#15803d",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 10.56,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 10.56,
+    "nav": 10.55,
+    "premium_discount": 0.09,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00994A",
+    "name": "主動第一金台股優",
+    "color": "#0891b2",
+    "tags": [
+      "主動",
+      "多因子"
+    ],
+    "type": "active",
+    "price": 13.29,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 13.29,
+    "nav": 13.27,
+    "premium_discount": 0.15,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00995A",
+    "name": "主動中信台灣卓越",
+    "color": "#0284c7",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 13.0,
+    "price_date": "2026-11-05",
+    "date": "2026-11-03",
+    "aum": "0億",
+    "market_price": 13.0,
+    "nav": 12.95,
+    "premium_discount": 0.39,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00996A",
+    "name": "主動兆豐台灣豐收",
+    "color": "#65a30d",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 10.53,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 10.53,
+    "nav": 10.5,
+    "premium_discount": 0.29,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00998A",
+    "name": "主動復華金融股息",
+    "color": "#ca8a04",
+    "tags": [
+      "主動",
+      "股息型"
+    ],
+    "type": "active",
+    "price": 16.93,
+    "price_date": "2026-11-05",
+    "date": "2026-11-02",
+    "aum": "0億",
+    "market_price": 16.93,
+    "nav": 16.96,
+    "premium_discount": -0.18,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00400A",
+    "name": "主動國泰動能高息",
+    "color": "#0d9488",
+    "tags": [
+      "主動",
+      "高股息型"
+    ],
+    "type": "active",
+    "price": 12.06,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 12.06,
+    "nav": 12.05,
+    "premium_discount": 0.08,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00401A",
+    "name": "主動摩根台灣鑫收",
+    "color": "#9333ea",
+    "tags": [
+      "主動",
+      "高股息型"
+    ],
+    "type": "active",
+    "price": 11.91,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 11.91,
+    "nav": 11.98,
+    "premium_discount": -0.62,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00403A",
+    "name": "主動統一升級50",
+    "color": "#14b8a6",
+    "tags": [
+      "主動",
+      "市值型"
+    ],
+    "type": "active",
+    "price": 8.46,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 8.46,
+    "nav": 8.48,
+    "premium_discount": -0.24,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00404A",
+    "name": "主動聯博動能50",
+    "color": "#6366f1",
+    "tags": [
+      "主動",
+      "收益型"
+    ],
+    "type": "active",
+    "price": 8.21,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 8.21,
+    "nav": 8.2096,
+    "premium_discount": 0.0,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  },
+  {
+    "ticker": "00405A",
+    "name": "主動富邦台灣龍耀",
+    "color": "#84cc16",
+    "tags": [
+      "主動",
+      "成長型"
+    ],
+    "type": "active",
+    "price": 7.0,
+    "price_date": "2026-11-05",
+    "date": "2026-11-04",
+    "aum": "0億",
+    "market_price": 7.0,
+    "nav": 6.99,
+    "premium_discount": 0.14,
+    "premium_discount_date": "2026-11-05",
+    "premium_discount_source": "etfinfo"
+  }
+]
